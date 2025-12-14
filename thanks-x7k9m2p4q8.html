@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Thank you! - Elo Booster</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F5E6A3;
+            --dark: #1A2332;
+            --cream: #FDF8F0;
+            --success: #48BB78;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--dark);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        h1, h2 {
+            font-family: 'Fraunces', serif;
+        }
+        
+        .container {
+            max-width: 600px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            animation: pop 0.5s ease-out 0.3s both;
+        }
+        
+        @keyframes pop {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+        
+        .download-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--gold);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .download-box h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-download svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .instructions ol {
+            margin-left: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .support {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+        
+        .support a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        .back-link {
+            margin-top: 2rem;
+            opacity: 0.6;
+        }
+        
+        .back-link a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .back-link a:hover {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✓</div>
+        
+        <h1>Thank you for your purchase!</h1>
+        <p class="subtitle">Your Elo Booster guide is ready to download.</p>
+        
+        <div class="download-box">
+            <h2>📘 Elo Booster - 30 Openings</h2>
+            <a href="https://drive.google.com/uc?export=download&id=1s1FkqbI3relK-IqAOXeGqxpeEH-csMY1" class="btn-download" download>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v-2H6v2z"/>
+                </svg>
+                Download PDF
+            </a>
+        </div>
+        
+        <div class="instructions">
+            <h3>💡 Tips for best results</h3>
+            <ol>
+                <li><strong>Print your favorite sheets</strong> — Start with 3-4 openings that appeal to you</li>
+                <li><strong>Read the main idea</strong> — That's the most important thing to remember</li>
+                <li><strong>Study the traps</strong> — Avoid 50% of quick losses</li>
+                <li><strong>Practice online</strong> — Test on Lichess or Chess.com</li>
+            </ol>
+        </div>
+        
+        <p class="support">
+            Any issues? Contact us: <a href="mailto:elobooster.guide@gmail.com">elobooster.guide@gmail.com</a>
+        </p>
+        
+        <p class="back-link">
+            <a href="/en.html">← Back to website</a>
+        </p>
+    </div>
+</body>
+</html>
