@@ -825,14 +825,44 @@
         }
         
         .teaser h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
         
         .teaser p {
             opacity: 0.8;
-            max-width: 500px;
-            margin: 0 auto;
+            max-width: 550px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .app-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .app-features span {
+            color: var(--gold);
+        }
+        
+        .btn-app {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-app:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
         }
         
         /* ===== FOOTER ===== */
@@ -1008,7 +1038,7 @@
     <section class="preview">
         <div class="container">
             <h2>Regardez à l'intérieur</h2>
-            <p class="preview-subtitle">Faites défiler pour voir des exemples de fiches →</p>
+            <p class="preview-subtitle">Aperçu des fiches du guide</p>
             <div class="preview-slider">
                 <div class="preview-page">
                     <img src="cover.jpg" alt="Couverture">
@@ -1022,7 +1052,6 @@
                     <img src="italienne.jpg" alt="Fiche Italienne">
                     <span class="label">Partie Italienne</span>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1155,12 +1184,19 @@
         </div>
     </section>
 
-    <!-- TEASER -->
-    <section class="teaser">
+    <!-- APP -->
+    <section class="teaser" id="app">
         <div class="container">
-            <div class="teaser-badge">🚀 En développement</div>
-            <h2>Bientôt : le simulateur d'ouvertures</h2>
-            <p>Une webapp pour s'entraîner sur chaque ouverture du guide. Jouez les coups, apprenez les variantes, mémorisez les pièges. Les acheteurs du PDF auront un accès prioritaire.</p>
+            <div class="teaser-badge">🎮 Nouveau</div>
+            <h2>Elo Trainer — L'app d'entraînement</h2>
+            <p>Entraînez-vous aux ouvertures en jouant contre un adversaire qui répond comme dans les vraies parties. Progressez coup par coup, mesurez votre score, maîtrisez vos ouvertures.</p>
+            <div class="app-features">
+                <span>✓ Gratuit pour commencer</span>
+                <span>✓ Accès Premium offert aux acheteurs du guide</span>
+            </div>
+            <a href="/app/" class="btn-app">
+                🚀 Lancer l'application
+            </a>
         </div>
     </section>
 
