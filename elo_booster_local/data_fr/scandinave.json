@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE SCANDINAVE",
+  "alt_name": "Centre Counter",
+  "moves": "1.e4 d5",
+  "uci_moves": "e2e4 d7d5",
+  "complexity": "Débutant",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Tiviakov, Pytel, Brynell",
+  
+  "idea": "Les Noirs attaquent immédiatement le pion e4! Après 2.exd5 Qxd5, la Dame sort tôt mais contrôle le centre. Les Blancs gagnent du temps avec Nc3, mais les Noirs ont une position solide et facile à jouer. Alternative: 2...Nf6!? (Gambit Scandinave) où les Noirs sacrifient le pion pour un développement rapide. C'est l'ouverture idéale pour les débutants qui veulent éviter la théorie et jouer des positions claires.",
+
+  "highlights_green": ["d5", "d8", "c6"],
+  "highlights_red": ["d5", "e4"],
+
+  "errors_white": [
+    "Ne pas jouer Nc3 après Qxd5 : c'est le meilleur coup pour gagner du temps sur la Dame",
+    "Pousser d4 trop tôt sans développer : les Blancs doivent d'abord sortir les pièces",
+    "Sous-estimer la solidité noire : la position est simple mais pas facile à attaquer"
+  ],
+  
+  "errors_black": [
+    "Qxd5 puis rester passif : la Dame doit rester active, pas se cacher en d8",
+    "Oublier de jouer ...c6 : ce coup soutient d5 et prépare ...Bf5",
+    "Développer le Fou en e6 ou d7 : le Fou doit aller en f5 ou g4 pour être actif"
+  ],
+
+  "development": [
+    ["Dame", "Après Qxd5 Nc3, reculer en a5 (agressif) ou d6 (solide) - jamais d8!"],
+    ["Fou c8", "C'est la pièce clé! Sortir en f5 (classique) ou g4 (cloue le Cf3)"],
+    ["Cavaliers", "Nf6 attaque e4 et développe, Nc6/Nd7 soutient le centre"],
+    ["Pion c", "...c6 est essentiel pour soutenir d5 et préparer ...e6 ou ...e5"],
+    ["Fou f8", "Développer en e7 (solide) ou g7 après ...g6 (fianchetto)"],
+    ["Roi", "Petit roque classique après ...e6 et ...Be7"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de la Dame",
+      "fen": "rnb1kbnr/ppp1pppp/8/q7/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4",
+      "highlights": ["a5", "b4", "d2"],
+      "desc": "Après 2...Qxd5 3.Nc3 Qa5 4.d4?? ...Qxd1+? Non! 4...e5! et si 5.dxe5?? Qxe5+ gagne une pièce. ÉVITER (Blancs): Jouer Nf3 ou Bd2 avant d4."
+    },
+    {
+      "name": "Piège du Gambit",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3P4/8/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3",
+      "highlights": ["d5", "f6", "e4"],
+      "desc": "2...Nf6 (Gambit) 3.d4?? ...Nxd5! récupère le pion avec un bon jeu. ÉVITER (Blancs): Jouer 3.Bb5+ ou 3.c4 pour garder le pion ou compliquer."
+    },
+    {
+      "name": "Piège Portugais",
+      "fen": "rn2kb1r/ppp1pppp/5n2/q4b2/3P2P1/2N5/PPP2P1P/R1BQKBNR b KQkq - 0 5",
+      "highlights": ["f5", "g4", "c2"],
+      "desc": "Variante Portugaise: 3...Qa5 4.d4 Nf6 5.g4?? (chasse le Fou) ...Bxc2! gagne le pion c2 car la Dame défend. ÉVITER (Blancs): Ne pas jouer g4 - développer normalement avec Nf3."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Moderne (Qa5)",
+      "moves": "2.exd5 Qxd5 3.Nc3 Qa5 4.d4 Nf6",
+      "uci": "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["a5", "f5", "c6"],
+      "white_plan": "Développer Nf3, Bd2 (défend c3 et prépare Bc4), 0-0. Garder la pression centrale avec un avantage d'espace.",
+      "black_plan": "Jouer ...Bf5! (sortir le Fou avant ...e6), puis ...c6, ...e6, ...Nbd7, ...Be7 et roquer. Position solide."
+    },
+    {
+      "name": "Variante Classique (Qd6)",
+      "moves": "2.exd5 Qxd5 3.Nc3 Qd6 4.d4 Nf6",
+      "uci": "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["d6", "f5", "a6"],
+      "white_plan": "Développer Nf3, Bd3 ou Bc4, 0-0. Le centre d4 est fort. Chercher à ouvrir le jeu pour exploiter l'avantage de développement.",
+      "black_plan": "La Dame en d6 est solide mais passive. Jouer ...a6 (prépare ...b5), ...Bf5, ...c6 puis ...e6 et roquer."
+    },
+    {
+      "name": "Gambit Scandinave (Nf6)",
+      "moves": "2.exd5 Nf6 3.d4 Nxd5 4.c4 Nb6",
+      "uci": "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["b6", "c4", "d4"],
+      "white_plan": "Centre puissant c4-d4. Développer Nf3, Nc3, Bd3 et 0-0. La position est très confortable pour les Blancs.",
+      "black_plan": "Contre-attaquer le centre! ...g6 et ...Bg7 (fianchetto) ou ...Bf5, ...e6, ...Be7. Le Cavalier b6 vise c4 et d5."
+    }
+  ]
+}

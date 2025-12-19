@@ -1,0 +1,93 @@
+{
+  "name": "PARTIE DES QUATRE CAVALIERS",
+  "alt_name": "Four Knights",
+  "moves": "1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6",
+  "uci_moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6",
+  "complexity": "Débutant",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Svidler, Caruana, Rubinstein",
+  
+  "idea": "L'ouverture la plus symétrique! Les deux camps développent leurs Cavaliers de façon identique. C'est solide et logique - on respecte tous les principes: développement rapide, contrôle du centre, préparation du roque. Idéal pour apprendre les bases sans se perdre dans la théorie. Le jeu reste équilibré mais les Blancs peuvent chercher l'avantage avec 4.Bb5 (Espagnole des 4 Cavaliers) ou 4.d4 (Écossaise des 4 Cavaliers).",
+
+  "highlights_green": ["d4", "d5", "e4", "e5"],
+  "highlights_red": ["f3", "f6", "c3", "c6"],
+
+  "errors_white": [
+    "Jouer passivement sans plan : il faut chercher d4 ou Bb5 pour créer un déséquilibre",
+    "Échanger trop de pièces : les échanges massifs mènent à des nulles faciles",
+    "Négliger le centre : même en position symétrique, d4 est le coup clé pour prendre l'avantage"
+  ],
+  
+  "errors_black": [
+    "Copier les Blancs indéfiniment : les Noirs doivent trouver leur propre plan à un moment",
+    "...Nxe4?? sans préparation : dans certaines lignes c'est un piège terrible (voir Rubinstein)",
+    "Oublier ...d6 ou ...d5 : un pion central doit avancer pour libérer le Fou c8"
+  ],
+
+  "development": [
+    ["Fous", "Bb5 (style Espagnol) ou Bc4 (style Italien) pour les Blancs, ...Bb4 ou ...Bc5 pour les Noirs"],
+    ["Centre", "d4 pour les Blancs est thématique, ...d6 ou ...d5 pour les Noirs"],
+    ["Roi", "Petit roque rapide des deux côtés - la position est ouverte"],
+    ["Tours", "Après le roque, centraliser sur e1/d1 (Blancs) ou e8/d8 (Noirs)"],
+    ["Dame", "Rester en retrait au début - les Cavaliers font le travail"],
+    ["Pions", "Éviter les avances de pions prématurées qui créent des faiblesses"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège Rubinstein",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 0 4",
+      "highlights": ["e4", "d5", "c4"],
+      "desc": "4.Bc4 Nxe4?? semble gagner un pion, mais 5.Nxe4! d5 6.Bxd5! Qxd5 7.Nc3! et la Dame est attaquée, les Blancs gagnent du matériel. ÉVITER (Noirs): Ne jamais prendre e4! Jouer ...Bc5 ou ...Nxe4 seulement après ...d5."
+    },
+    {
+      "name": "Piège Halloween",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4N3/4P3/2N5/PPPP1PPP/R1BQKB1R b KQkq - 0 4",
+      "highlights": ["e5", "c6", "d4"],
+      "desc": "4.Nxe5!? Gambit Halloween - sacrifice de Cavalier! Si ...Nxe5 5.d4 le centre blanc est monstrueux. ÉVITER (Noirs): Accepter avec ...Nxe5 5.d4 Nc6! (pas Ng6?) 6.d5 Bb4! avec contre-jeu."
+    },
+    {
+      "name": "Piège de la symétrie",
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/1Bb1p3/4P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 0 5",
+      "highlights": ["b5", "c5", "a6"],
+      "desc": "4.Bb5 Bc5?! copie les Blancs mais 5.Nxe5! Nxe5 6.d4 gagne une pièce! Le Fou c5 et le Ce5 sont en prise. ÉVITER (Noirs): Jouer 4...Bb4! (cloue le Cc3) ou 4...Nd4 (attaque le Fb5)."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Espagnole 4 Cavaliers",
+      "moves": "4.Bb5 Bb4 5.0-0 0-0 6.d3",
+      "uci": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["b5", "b4", "d4"],
+      "white_plan": "Position solide et symétrique. Préparer d4 avec Bg5, Nd5 ou a3 pour chasser le Fb4. Jeu positionnel lent.",
+      "black_plan": "Maintenir la symétrie avec ...d6, ou casser avec ...Nd4! pour échanger des pièces et simplifier."
+    },
+    {
+      "name": "Italienne 4 Cavaliers",
+      "moves": "4.Bc4 Bc5 5.d3 d6 6.0-0",
+      "uci": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1c4 f8c5 d2d3 d7d6 e1g1",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["c4", "c5", "f7"],
+      "white_plan": "Plans typiques de l'Italienne: Be3, Qd2, puis chercher d4 ou attaquer avec Nd5, Bg5.",
+      "black_plan": "Position miroir. Jouer ...0-0, ...Be6, ...a6 puis chercher ...d5 ou ...Na5 pour échanger le Fc4."
+    },
+    {
+      "name": "Écossaise 4 Cavaliers",
+      "moves": "4.d4 exd4 5.Nxd4 Bb4 6.Nxc6 bxc6",
+      "uci": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 f3d4 f8b4 d4c6 b7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["d4", "c6", "e4"],
+      "white_plan": "Les Blancs ont un centre fort et les pions doublés c6 sont faibles. Jouer Bd3, 0-0 et exploiter l'avantage structurel.",
+      "black_plan": "Les pions doublés donnent le contrôle de d5! Jouer ...d5 rapidement, la paire de Fous compense la structure."
+    }
+  ]
+}

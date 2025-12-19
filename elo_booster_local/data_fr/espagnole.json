@@ -1,0 +1,93 @@
+{
+  "name": "PARTIE ESPAGNOLE",
+  "alt_name": "Ruy Lopez",
+  "moves": "1.e4 e5 2.Nf3 Nc6 3.Bb5",
+  "uci_moves": "e2e4 e7e5 g1f3 b8c6 f1b5",
+  "complexity": "Avancé",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Capablanca, Fischer, Carlsen",
+  
+  "idea": "Le Fou b5 met la pression sur le Cavalier c6 qui défend le pion e5. Les Blancs ne cherchent pas à gagner e5 immédiatement (Bxc6 dxc6 Nxe5? permet ...Qd4! récupérant le pion), mais créent une tension durable. L'objectif est de construire lentement avec c3-d4 pour dominer le centre. C'est l'ouverture la plus analysée de l'histoire des échecs.",
+
+  "highlights_green": ["d4", "d5", "e5"],
+  "highlights_red": ["c6", "f7"],
+
+  "errors_white": [
+    "Bxc6 trop tôt : donne la paire de Fous aux Noirs sans compensation",
+    "d4 sans c3 : après ...exd4, les Blancs perdent du temps à récupérer",
+    "Négliger le roque : le Roi au centre devient une cible"
+  ],
+  
+  "errors_black": [
+    "...Nxe4? prématuré : tombe dans le piège Mortimer ou Berlin",
+    "...f6? : affaiblit terriblement la diagonale h5-e8, invite Qh5+",
+    "...a6 Ba4 b5 Bb3 Na5? : le Cavalier en bord d'échiquier est mal placé"
+  ],
+
+  "development": [
+    ["Fou c1", "Développer en e3 (solide) ou g5 (agressif sur f6)"],
+    ["Cavalier b1", "Aller en c3 (classique) ou d2 (Breyer) pour soutenir e4"],
+    ["Tours", "Centraliser sur e1 (pression colonne e) et d1 (soutien d4)"],
+    ["Roi", "Roquer rapidement côté roi, c'est prioritaire"],
+    ["Dame", "Rester flexible - souvent e2 pour connecter les Tours"],
+    ["Pions", "Préparer c3 puis d4 pour un centre de pions idéal"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège Mortimer",
+      "fen": "r1bqkb1r/pppp1ppp/2n5/1B2p3/3nP3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 0 5",
+      "highlights": ["d4", "e5"],
+      "desc": "Après 4.Nc3 Nd4?? 5.Nxe5! gagne un pion car le Cd4 tombe ensuite. ÉVITER: Ne jamais jouer ...Nd4 si tôt! Développer normalement avec ...Nf6, ...Be7, ...0-0."
+    },
+    {
+      "name": "Noah's Ark",
+      "fen": "r1bqkbnr/3p1ppp/p1n1p3/1pp5/B3P3/2P2N2/PP1P1PPP/RNBQK2R w KQkq - 0 6",
+      "highlights": ["a4", "b3", "c4"],
+      "desc": "Après ...a6 Ba4 b5 Bb3, les Noirs jouent ...c5-c4 emprisonnant le Fou! ÉVITER (Blancs): Reculer en Bc2 à temps, ou jouer a4 pour casser la chaîne de pions."
+    },
+    {
+      "name": "Piège du Tarrasch",
+      "fen": "r1bqkb1r/2pp1ppp/p1n2n2/1p2p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 5",
+      "highlights": ["e5", "d5"],
+      "desc": "Après 5.Bxc6 dxc6 6.Nxe5?? 6...Qd4! attaque e5 ET e4 - les Noirs récupèrent avec avantage. ÉVITER (Blancs): Ne pas prendre e5! Jouer plutôt 0-0 ou d3."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Défense Morphy",
+      "moves": "3...a6 4.Ba4 Nf6 5.0-0 Be7 6.Re1",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1",
+      "eval": "+0.3",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["d4", "e5"],
+      "white_plan": "Jouer c3 puis d4 pour ouvrir le centre. La Tour e1 soutient e4 et prépare l'attaque.",
+      "black_plan": "Développer ...b5, ...Bb7, roquer, puis contre-attaquer au centre avec ...d5 au bon moment."
+    },
+    {
+      "name": "Défense Berlin",
+      "moves": "3...Nf6 4.0-0 Nxe4 5.d4 Nd6 6.Bxc6 dxc6 7.dxe5 Nf5",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["e5", "c6"],
+      "white_plan": "Finale technique! Exploiter la majorité de pions à l'aile roi et les pions doublés noirs.",
+      "black_plan": "La paire de Fous compense les pions doublés. Activer le Roi tôt et viser les finales."
+    },
+    {
+      "name": "Gambit Marshall",
+      "moves": "3...a6 4.Ba4 Nf6 5.0-0 Be7 6.Re1 b5 7.Bb3 0-0 8.c3 d5!?",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5",
+      "eval": "=",
+      "white_win": 50,
+      "black_win": 50,
+      "highlights": ["d5", "e4", "f2"],
+      "white_plan": "Accepter le gambit avec 9.exd5 Nxd5 10.Nxe5 Nxe5 11.Rxe5. Défendre précisément!",
+      "black_plan": "Attaque furieuse! Après ...Bd6, ...Qh4, ...Bg4 les Noirs ont une initiative dangereuse sur le Roi."
+    }
+  ]
+}

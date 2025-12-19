@@ -1,0 +1,136 @@
+{
+  "name": "DUTCH DEFENSE",
+  "alt_name": "",
+  "moves": "1.d4 f5",
+  "uci_moves": "d2d4 f7f5",
+  "complexity": "Intermediate",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Nakamura, Short, Malaniuk",
+  "idea": "The most aggressive reply to 1.d4! With ...f5, Black immediately fights for e4 and prepares a kingside attack. There are two main setups: the Stonewall (...d5, ...e6, ...c6, ...Bd6) with a solid pawn wall, or the Leningrad (...g6, ...Bg7, ...d6) with the fianchetto. Both lead to unbalanced, fighting positions. It's the opening for players who want to attack as Black!",
+  "highlights_green": [
+    "f5",
+    "e4",
+    "g5"
+  ],
+  "highlights_red": [
+    "e8",
+    "h5",
+    "g7"
+  ],
+  "errors_white": [
+    "Ignoring Black's kingside attack: ...g5, ...h5 can be dangerous",
+    "Playing e4 without preparation: ...fxe4 can be good for Black",
+    "Being too passive: White must use the center and the e5 square"
+  ],
+  "errors_black": [
+    "Weakening the King too much: f5 and g5 leave the King exposed",
+    "Forgetting development: ...Nf6, ...Be7/...Bd6, ...0-0 are essential",
+    "Playing ...e5 at the wrong time: can leave the f5 pawn weak"
+  ],
+  "development": [
+    [
+      "Knight g8",
+      "Nf6 is essential - controls e4 and prepares ...Ne4 after 0-0"
+    ],
+    [
+      "Pawn e",
+      "e6 supports f5 and frees the Bf8 - Stonewall structure"
+    ],
+    [
+      "Bishop f8",
+      "Be7 (solid) or Bd6 (aggressive, targets h2) depending on system"
+    ],
+    [
+      "King",
+      "Castle quickly! The h5-e8 diagonal is weak, the King must be safe"
+    ],
+    [
+      "Bishop c8",
+      "The Dutch problem! Comes out via d7-e8-h5 or stays passive"
+    ],
+    [
+      "Pawn g",
+      "The ...g5-g4 push is the main attack plan - open the g-file"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Queen Trap",
+      "fen": "rnbqkbnr/ppppp1pp/8/5p1Q/3P4/8/PPP1PPPP/RNB1KBNR b KQkq - 1 2",
+      "highlights": [
+        "h5",
+        "e8",
+        "f5"
+      ],
+      "desc": "2.Qh5+?! looks strong but after ...g6 3.Qh4 (or Qh3) Black plays ...Nf6 and the Queen is misplaced. AVOID (Black): Don't panic! ...g6 then normal development."
+    },
+    {
+      "name": "Staunton Gambit",
+      "fen": "rnbqkbnr/ppppp1pp/8/5p2/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2",
+      "highlights": [
+        "e4",
+        "f5",
+        "d5"
+      ],
+      "desc": "2.e4!? Staunton Gambit - pawn sacrifice to open lines. After ...fxe4 3.Nc3 Nf6 4.Bg5 White has activity. AVOID (Black): Accept with ...fxe4 then ...d5! to close the center."
+    },
+    {
+      "name": "Bishop Trap",
+      "fen": "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "highlights": [
+        "h3",
+        "g4",
+        "f5"
+      ],
+      "desc": "In the Leningrad, if White plays h3?! Black prepares ...g5-g4! opening the g-file. AVOID (White): Play Qc2 or Bf4 instead to control e4 without weakening the kingside."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Stonewall",
+      "moves": "2.c4 Nf6 3.g3 e6 4.Bg2 d5 5.Nf3 c6",
+      "uci": "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 d7d5 g1f3 c7c6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "d5",
+        "f5",
+        "e4"
+      ],
+      "white_plan": "Black's center is solid but the Bc8 is bad. Play b3/Bb2, Qc2 and look to exchange the bad Bishop or break with e3-e4.",
+      "black_plan": "Wall of pawns d5-e6-f5! The Knight goes to e4 via d7. Plan: ...Bd6, ...Qe7, ...Ne4, then kingside attack."
+    },
+    {
+      "name": "Leningrad",
+      "moves": "2.c4 Nf6 3.g3 g6 4.Bg2 Bg7 5.Nc3 0-0",
+      "uci": "d2d4 f7f5 c2c4 g8f6 g2g3 g7g6 f1g2 f8g7 b1c3 e8g8",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "g7",
+        "f5",
+        "e4"
+      ],
+      "white_plan": "Double fianchetto. White plays Nf3, 0-0, d5 (closes the Bg7) or Rb1/b4 for queenside attack.",
+      "black_plan": "The Bg7 is a monster! Plan: ...d6, ...Nc6, ...e5 (if possible) to open the diagonal. Attack ...g5-g4 if opportunity arises."
+    },
+    {
+      "name": "Classical",
+      "moves": "2.c4 Nf6 3.Nc3 e6 4.Nf3 Be7 5.Bg5",
+      "uci": "d2d4 f7f5 c2c4 g8f6 b1c3 e7e6 g1f3 f8e7 c1g5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "g5",
+        "e7",
+        "e4"
+      ],
+      "white_plan": "Classical development. The Bg5 pin bothers Black. Plan: e3, Bd3, Qc2, 0-0 then look for e4 at the right moment.",
+      "black_plan": "Play ...0-0, ...d6, ...Qe8 (frees the Queen for h5) and prepare ...Ne4 or ...e5. The Bishop comes out via d7-e8."
+    }
+  ]
+}

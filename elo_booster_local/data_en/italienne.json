@@ -1,0 +1,130 @@
+{
+  "name": "ITALIAN GAME",
+  "alt_name": "Giuoco Piano",
+  "moves": "1.e4 e5 2.Nf3 Nc6 3.Bc4",
+  "uci_moves": "e2e4 e7e5 g1f3 b8c6 f1c4",
+  "complexity": "Beginner",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Morphy, Greco, Kasparov",
+  "idea": "The Bc4 directly targets f7, the weakest point on the board at the start of the game (defended only by the King). White can choose between a rapid attack (Ng5, sacrifices on f7) or slow positional play with d3, 0-0, c3 then d4. This is the classic opening of the Italian Renaissance, ideal for learning the fundamental principles of open games.",
+  "highlights_green": [
+    "f7",
+    "d4",
+    "d5"
+  ],
+  "highlights_red": [
+    "f2",
+    "e4"
+  ],
+  "errors_white": [
+    "Premature d4 without c3: after ...exd4, White loses the center and time",
+    "Neglecting castling: the King in the center is vulnerable to tactics on the e-file",
+    "Qh5 too early (Scholar's Mate): easily parried by ...Qe7 or ...g6, and the Queen is exposed"
+  ],
+  "errors_black": [
+    "Premature ...Nxe4?: allows the Legal Trap with Bxf7+! or Nxf7 winning",
+    "...f6?: horribly weakens the a2-g8 diagonal and allows devastating sacrifices",
+    "Ignoring the threat on f7: always watch for Ng5 or Qb3 attacking f7 and b7"
+  ],
+  "development": [
+    [
+      "Bc1",
+      "Develop to e3 (solid, defends d4) or g5 (aggressive, pins Nf6)"
+    ],
+    [
+      "Nb1",
+      "Develop to c3 to control d5 and support d4"
+    ],
+    [
+      "Rooks",
+      "After 0-0, place Re1 on the semi-open e-file"
+    ],
+    [
+      "King",
+      "Kingside castling is priority - the King is safe and the Rook is active"
+    ],
+    [
+      "Queen",
+      "Avoid premature sorties (Qh5, Qf3) - keep flexible"
+    ],
+    [
+      "Pawns",
+      "Plan c3-d4 to build an ideal pawn center"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Legal Trap",
+      "fen": "r1bqkb1r/pppp1ppp/2n5/4p3/2B1n3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+      "highlights": [
+        "f7",
+        "e4"
+      ],
+      "desc": "After 4.Nc3 Nxe4?? 5.Bxf7+! Kxf7 6.Nxe4 wins. AVOID: Never take e4 with the Knight! Play ...Bc5 or ...Be7 instead to develop normally."
+    },
+    {
+      "name": "Fried Liver Attack",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p1N1/2B1P3/8/PPPP1PPP/RNBQK2R b KQkq - 0 4",
+      "highlights": [
+        "f7",
+        "d5"
+      ],
+      "desc": "4.Ng5 threatens Nxf7. If ...d5 5.exd5 Nxd5?? 6.Nxf7! wins. AVOID: After ...d5 exd5, play ...Na5! (not Nxd5) to chase the Bishop and recapture d5 later."
+    },
+    {
+      "name": "Scholar's Mate",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 0 3",
+      "highlights": [
+        "f7"
+      ],
+      "desc": "Qh5 + Bc4 threatens Qxf7#. Beginner's trap! AVOID: Play ...Qe7! (defends f7 and threatens Qxe4+), or ...g6 then ...Nf6. The White Queen will be misplaced."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Giuoco Piano",
+      "moves": "3...Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4 Bb4+",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d4 e5d4 c3d4 c5b4",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "d4",
+        "e4"
+      ],
+      "white_plan": "Accept the isolated pawns after Nc3 or Bd2. The d4-e4 pawn center gives space and open lines for attacking.",
+      "black_plan": "Put pressure on e4 with ...d5 at the right moment. The Bb4 hinders White's development. Look to exchange pieces."
+    },
+    {
+      "name": "Evans Gambit",
+      "moves": "3...Bc5 4.b4!? Bxb4 5.c3 Ba5",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5",
+      "eval": "=",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "b4",
+        "d4",
+        "a5"
+      ],
+      "white_plan": "Sacrifice the b4 pawn for ultra-rapid development. After d4, White has a powerful center and all pieces active.",
+      "black_plan": "Accept the gambit and consolidate. Play ...d6, ...Bb6 and return the pawn if necessary to complete development safely."
+    },
+    {
+      "name": "Two Knights Defense",
+      "moves": "3...Nf6 4.Ng5 d5 5.exd5 Na5",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "d5",
+        "c4",
+        "f7"
+      ],
+      "white_plan": "After Bb5+ c6 dxc6 bxc6, White has an extra pawn but Black has strong initiative. Very tactical play!",
+      "black_plan": "Immediate counter-attack! ...Na5 chases the Bc4 and prepares ...c6 to recover the d5 pawn with good play."
+    }
+  ]
+}

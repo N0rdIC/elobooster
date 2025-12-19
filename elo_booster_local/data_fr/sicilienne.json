@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE SICILIENNE",
+  "alt_name": "",
+  "moves": "1.e4 c5",
+  "uci_moves": "e2e4 c7c5",
+  "complexity": "Avancé",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Kasparov, Fischer, Nakamura",
+  
+  "idea": "Les Noirs refusent la symétrie de 1...e5 et combattent le centre avec le pion c. Après d4 cxd4 Nxd4, les Noirs ont échangé un pion de l'aile (c) contre un pion central (d) - excellent deal! Cela crée un déséquilibre immédiat: les Blancs ont plus d'espace au centre, mais les Noirs ont une majorité de pions à l'aile dame et la colonne c semi-ouverte. C'est l'ouverture la plus combative et la plus jouée au haut niveau.",
+
+  "highlights_green": ["d4", "d5", "b5"],
+  "highlights_red": ["d6", "e6", "b6"],
+
+  "errors_white": [
+    "Jouer d4 sans Nf3 d'abord : après ...cxd4 Qxd4?? ...Nc6 gagne du temps sur la Dame",
+    "Ignorer la contre-attaque ...b5-b4 : les Noirs peuvent chasser le Cc3 et créer des faiblesses",
+    "Pousser les pions sans développer : l'avance f4-f5 ou g4-g5 prématurée laisse le Roi exposé"
+  ],
+  
+  "errors_black": [
+    "Jouer ...d5 trop tôt : après exd5 Qxd5, la Dame se fait chasser par Nc3 et les Blancs développent avec tempo",
+    "Négliger le développement du Cavalier f6 : ce Cavalier est crucial pour le contrôle de d5 et e4",
+    "Laisser un Cavalier blanc s'installer sur d5 : sans Cf6 pour l'échanger, ce Cavalier devient dominant"
+  ],
+
+  "development": [
+    ["Cavalier f6", "Sortir rapidement - contrôle d5, attaque e4, essentiel dans toutes les variantes"],
+    ["Pion d", "Choisir entre ...d6 (solide, Scheveningen/Najdorf) ou ...d5 en un coup (agressif)"],
+    ["Fou f8", "Fianchetto ...g6/...Bg7 (Dragon) ou ...Be7 (classique) selon la variante"],
+    ["Cavalier b8", "Développer en c6 (classique) ou en d7 (Scheveningen) pour soutenir ...e5"],
+    ["Tours", "La Tour a8 va en c8 pour la colonne c semi-ouverte - pression sur c2"],
+    ["Roi", "Petit roque habituel, mais le grand roque est possible dans certaines variantes"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège Sibérien",
+      "fen": "rnb1kb1r/pp2pppp/5n2/2pq4/3P4/N1P5/PP3PPP/R1BQKBNR b KQkq - 1 5",
+      "highlights": ["b5", "c7", "a3"],
+      "desc": "Alapine: 2.c3 d5 3.exd5 Qxd5 4.d4 Nf6?? 5.Na3! Le Ca3 va en b5, attaquant c7. ÉVITER: Jouer 4...e6! ou 4...Nc6 au lieu de Nf6 pour contrôler b5."
+    },
+    {
+      "name": "Piège du Dragon",
+      "fen": "r4rk1/pp1bppbp/2np1np1/q7/3NP1P1/2N1BP2/PPPQ3P/2KR1B1R w - - 0 11",
+      "highlights": ["d5", "f6", "c3"],
+      "desc": "Attaque Yougoslave: si les Noirs roulent avec ...Rc8 sans préparation, Bxf6! Bxf6 Nd5! est dévastateur. ÉVITER: Jouer d'abord ...Rfc8 et ...Ne5 avant ...Rc8."
+    },
+    {
+      "name": "Piège du Najdorf",
+      "fen": "rn2kb1r/1p1p1ppp/pq2pn2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R w KQkq - 0 7",
+      "highlights": ["b6", "f7", "e6"],
+      "desc": "Après 6.Bg5 e6 7.f4 Qb6?? 8.Qd2! (ou Nb3) la Dame est mal placée, b6 et f7 deviennent faibles. ÉVITER: Jouer ...Be7 ou ...Nbd7 avant de sortir la Dame."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Dragon",
+      "moves": "2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6",
+      "uci": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6",
+      "eval": "=",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["g7", "c8", "h4"],
+      "white_plan": "Attaque Yougoslave! f3, Be3, Qd2, 0-0-0 puis g4-g5-h4-h5 pour ouvrir la colonne h et mater sur h7/h8.",
+      "black_plan": "Le Fou g7 est un monstre sur la grande diagonale. Jouer ...Rc8, ...Qa5, ...Nc6-e5 et pousser ...b5-b4 pour contre-attaquer."
+    },
+    {
+      "name": "Najdorf",
+      "moves": "2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6",
+      "uci": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["a6", "b5", "e5"],
+      "white_plan": "Plusieurs options: 6.Be3 (Anglaise), 6.Bg5 (Venimeuse), 6.Be2 (Classique), 6.f3 (Anglaise lente). Pression centrale et jeu sur les deux ailes.",
+      "black_plan": "Flexibilité maximale! ...a6 prépare ...b5 et empêche Bb5/Nb5. Choisir ensuite entre ...e5 (espace) ou ...e6 (solide) selon les Blancs."
+    },
+    {
+      "name": "Sveshnikov",
+      "moves": "2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e5",
+      "uci": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["d5", "d6", "f5"],
+      "white_plan": "Après Ndb5 d6, le Cavalier s'installe en d5 via c3. Exploiter le trou d5 et la faiblesse du pion d6 arriéré.",
+      "black_plan": "Accepter la faiblesse en d5 pour l'activité! La paire de Fous, la case f5 pour le Cavalier et la poussée ...f5 compensent largement."
+    }
+  ]
+}

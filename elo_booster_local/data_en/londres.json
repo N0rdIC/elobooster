@@ -1,0 +1,135 @@
+{
+  "name": "LONDON SYSTEM",
+  "alt_name": "London System",
+  "moves": "1.d4 d5 2.Bf4",
+  "uci_moves": "d2d4 d7d5 c1f4",
+  "complexity": "Beginner",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Carlsen, Kamsky, Jobava",
+  "idea": "The easiest system to learn! White plays the same moves regardless of Black's response: Bf4, e3, Nf3, Bd3, c3, Nbd2, 0-0. The structure is rock solid and the plan is always the same: build a pawn pyramid (d4-e3-c3) then attack on the kingside with Ne5, Qf3 or h4-h5. Ideal for beginners who want to avoid all theory and play familiar positions every game.",
+  "highlights_green": [
+    "f4",
+    "e5",
+    "h7"
+  ],
+  "highlights_red": [
+    "c1",
+    "f4"
+  ],
+  "errors_white": [
+    "Letting the Bf4 get exchanged by ...Bd6: the Bishop is the key piece, retreat to g3 if threatened",
+    "Playing e3 BEFORE Bf4: the Bishop stays locked in! Always bring out the Bishop first",
+    "Forgetting to play c3: this pawn protects d4 and prevents ...Nb4 or ...Bb4"
+  ],
+  "errors_black": [
+    "Playing passively: Black must counter-attack in the center with ...c5 or ...e5",
+    "Letting the white Knight settle on e5: this Knight becomes a monster, chase it with ...Nd7",
+    "Ignoring the h4-h5 attack: if White pushes h5 without opposition, the attack can be strong"
+  ],
+  "development": [
+    [
+      "Bc1",
+      "ALWAYS to f4 on move 2 or 3 - that's the signature of the London!"
+    ],
+    [
+      "e3 pawn",
+      "Supports d4 and frees the Bf1 - play AFTER Bf4"
+    ],
+    [
+      "Ng1",
+      "Classical Nf3, then Ne5 when possible - strong square"
+    ],
+    [
+      "Bf1",
+      "Bd3 targets h7, the Bd3+Qc2 battery can be deadly"
+    ],
+    [
+      "Nb1",
+      "Nbd2 then Ne5 or Nf1-e3 to control central squares"
+    ],
+    [
+      "King",
+      "Classical kingside castle - the position is very safe"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Bishop Trap",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3",
+      "highlights": [
+        "f4",
+        "d6",
+        "g3"
+      ],
+      "desc": "If Black plays ...Bd6 to exchange the Bishop, retreat Bg3! After ...Bxg3 hxg3 White has the open h-file for attack. AVOID (White): Never let it be taken on f4 - Bg3 keeps the Bishop."
+    },
+    {
+      "name": "Knight Trap",
+      "fen": "r1bqkb1r/ppp1pppp/2n2n2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "highlights": [
+        "e5",
+        "h7",
+        "d3"
+      ],
+      "desc": "White prepares Ne5. If Black ignores: Ne5 Nxe5?! dxe5 and White dominates. Then Bd3 and Qh5 threatens mate on h7! AVOID (Black): Play ...e6 and ...Bd6 to control e5."
+    },
+    {
+      "name": "Queen Trap",
+      "fen": "r1bqkb1r/ppp2ppp/2n1pn2/3p4/3P1B2/3BPN2/PPP2PPP/RN1QK2R w KQkq - 0 5",
+      "highlights": [
+        "d3",
+        "c2",
+        "h7"
+      ],
+      "desc": "After Bd3 and 0-0, the Qc2 + Bd3 battery targets h7. If Black castles without defending: Qc2 threatens Bxh7+! AVOID (Black): Play ...g6 or ...h6 before castling, or keep a Knight on f6."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical London",
+      "moves": "2...Nf6 3.e3 e6 4.Nf3 Bd6 5.Bg3",
+      "uci": "d2d4 d7d5 c1f4 g8f6 e2e3 e7e6 g1f3 f8d6 f4g3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "g3",
+        "e5",
+        "d3"
+      ],
+      "white_plan": "After Bxg3 hxg3, the h-file is open! Play Bd3, c3, Nbd2-e5 and Qc2 with pressure on h7.",
+      "black_plan": "Exchange the Bishop on g3 to weaken the attack. Play ...c5 to counter-attack in the center and free the game."
+    },
+    {
+      "name": "Anti-King's Indian",
+      "moves": "1.d4 Nf6 2.Bf4 g6 3.Nc3 d5 4.e3",
+      "uci": "d2d4 g8f6 c1f4 g7g6 b1c3 d7d5 e2e3",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "f4",
+        "c3",
+        "h4"
+      ],
+      "white_plan": "Against the fianchetto, the London stays solid. Plan: Nf3, Be2 or Bd3, 0-0 then h4-h5 to attack the fianchettoed King.",
+      "black_plan": "The Bg7 is less effective with solid d4. Play ...c5, ...Nc6 and seek ...e5 to open the diagonal."
+    },
+    {
+      "name": "Jobava London",
+      "moves": "2...Nf6 3.Nc3 e6 4.Nb5",
+      "uci": "d2d4 d7d5 c1f4 g8f6 b1c3 e7e6 c3b5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "b5",
+        "c7",
+        "a6"
+      ],
+      "white_plan": "Aggressive variation! Nc3 instead of Nf3 to jump to b5 and threaten c7. After ...Na6 or ...c6, White keeps the initiative.",
+      "black_plan": "Don't panic! Play ...a6 or ...c6 to chase the Knight. Then ...Bd6 and ...0-0 with a normal position."
+    }
+  ]
+}

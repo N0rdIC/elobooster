@@ -1,0 +1,136 @@
+{
+  "name": "FRENCH DEFENSE",
+  "alt_name": "",
+  "moves": "1.e4 e6",
+  "uci_moves": "e2e4 e7e6",
+  "complexity": "Intermediate",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Botvinnik, Petrosian, Morozevich",
+  "idea": "Black prepares ...d5 to contest the center immediately. Unlike the Caro-Kann, the Bc8 is locked behind the e6 pawn - that's the price to pay! In exchange, Black gets a solid structure and a clear plan: attack the white pawn chain at its base (d4) with ...c5. The French creates unbalanced positions where both sides have clear plans - White attacks on the kingside, Black counter-attacks in the center and on the queenside.",
+  "highlights_green": [
+    "d5",
+    "c5",
+    "f6"
+  ],
+  "highlights_red": [
+    "e6",
+    "c8",
+    "d4"
+  ],
+  "errors_white": [
+    "Not choosing a system: you must decide between e5 (Advance), exd5 (Exchange) or Nc3/Nd2 (Tarrasch/Winawer)",
+    "Ignoring ...c5: this move undermines d4, if you don't react the chain collapses",
+    "Exchanging exd5 without reason: frees the Bc8 and gives Black easy play"
+  ],
+  "errors_black": [
+    "Forgetting to attack the chain: ...c5 is the thematic move, without it Black is passive",
+    "Letting the Bc8 die: you must find a plan to activate it (...b6/...Ba6 or ...Qb6/...Bd7)",
+    "Playing ...f6 at the wrong moment: this move weakens e6 and can be premature"
+  ],
+  "development": [
+    [
+      "d5 pawn",
+      "Play ...d5 on move 2 - that's the whole point of 1...e6"
+    ],
+    [
+      "c5 pawn",
+      "The key move! Attacks the base of the d4 chain, play it quickly"
+    ],
+    [
+      "Bc8",
+      "The French problem! Solutions: ...b6/...Ba6, ...Qb6/...Bd7, or sacrifice on b4"
+    ],
+    [
+      "Knights",
+      "Nd7 supports ...c5 and can go to f6 or b6, Nf6 (if no Advance) attacks e4"
+    ],
+    [
+      "Bf8",
+      "In Winawer ...Bb4 pins the Nc3, otherwise ...Be7 solid or ...Bd6 active"
+    ],
+    [
+      "King",
+      "Often kingside castle, but sometimes the King stays in center in Winawer"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Advance Trap",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+      "highlights": [
+        "e5",
+        "c5",
+        "d4"
+      ],
+      "desc": "After 3.e5, if Black plays ...c5 4.c3 Nc6 5.Nf3 Qb6?! 6.Bd3! (not a3?? Qxb2) White is well developed. AVOID (Black): Play ...Bd7 and ...Bb5 to exchange the bad Bishop, or ...Nh6-f7."
+    },
+    {
+      "name": "Winawer Trap",
+      "fen": "rnbqk1nr/ppp2ppp/4p3/3pP3/1b1P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4",
+      "highlights": [
+        "b4",
+        "c3",
+        "g7"
+      ],
+      "desc": "3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 and White has the bishop pair and aims for Qg4 attacking g7! AVOID (Black): Play ...Qc7! (defends g7) or ...Ne7 before ...Qa5."
+    },
+    {
+      "name": "Exchange Trap",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3",
+      "highlights": [
+        "d5",
+        "c5",
+        "e6"
+      ],
+      "desc": "3.exd5 exd5 seems boring but if Black is not careful: 4.Bd3 Nc6 5.c3 Bd6?! 6.Qh5! creates threats on h7 and d5. AVOID (Black): Play ...Nf6 quickly to control h5."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Advance Variation",
+      "moves": "2.d4 d5 3.e5 c5 4.c3 Nc6 5.Nf3",
+      "uci": "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "e5",
+        "c5",
+        "d4"
+      ],
+      "white_plan": "Keep the e5-d4-c3 chain. Develop Bd3, 0-0, and attack on the kingside with Na3-c2, f4 then pawn assault.",
+      "black_plan": "Attack d4! ...Qb6 puts pressure, ...cxd4 cxd4 then ...Nh6-f7 and ...Be7. The Bc8 comes out via d7-b5."
+    },
+    {
+      "name": "Winawer",
+      "moves": "2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+",
+      "uci": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "b4",
+        "c3",
+        "g7"
+      ],
+      "white_plan": "After bxc3, damaged structure but bishop pair! Qg4 threatens g7, Bd3, Ne2 and kingside attack.",
+      "black_plan": "...Qc7 defends g7, ...cxd4 cxd4 creates a white isolated pawn. Plans: ...Ne7-f5 or ...Qa5+, ...Bd7, long castle."
+    },
+    {
+      "name": "Tarrasch",
+      "moves": "2.d4 d5 3.Nd2 Nf6 4.e5 Nfd7 5.Bd3",
+      "uci": "e2e4 e7e6 d2d4 d7d5 b1d2 g8f6 e4e5 f6d7 f1d3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "d2",
+        "e5",
+        "f7"
+      ],
+      "white_plan": "The Nd2 avoids the ...Bb4 pin. Play c3, Ne2, 0-0 and attack with f4-f5 or Qg4.",
+      "black_plan": "Classic plan: ...c5, ...Nc6, ...Qb6 (pressure on b2 and d4). The Bishop comes out via ...b6/...Ba6 to exchange Bd3."
+    }
+  ]
+}

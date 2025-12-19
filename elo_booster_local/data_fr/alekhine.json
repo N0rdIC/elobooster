@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE ALEKHINE",
+  "alt_name": "",
+  "moves": "1.e4 Nf6",
+  "uci_moves": "e2e4 g8f6",
+  "complexity": "Intermédiaire",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Alekhine, Fischer, Carlsen",
+  
+  "idea": "La défense la plus provocatrice! Les Noirs attaquent e4 immédiatement avec le Cavalier et INVITENT les Blancs à avancer leurs pions. Après 2.e5 Nd5 3.d4 d6, les Blancs ont un centre imposant mais les Noirs vont l'attaquer avec ...c5, ...Nc6, ...e6. L'idée géniale d'Alekhine: les pions avancés deviennent des cibles! C'est une ouverture pour joueurs courageux qui aiment le contre-jeu dynamique.",
+
+  "highlights_green": ["d5", "c5", "f6"],
+  "highlights_red": ["e5", "d4", "c4"],
+
+  "errors_white": [
+    "Pousser tous les pions (e5, d4, c4, f4) : le centre devient surtendu et les Noirs l'attaquent",
+    "Ne pas jouer c4 pour chasser le Cd5 : le Cavalier reste centralisé et gêne les Blancs",
+    "Ignorer ...c5 : ce coup sape d4, il faut défendre le centre ou l'échanger"
+  ],
+  
+  "errors_black": [
+    "Laisser les pions blancs s'installer sans les attaquer : ...c5 et ...d6 sont urgents",
+    "Reculer le Cavalier en f6 trop tôt : exf6 donne aux Blancs la colonne e ouverte",
+    "Jouer ...g6 sans préparation : le fianchetto est lent, le centre blanc peut écraser"
+  ],
+
+  "development": [
+    ["Cavalier f6", "Attaque e4, puis recule en d5 après e5 - c'est le voyage du Cavalier!"],
+    ["Pion d6", "Attaque e5 immédiatement - coup thématique essentiel"],
+    ["Pion c5", "Attaque d4 - le deuxième coup clé pour saper le centre"],
+    ["Cavalier b8", "Nc6 met la pression sur d4 et e5 - renforce l'attaque du centre"],
+    ["Fou c8", "Sortir en f5, g4 ou e6 selon la structure - reste flexible"],
+    ["Fou f8", "e6 puis Be7 (solide) ou g6/Bg7 (fianchetto) dans certaines lignes"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de la Chase",
+      "fen": "rnbqkb1r/pppppppp/8/3nP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+      "highlights": ["d5", "c4", "e5"],
+      "desc": "Après 2.e5 Nd5 3.d4, si les Noirs jouent ...d6 4.c4 Nb6 5.f4?! (trop agressif) ...dxe5 6.fxe5 Nc6! et le centre blanc s'effondre. ÉVITER (Blancs): Jouer 5.Nf3 solidement au lieu de f4."
+    },
+    {
+      "name": "Piège des 4 Pions",
+      "fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 4",
+      "highlights": ["c4", "d4", "e5"],
+      "desc": "Variante des 4 Pions: 4.c4 Nb6 5.f4 (4 pions!) mais après ...dxe5 6.fxe5 Nc6 7.Be3 Bf5! les Noirs ont un excellent contre-jeu. ÉVITER (Blancs): Cette variante est double tranchant - préférer 5.exd6."
+    },
+    {
+      "name": "Piège du Cavalier",
+      "fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 4",
+      "highlights": ["d5", "c4", "b6"],
+      "desc": "Après 4.Nf3 si les Noirs jouent ...Bg4?! 5.c4! Nb6 6.Be2 et le Cavalier doit encore bouger (Nc6 ou Na6), perdant du temps. ÉVITER (Noirs): Jouer ...dxe5 ou ...g6 avant ...Bg4."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Moderne",
+      "moves": "2.e5 Nd5 3.d4 d6 4.Nf3 dxe5 5.Nxe5",
+      "uci": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 d6e5 f3e5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["e5", "d4", "c5"],
+      "white_plan": "Le Ce5 est fort au centre. Développer Bd3, 0-0, c4 (chasse le Cd5), puis attaque avec f4 ou Qg4.",
+      "black_plan": "...c6 prépare ...Nc7, ou ...Nd7 attaque le Ce5. Puis ...e6, ...Be7, ...0-0 avec position solide."
+    },
+    {
+      "name": "Variante des 4 Pions",
+      "moves": "2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.f4 dxe5 6.fxe5 Nc6",
+      "uci": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["f4", "e5", "c6"],
+      "white_plan": "Centre massif mais fragile. Jouer Be3, Nc3, Nf3 et défendre les pions. L'attaque peut être forte si les Noirs errent.",
+      "black_plan": "Attaquer le centre! ...Bg4 (cloue Nf3), ...e6, ...Bb4+ puis ...Bf5 ou ...f6 pour démolir e5."
+    },
+    {
+      "name": "Variante d'Échange",
+      "moves": "2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.exd6 exd6",
+      "uci": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 e7d6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["d6", "c4", "d4"],
+      "white_plan": "Position plus calme. Les Blancs ont plus d'espace. Nc3, Nf3, Be2, 0-0 puis pression sur d6 isolé.",
+      "black_plan": "Le pion d6 est isolé mais les pièces sont actives. ...Be7, ...0-0, ...Nc6, ...Bf5 et chercher ...d5 pour libérer."
+    }
+  ]
+}

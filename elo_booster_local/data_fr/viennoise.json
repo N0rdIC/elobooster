@@ -1,0 +1,93 @@
+{
+  "name": "PARTIE VIENNOISE",
+  "alt_name": "Vienna Game",
+  "moves": "1.e4 e5 2.Nc3",
+  "uci_moves": "e2e4 e7e5 b1c3",
+  "complexity": "Débutant",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Spielmann, Mieses, Tseshkovsky",
+  
+  "idea": "Une ouverture agressive et sous-estimée! Au lieu du classique 2.Nf3, les Blancs jouent 2.Nc3 pour préparer f4 (Gambit Viennois) ou Bc4 avec attaque directe sur f7. Le Cavalier c3 soutient d5 et prépare le central e4. C'est une excellente alternative aux ouvertures classiques - les Noirs sont souvent surpris et mal préparés. Plans simples mais dangereux!",
+
+  "highlights_green": ["c3", "f4", "f7"],
+  "highlights_red": ["f2", "e5"],
+
+  "errors_white": [
+    "Jouer passivement après Nc3 : il faut enchaîner avec f4 ou Bc4 pour justifier l'ordre des coups",
+    "Oublier la faiblesse de f2 : sans Nf3, la case f2 est moins protégée",
+    "Ne pas exploiter le centre : e4 est fort, il faut le soutenir avec d3 ou f3"
+  ],
+  
+  "errors_black": [
+    "Jouer ...Nc6 automatiquement : permet Bc4 et Qh5 avec attaque rapide",
+    "Ignorer la menace f4 : le Gambit Viennois peut être dangereux si mal géré",
+    "Sous-estimer l'initiative blanche : la Viennoise peut mener à des attaques mortelles"
+  ],
+
+  "development": [
+    ["Cavalier c3", "Soutient e4 et prépare d5 - développement logique"],
+    ["Pion f4", "Le Gambit Viennois! Ouvre la colonne f et attaque e5"],
+    ["Fou f1", "Bc4 vise f7 - combiné avec Qh5 c'est dangereux"],
+    ["Dame", "Qh5 dans certaines lignes menace mat en f7"],
+    ["Cavalier g1", "Nf3 ou Nge2 selon le plan (f4 ou non)"],
+    ["Roi", "Petit roque après Bc4/Be2 et Nf3"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de Frankenstein",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR w KQkq - 4 4",
+      "highlights": ["c4", "e4", "g4"],
+      "desc": "3.Bc4 Nf6 4.d3?! ...Nxe4! 5.Nxe4 d5 gagne une pièce car le Fc4 et Ce4 sont en prise! ÉVITER (Blancs): Jouer 4.d3 seulement après f3, ou jouer 3.f4 directement."
+    },
+    {
+      "name": "Gambit Viennois",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 3",
+      "highlights": ["f4", "e5", "d4"],
+      "desc": "3.f4!? exf4 et les Blancs sacrifient un pion pour des lignes ouvertes. Si les Noirs acceptent, 4.Nf3 avec compensation. ÉVITER (Noirs): Accepter avec ...exf4 mais jouer solidement, ou décliner avec ...d6."
+    },
+    {
+      "name": "Attaque Max Lange",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR b KQkq - 3 3",
+      "highlights": ["c4", "f7", "h5"],
+      "desc": "3.Bc4 et si ...Bc5?! 4.Qg4! menace g7 et f7. Les Noirs doivent défendre précisément. ÉVITER (Noirs): Jouer ...Nf6 d'abord pour contrôler g4 et e4."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Gambit Viennois",
+      "moves": "2...Nf6 3.f4 d5 4.fxe5 Nxe4 5.Nf3",
+      "uci": "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 g1f3",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["f4", "e4", "e5"],
+      "white_plan": "Position ouverte et tactique. Développer Bd3, 0-0 et attaquer le Ce4. d3 pour chasser le Cavalier.",
+      "black_plan": "Le Ce4 est actif mais exposé. ...Bc5 ou ...Be7, ...0-0, ...Nc6 avec jeu actif."
+    },
+    {
+      "name": "Variante Falkbeer",
+      "moves": "2...Nf6 3.Bc4 Nxe4 4.Qh5 Nd6 5.Bb3 Nc6",
+      "uci": "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3 b8c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["h5", "d6", "f7"],
+      "white_plan": "Qh5 met la pression sur f7 et e5. Nf3, d3, 0-0 avec attaque continue.",
+      "black_plan": "Défendre f7 avec le Cd6. ...Be7, ...0-0, puis ...Nf5 pour bloquer l'attaque."
+    },
+    {
+      "name": "Variante Classique",
+      "moves": "2...Nc6 3.Bc4 Bc5 4.Qg4 Qf6 5.Nd5 Qxf2+",
+      "uci": "e2e4 e7e5 b1c3 b8c6 f1c4 f8c5 d1g4 d8f6 c3d5 f6f2",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["g4", "d5", "f2"],
+      "white_plan": "Position tactique folle! Après Kd1, les Blancs ont des pièces actives mais le Roi est exposé.",
+      "black_plan": "La Dame f2 est agressive. ...Kd8 met le Roi en sécurité, puis développer et attaquer."
+    }
+  ]
+}

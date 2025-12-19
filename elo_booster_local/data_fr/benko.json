@@ -1,0 +1,93 @@
+{
+  "name": "GAMBIT BENKO",
+  "alt_name": "Gambit Volga",
+  "moves": "1.d4 Nf6 2.c4 c5 3.d5 b5",
+  "uci_moves": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5",
+  "complexity": "Intermédiaire",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Benko, Topalov, Ivanchuk",
+  
+  "idea": "Le gambit positionnel par excellence! Les Noirs sacrifient un pion (parfois deux avec ...a6) pour obtenir une pression durable sur les colonnes a et b ouvertes. Ce n'est pas un gambit pour mater, mais pour créer une pression à long terme. Le Fou g7 en fianchetto et les Tours sur a8-b8 visent les pions a2 et b2. Même en finale, la pression continue! C'est un gambit que les Blancs détestent car il est difficile à réfuter et ennuyeux à défendre.",
+
+  "highlights_green": ["a1", "b2", "g7"],
+  "highlights_red": ["b5", "a6", "d5"],
+
+  "errors_white": [
+    "Garder le pion b5 à tout prix : cela coûte du temps et les Noirs obtiennent leur pression",
+    "Jouer passivement : les Blancs doivent contre-attaquer au centre ou à l'aile roi, pas défendre",
+    "Négliger le développement : si les Blancs jouent a4, Ra3 etc. pour défendre, ils prennent du retard"
+  ],
+  
+  "errors_black": [
+    "Oublier de jouer ...g6/...Bg7 : le fianchetto est essentiel pour la pression sur la grande diagonale",
+    "Ne pas mettre les Tours sur a8 et b8 : c'est toute l'idée du gambit! Ta8 et Rb8 sont thématiques",
+    "Échanger les pièces sans raison : la pression vient des pièces, pas des pions"
+  ],
+
+  "development": [
+    ["Pion b5", "Le sacrifice! Après cxb5 a6 bxa6, les colonnes a et b sont ouvertes"],
+    ["Pion g6 + Fou", "g6 puis Bg7 - le Fou vise a1 et le centre sur la grande diagonale"],
+    ["Tours", "Ta8 et Rb8 (ou Rfb8 après roque) - la pression sur a2 et b2 est le plan"],
+    ["Cavalier b8", "Nbd7 puis Nb6 - le Cavalier vise c4 ou a4 pour renforcer la pression"],
+    ["Roi", "Petit roque après ...Bg7 - position sûre et Tour f8 libérée pour b8"],
+    ["Dame", "Qa5 ou Qb6 pour renforcer la pression sur l'aile dame"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Gambit Complet",
+      "fen": "rnbqkb1r/p2ppppp/5n2/1PpP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 4",
+      "highlights": ["b5", "a6", "a1"],
+      "desc": "Après 4.cxb5 a6! (deuxième sacrifice) 5.bxa6 Bxa6 et les Noirs ont deux colonnes ouvertes pour le prix de deux pions. ÉVITER (Blancs): Accepter mais contre-attaquer vite au centre avec e4, Nc3, Nf3."
+    },
+    {
+      "name": "Piège de la Diagonale",
+      "fen": "rn1qkb1r/p2ppppp/b4n2/1PpP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 5",
+      "highlights": ["a6", "f1", "g7"],
+      "desc": "Le Fou a6 vise f1, empêchant le développement naturel! Si les Blancs jouent e4?? le Fou prend f1. ÉVITER (Blancs): Jouer Nf3, e3 (pas e4), puis développer le Fou en e2 ou b5."
+    },
+    {
+      "name": "Piège de la Tour",
+      "fen": "r4rk1/p2pppbp/1qn2np1/1PpP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 0 9",
+      "highlights": ["b6", "b2", "a1"],
+      "desc": "Position typique. Les Tours noires vont sur a8 et b8, la Dame b6 vise b2. Si les Blancs sont passifs, la pression devient insupportable. ÉVITER (Blancs): Jouer activement! e4, Re1, Bf4 et contre-attaquer."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Gambit Accepté",
+      "moves": "4.cxb5 a6 5.bxa6 Bxa6 6.Nc3 d6 7.Nf3 g6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 g1f3 g7g6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["a6", "g6", "a1"],
+      "white_plan": "Contre-attaque! e4 (prend de l'espace), Nd2 (protège b2), puis 0-0, Re1, Bf4 et jeu actif au centre.",
+      "black_plan": "Pression classique. ...Bg7, ...0-0, ...Nbd7, ...Qa5 ou ...Qb6, puis ...Rfb8 et ...Rb8-b4 ou ...Nb6-c4."
+    },
+    {
+      "name": "Gambit Décliné (b6)",
+      "moves": "4.Nf3 g6 5.b6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3 g7g6 b5b6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["b6", "g6", "a7"],
+      "white_plan": "Garder le pion avancé en b6 gêne les Noirs. Développer Nc3, e4, Be2, 0-0 avec espace et pion passé.",
+      "black_plan": "Récupérer le pion b6 avec ...Qxb6 ou ...Bg7/...0-0/...Na6-c7xb6. La position reste déséquilibrée."
+    },
+    {
+      "name": "Variante Fianchetto",
+      "moves": "4.cxb5 a6 5.bxa6 g6 6.Nc3 Bxa6 7.g3 d6 8.Bg2",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 g7g6 b1c3 c8a6 g2g3 d7d6 f1g2",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["g2", "g7", "a6"],
+      "white_plan": "Double fianchetto! Le Bg2 contrôle le centre et défend. Nf3, 0-0, Rb1, puis b3 et Bb2 possible.",
+      "black_plan": "Les deux Fous sont actifs! ...Bg7, ...0-0, ...Nbd7-b6, ...Qa5 et la pression habituelle sur l'aile dame."
+    }
+  ]
+}

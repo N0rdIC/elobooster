@@ -1,0 +1,135 @@
+{
+  "name": "SLAV DEFENSE",
+  "alt_name": "",
+  "moves": "1.d4 d5 2.c4 c6",
+  "uci_moves": "d2d4 d7d5 c2c4 c7c6",
+  "complexity": "Intermediate",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Lasker, Euwe, Anand",
+  "idea": "The most solid reply to the Queen's Gambit! With ...c6, Black defends d5 while keeping the diagonal open for the Bc8 (unlike the QGD with ...e6). After ...Nf6, ...Bf5 develops the Bishop BEFORE ...e6. The Slav leads to solid, strategic positions where Black has no weaknesses. It's the favorite defense of Lasker, Euwe, and many modern grandmasters who want reliability!",
+  "highlights_green": [
+    "c6",
+    "f5",
+    "d5"
+  ],
+  "highlights_red": [
+    "c4",
+    "e6"
+  ],
+  "errors_white": [
+    "Exchanging cxd5 too early: releases the tension and Black equalizes",
+    "Ignoring the Bf5: this Bishop is Black's best piece, challenge it",
+    "Playing passively: White must use the space advantage"
+  ],
+  "errors_black": [
+    "Playing ...e6 before ...Bf5: blocks the Bishop forever",
+    "Taking on c4 without a plan: ...dxc4 should be prepared",
+    "Being too passive: ...c5 or ...e5 must come to challenge White's center"
+  ],
+  "development": [
+    [
+      "Pawn c6",
+      "Supports d5 and prepares ...Bf5 - play BEFORE ...e6!"
+    ],
+    [
+      "Bishop c8",
+      "THE key piece! Develop to f5 (classical) or g4 before closing with ...e6"
+    ],
+    [
+      "Knight g8",
+      "Nf6 attacks e4 and develops - natural move"
+    ],
+    [
+      "Knight b8",
+      "Nbd7 (flexible, supports Nf6) is often better than Nc6"
+    ],
+    [
+      "Pawn e",
+      "...e6 after the Bishop comes out - otherwise the Slav loses its point"
+    ],
+    [
+      "King",
+      "Classical kingside castle after ...Be7 or ...Bd6"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Bishop Trap",
+      "fen": "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3",
+      "highlights": [
+        "f5",
+        "b3",
+        "c8"
+      ],
+      "desc": "After 3.Nc3 (or 3.Nf3) Black MUST play ...Nf6 then ...Bf5 (or ...dxc4 then ...Bf5). If ...e6? first, the Bc8 is locked in forever! AVOID (Black): Always develop the Bishop before ...e6."
+    },
+    {
+      "name": "Slav Gambit",
+      "fen": "rnbqkbnr/pp2pppp/2p5/5b2/2pP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 1 5",
+      "highlights": [
+        "c4",
+        "f5",
+        "e4"
+      ],
+      "desc": "After ...dxc4 ...Bf5, Black tries to keep the pawn. If 5.e4?? Bxe4! wins a pawn. White must play 5.a4 to prevent ...b5. AVOID (White): Don't play e4 too fast! a4 first."
+    },
+    {
+      "name": "Meran Trap",
+      "fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "highlights": [
+        "e6",
+        "c8",
+        "d5"
+      ],
+      "desc": "If Black plays ...e6 without having brought out the Bishop, it's the Semi-Slav. The Bc8 is locked in but Black prepares ...dxc4, ...b5 (Meran). AVOID (Black): Either pure Slav (...Bf5), or accept Semi-Slav but know the plans."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Pure Slav (Bf5)",
+      "moves": "3.Nf3 Nf6 4.Nc3 Bf5 5.cxd5 cxd5 6.Qb3",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 c8f5 c4d5 c6d5 d1b3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "f5",
+        "b3",
+        "b7"
+      ],
+      "white_plan": "Qb3 attacks b7 and d5. After ...Qb6 Qxb6 axb6, White has a slight positional advantage with e3, Bd3, 0-0.",
+      "black_plan": "The Bf5 is active! Play ...Qb6 (exchange simplifies), or ...e6, ...Be7, ...0-0 and defend solidly."
+    },
+    {
+      "name": "Semi-Slav (e6)",
+      "moves": "3.Nf3 Nf6 4.Nc3 e6 5.e3 Nbd7 6.Bd3",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "e6",
+        "d3",
+        "c4"
+      ],
+      "white_plan": "The Bc8 is locked in. Play 0-0, Qc2, e4 to open the center and exploit the space advantage.",
+      "black_plan": "Prepare ...dxc4 Bxc4 ...b5 ...Bb7 (Meran) to free the Bishop. Or play ...Bd6 and attack on the kingside."
+    },
+    {
+      "name": "Slav Accepted",
+      "moves": "3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "c4",
+        "a4",
+        "f5"
+      ],
+      "white_plan": "a4 prevents ...b5. Recover the pawn with Bxc4 and develop with 0-0, Qe2. Central pressure.",
+      "black_plan": "The Bf5 is out! Play ...e6, ...Nbd7, ...Be7, ...0-0 and the c4 pawn has cost White time."
+    }
+  ]
+}

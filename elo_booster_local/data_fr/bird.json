@@ -1,0 +1,93 @@
+{
+  "name": "OUVERTURE BIRD",
+  "alt_name": "",
+  "moves": "1.f4",
+  "uci_moves": "f2f4",
+  "complexity": "Intermédiaire",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Bird, Larsen, Nakamura",
+  
+  "idea": "La Hollandaise inversée avec un temps de plus! Les Blancs contrôlent e5 et préparent une attaque à l'aile roi avec Nf3, g3, Bg2, 0-0, d3 puis e4 ou une attaque directe avec Nc3 et e4. C'est une ouverture originale qui évite toute la théorie classique. Le prix? Le Roi blanc est légèrement affaibli (diagonale e1-h4) et les Noirs peuvent contre-attaquer avec le Gambit From (1...e5!?). Parfait pour surprendre!",
+
+  "highlights_green": ["f4", "e5", "g2"],
+  "highlights_red": ["f4", "h4", "e1"],
+
+  "errors_white": [
+    "Jouer sans plan : il faut choisir entre le fianchetto (g3/Bg2) ou le développement classique (e3/Be2)",
+    "Ignorer le Gambit From (1...e5) : fxe5 d6! donne aux Noirs du contre-jeu",
+    "Pousser e4 sans préparation : le centre peut devenir instable si mal fait"
+  ],
+  
+  "errors_black": [
+    "Jouer passivement : les Noirs doivent contester le centre avec ...d5, ...c5 ou ...e6",
+    "Ignorer la faiblesse de e5 : si les Blancs contrôlent e5 solidement, l'attaque peut être forte",
+    "Ne pas profiter de la diagonale a3-f8 : ...Bb4+ ou ...Ba6 peuvent gêner les Blancs"
+  ],
+
+  "development": [
+    ["Pion f4", "Contrôle e5 et prépare l'attaque - c'est le coup signature"],
+    ["Cavalier g1", "Nf3 classique - développe et soutient e5"],
+    ["Pion g3 + Fou", "g3 puis Bg2 - fianchetto comme dans la Hollandaise"],
+    ["Roi", "Petit roque rapide pour sécuriser le Roi"],
+    ["Pion d3", "Solide - prépare e4 ou Nc3 selon le plan"],
+    ["Pion e4", "Le coup thématique pour un centre fort - mais attention au timing"]
+  ],
+
+  "traps": [
+    {
+      "name": "Gambit From",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/5P2/8/PPPPP1PP/RNBQKBNR w KQkq - 0 2",
+      "highlights": ["e5", "f4", "d6"],
+      "desc": "1...e5!? Gambit From - sacrifice de pion! Après 2.fxe5 d6 3.exd6 Bxd6 les Noirs ont des lignes ouvertes et de l'activité. ÉVITER (Blancs): Accepter avec fxe5 mais jouer solidement, ou décliner avec e4."
+    },
+    {
+      "name": "Piège de la Diagonale",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/5P2/5N2/PPPPP1PP/RNBQKB1R w KQkq - 0 3",
+      "highlights": ["h4", "e1", "d5"],
+      "desc": "Après ...d5 ...e6, si les Blancs jouent b3?! ...Bb4+! peut être gênant car le Roi n'a pas roqué. ÉVITER (Blancs): Jouer g3/Bg2/0-0 rapidement pour sécuriser le Roi."
+    },
+    {
+      "name": "Piège Leningrad",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/5P2/5NP1/PPPPP1BP/RNBQK2R b KQkq - 0 4",
+      "highlights": ["g2", "d5", "f4"],
+      "desc": "Système Leningrad: g3, Bg2, Nf3, 0-0, d3. Si les Noirs jouent ...Bd6?! le Fou bloque d6 et gêne le développement. ÉVITER (Noirs): Jouer ...Be7 (solide) ou ...c5 pour le contre-jeu."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Système Leningrad",
+      "moves": "1...d5 2.Nf3 Nf6 3.g3 g6 4.Bg2 Bg7 5.0-0 0-0",
+      "uci": "f2f4 d7d5 g1f3 g8f6 g2g3 g7g6 f1g2 f8g7 e1g1 e8g8",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["g2", "g7", "d5"],
+      "white_plan": "Double fianchetto possible. d3, Nc3 ou c4 pour attaquer d5. La position ressemble à une Est-Indienne inversée.",
+      "black_plan": "Fianchetto miroir. ...c5 ou ...c6 pour soutenir d5. ...Nc6 ou ...Nbd7. Jeu symétrique et solide."
+    },
+    {
+      "name": "Gambit From Accepté",
+      "moves": "1...e5 2.fxe5 d6 3.exd6 Bxd6 4.Nf3 g5",
+      "uci": "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3 g7g5",
+      "eval": "=",
+      "white_win": 50,
+      "black_win": 50,
+      "highlights": ["d6", "g5", "h4"],
+      "white_plan": "Les Noirs ont sacrifié un pion pour l'activité. Développer d4, Nc3, e3 et consolider le pion de plus.",
+      "black_plan": "Attaque! ...g4 chasse le Cf3, ...Nc6, ...Qe7, ...Be6. L'initiative compense le pion."
+    },
+    {
+      "name": "Variante Classique",
+      "moves": "1...d5 2.Nf3 Nf6 3.e3 e6 4.Be2 c5 5.0-0 Nc6",
+      "uci": "f2f4 d7d5 g1f3 g8f6 e2e3 e7e6 f1e2 c7c5 e1g1 b8c6",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["f4", "c5", "e5"],
+      "white_plan": "Position type Stonewall inversé. b3, Bb2, Ne5 ou d3 et c4. Contrôler e5 et attaquer à l'aile roi.",
+      "black_plan": "Contre-jeu central avec ...c5. ...Bd6, ...0-0, ...b6/...Bb7. Chercher ...Ne4 ou ...d4 pour ouvrir."
+    }
+  ]
+}

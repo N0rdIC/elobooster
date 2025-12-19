@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE MODERNE",
+  "alt_name": "Robatsch",
+  "moves": "1.e4 g6",
+  "uci_moves": "e2e4 g7g6",
+  "complexity": "Débutant",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Seirawan, Speelman, Tiger Hillarp Persson",
+  
+  "idea": "L'ouverture la plus flexible! Avec 1...g6, les Noirs ne s'engagent à rien et peuvent transposer dans la Pirc (...Nf6, ...d6), l'Est-Indienne (...d6, ...Nf6, ...Bg7) ou rester dans la Moderne pure. Le Fou g7 en fianchetto contrôle le centre de loin. Les Noirs laissent les Blancs choisir leur structure et s'adaptent. Parfait pour les joueurs qui aiment surprendre et éviter la théorie. Simple à apprendre, difficile à réfuter!",
+
+  "highlights_green": ["g7", "d6", "c5"],
+  "highlights_red": ["g6", "e5"],
+
+  "errors_white": [
+    "Pousser tous les pions au centre sans développer : e4, d4, f4, c4 sans pièces = cibles",
+    "Ignorer le Fou g7 : ce Fou peut devenir un monstre si le centre s'ouvre",
+    "Jouer Bc4 trop tôt : ...d6 puis ...e6 enferme le Fou, préférer Be2 ou Bd3"
+  ],
+  
+  "errors_black": [
+    "Ne jamais contester le centre : ...c5 ou ...d5 ou ...e5 doit venir à un moment",
+    "Jouer ...d6 et ...e6 : les deux pions sur cases claires enferment le Fou c8",
+    "Oublier de roquer : le Roi au centre avec g6 joué est très exposé"
+  ],
+
+  "development": [
+    ["Pion g6 + Fou", "g6 puis Bg7 - le fianchetto est l'idée de base"],
+    ["Pion d6", "Flexible - permet ...Nf6 (Pirc) ou ...e5/...Ne7 (Moderne pure)"],
+    ["Cavalier g8", "Nf6 transpose en Pirc, ou ...Ne7 reste dans la Moderne"],
+    ["Pion c5", "Contre-attaque sur d4 - thématique dans beaucoup de lignes"],
+    ["Roi", "Petit roque rapide après ...Bg7 - essentiel pour la sécurité"],
+    ["Cavalier b8", "...Nc6 ou ...Nd7 selon le plan choisi"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Centre",
+      "fen": "rnbqkbnr/pppppp1p/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2",
+      "highlights": ["e4", "d4", "g7"],
+      "desc": "Après 2.d4, les Blancs ont un centre idéal. Si les Noirs jouent ...Bg7 sans plan, les Blancs écrasent avec Nc3, Be3, Qd2, 0-0-0 et attaque. ÉVITER (Noirs): Jouer ...d6 et préparer ...c5 ou ...e5 pour contester."
+    },
+    {
+      "name": "Piège de l'Attaque",
+      "fen": "rnbqk1nr/ppppppbp/6p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3",
+      "highlights": ["d4", "e4", "h6"],
+      "desc": "Si les Noirs sont passifs, les Blancs jouent Be3, Qd2, Bh6! (échange le Fg7), puis 0-0-0 et h4-h5 pour ouvrir le Roi noir. ÉVITER (Noirs): Jouer ...d6, ...c6 ou ...c5 rapidement pour du contre-jeu."
+    },
+    {
+      "name": "Piège du Pion f",
+      "fen": "rnbqk1nr/ppppppbp/6p1/8/3PPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3",
+      "highlights": ["f4", "e5", "d6"],
+      "desc": "3.f4!? agressif. Si ...d6 4.Nf3 Nf6 5.e5!? dxe5 6.fxe5 Nd5 7.c4 les Noirs perdent le Cavalier ou ont une position difficile. ÉVITER (Noirs): Jouer ...d5! ou ...c5 pour contester le centre avant f4-e5."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Moderne Classique",
+      "moves": "2.d4 Bg7 3.Nc3 d6 4.Be3 a6 5.Qd2",
+      "uci": "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 c1e3 a7a6 d1d2",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["d2", "e3", "h6"],
+      "white_plan": "Système d'attaque! Bh6 (échange le Fg7), 0-0-0, f3, puis g4-h4-h5 pour ouvrir l'aile roi.",
+      "black_plan": "...a6 prépare ...b5. Jouer ...Nd7, ...c5 ou ...e5 pour contre-jeu. ...h5 peut empêcher g4."
+    },
+    {
+      "name": "Pterodactyl",
+      "moves": "2.d4 Bg7 3.Nc3 c5 4.dxc5 Qa5",
+      "uci": "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 d8a5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["a5", "c5", "c3"],
+      "white_plan": "La Dame a5 est agressive mais exposée. Bd2, Nf3, Bc4 et développement rapide pour exploiter l'avance.",
+      "black_plan": "...Qxc5 récupère le pion. Puis ...Nc6, ...Nf6, ...0-0, ...d6 avec position jouable. Le Bg7 est actif."
+    },
+    {
+      "name": "Hippopotame",
+      "moves": "2.d4 Bg7 3.Nc3 d6 4.Nf3 Nd7 5.Be2 e6",
+      "uci": "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 b8d7 f1e2 e7e6",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["e6", "d6", "g7"],
+      "white_plan": "Les Noirs sont très solides mais passifs. 0-0, Be3, Qd2 et chercher une faiblesse. a4 ou h4 possibles.",
+      "black_plan": "Ultra-solide! ...Ne7, ...0-0, ...b6, ...Bb7, ...c5 ou ...e5 au bon moment. Difficile à battre mais dur de gagner."
+    }
+  ]
+}

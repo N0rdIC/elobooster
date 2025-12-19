@@ -1,0 +1,93 @@
+{
+  "name": "PARTIE ITALIENNE",
+  "alt_name": "Giuoco Piano",
+  "moves": "1.e4 e5 2.Nf3 Nc6 3.Bc4",
+  "uci_moves": "e2e4 e7e5 g1f3 b8c6 f1c4",
+  "complexity": "Débutant",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Morphy, Greco, Kasparov",
+  
+  "idea": "Le Fou c4 vise directement f7, le point le plus faible de l'échiquier au début de partie (défendu uniquement par le Roi). Les Blancs peuvent choisir entre une attaque rapide (Ng5, sacrifices sur f7) ou un jeu positionnel lent avec d3, 0-0, c3 puis d4. C'est l'ouverture classique de la Renaissance italienne, idéale pour apprendre les principes fondamentaux du jeu ouvert.",
+
+  "highlights_green": ["f7", "d4", "d5"],
+  "highlights_red": ["f2", "e4"],
+
+  "errors_white": [
+    "d4 prématuré sans c3 : après ...exd4, les Blancs perdent le centre et du temps",
+    "Négliger le roque : le Roi au centre est vulnérable aux tactiques sur la colonne e",
+    "Qh5 trop tôt (Mat du Berger) : facilement paré par ...Qe7 ou ...g6, et la Dame est exposée"
+  ],
+  
+  "errors_black": [
+    "...Nxe4? prématuré : permet le piège Légal avec Bxf7+! ou Nxf7 gagnant",
+    "...f6? : affaiblit horriblement la diagonale a2-g8 et permet des sacrifices dévastateurs",
+    "Ignorer la menace sur f7 : toujours surveiller Ng5 ou Qb3 attaquant f7 et b7"
+  ],
+
+  "development": [
+    ["Fou c1", "Sortir en e3 (solide, défend d4) ou g5 (agressif, cloue Cf6)"],
+    ["Cavalier b1", "Développer en c3 pour contrôler d5 et soutenir d4"],
+    ["Tours", "Après 0-0, placer Te1 sur la colonne e semi-ouverte"],
+    ["Roi", "Petit roque prioritaire - le Roi est en sécurité et la Tour active"],
+    ["Dame", "Éviter les sorties prématurées (Qh5, Qf3) - garder flexible"],
+    ["Pions", "Plan c3-d4 pour construire un centre de pions idéal"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège Légal",
+      "fen": "r1bqkb1r/pppp1ppp/2n5/4p3/2B1n3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+      "highlights": ["f7", "e4"],
+      "desc": "Après 4.Nc3 Nxe4?? 5.Bxf7+! Kxf7 6.Nxe4 gagne. ÉVITER: Ne jamais prendre e4 avec le Cavalier! Jouer plutôt ...Bc5 ou ...Be7 pour développer normalement."
+    },
+    {
+      "name": "Fried Liver Attack",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p1N1/2B1P3/8/PPPP1PPP/RNBQK2R b KQkq - 0 4",
+      "highlights": ["f7", "d5"],
+      "desc": "4.Ng5 menace Nxf7. Si ...d5 5.exd5 Nxd5?? 6.Nxf7! gagne. ÉVITER: Après ...d5 exd5, jouer ...Na5! (pas Nxd5) pour chasser le Fou et reprendre d5 ensuite."
+    },
+    {
+      "name": "Mat du Berger",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 0 3",
+      "highlights": ["f7"],
+      "desc": "Qh5 + Bc4 menace Qxf7#. Piège pour débutants! ÉVITER: Jouer ...Qe7! (défend f7 et menace Qxe4+), ou ...g6 puis ...Nf6. La Dame blanche sera mal placée."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Giuoco Piano",
+      "moves": "3...Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4 Bb4+",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d4 e5d4 c3d4 c5b4",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["d4", "e4"],
+      "white_plan": "Accepter les pions isolés après Nc3 ou Bd2. Le centre de pions d4-e4 donne de l'espace et des lignes ouvertes pour attaquer.",
+      "black_plan": "Mettre la pression sur e4 avec ...d5 au bon moment. Le Fou b4 gêne le développement blanc. Chercher à échanger les pièces."
+    },
+    {
+      "name": "Gambit Evans",
+      "moves": "3...Bc5 4.b4!? Bxb4 5.c3 Ba5",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5",
+      "eval": "=",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["b4", "d4", "a5"],
+      "white_plan": "Sacrifier le pion b4 pour un développement ultra-rapide. Après d4, les Blancs ont un centre puissant et toutes les pièces actives.",
+      "black_plan": "Accepter le gambit et consolider. Jouer ...d6, ...Bb6 et rendre le pion si nécessaire pour terminer le développement en sécurité."
+    },
+    {
+      "name": "Défense Deux Cavaliers",
+      "moves": "3...Nf6 4.Ng5 d5 5.exd5 Na5",
+      "uci": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["d5", "c4", "f7"],
+      "white_plan": "Après Bb5+ c6 dxc6 bxc6, les Blancs ont un pion de plus mais les Noirs ont une forte initiative. Jeu très tactique!",
+      "black_plan": "Contre-attaque immédiate! ...Na5 chasse le Fou c4 et prépare ...c6 pour récupérer le pion d5 avec un bon jeu."
+    }
+  ]
+}

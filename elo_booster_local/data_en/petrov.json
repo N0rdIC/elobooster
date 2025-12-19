@@ -1,0 +1,135 @@
+{
+  "name": "PETROV DEFENSE",
+  "alt_name": "Russian Defense",
+  "moves": "1.e4 e5 2.Nf3 Nf6",
+  "uci_moves": "e2e4 e7e5 g1f3 g8f6",
+  "complexity": "Intermediate",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Kramnik, Caruana, Karjakin",
+  "idea": "The most solid response to 1.e4 e5 2.Nf3! Instead of defending e5 with ...Nc6, Black counter-attacks the e4 pawn with ...Nf6. After 3.Nxe5 d6 4.Nf3 Nxe4, the position is symmetrical and solid. Black's plan is simple: equalize with solid play and wait for White's mistakes. It's the favorite defense of World Champions who want a safe draw as Black!",
+  "highlights_green": [
+    "e4",
+    "f6",
+    "d5"
+  ],
+  "highlights_red": [
+    "e5",
+    "f7"
+  ],
+  "errors_white": [
+    "Playing 3.Nxe5 Nxe4?? 4.Qe2!: wins a piece (this is actually good for White!)",
+    "Trading too many pieces: helps Black equalize",
+    "Being too aggressive: the Petrov is solid, forcing leads nowhere"
+  ],
+  "errors_black": [
+    "Playing 3.Nxe5 Nxe4?? without ...d6 first: loses a piece to Qe2",
+    "Being too passive: Black must at least equalize",
+    "Forgetting ...d5: this move frees Black's position"
+  ],
+  "development": [
+    [
+      "Pawn d6",
+      "MANDATORY after 3.Nxe5! Chases the Knight before recapturing e4"
+    ],
+    [
+      "Knight f6",
+      "Recaptures e4 after ...d6 Nf3, then retreats to d6 or f6 depending on variation"
+    ],
+    [
+      "Bishop f8",
+      "Develop to d6 (active) or e7 (solid) - controls central squares"
+    ],
+    [
+      "Bishop c8",
+      "Develop to f5 or g4 (pins Nf3) - don't leave it locked in"
+    ],
+    [
+      "Knight b8",
+      "Go to d7 (supports the center) or c6 (after ...c6)"
+    ],
+    [
+      "King",
+      "Classical kingside castle after ...Be7 - very safe position"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Beginner's Trap",
+      "fen": "rnbqkb1r/pppp1ppp/5n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R b KQkq - 0 3",
+      "highlights": [
+        "e5",
+        "e4",
+        "e2"
+      ],
+      "desc": "3.Nxe5 Nxe4?? (mistake!) 4.Qe2! and the Ne4 is pinned. If 4...Nf6 5.Nc6+ wins the Queen! AVOID (Black): Always play 3...d6! first to chase the Ne5."
+    },
+    {
+      "name": "Stafford Trap",
+      "fen": "rnbqkb1r/ppp2ppp/3p1n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 0 4",
+      "highlights": [
+        "e5",
+        "d6",
+        "f7"
+      ],
+      "desc": "3...d6 4.Nxf7?! (dubious gambit) Kxf7 5.Bc4+ White has threats but Black is better after 5...Be6! AVOID (White): Don't play Nxf7 - retreat Nf3 is correct."
+    },
+    {
+      "name": "Cochrane Trap",
+      "fen": "rnbqkb1r/ppp2ppp/3p4/4N2n/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 0 5",
+      "highlights": [
+        "f7",
+        "e5",
+        "h5"
+      ],
+      "desc": "Cochrane Gambit: 4.Nxf7!? Kxf7 5.d4 - real sacrifice for the attack. If Black accepts poorly, the attack is strong. AVOID (Black): 5...c5! or 5...Be6 with active defense and extra material."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical Variation",
+      "moves": "3.Nxe5 d6 4.Nf3 Nxe4 5.d4 d5 6.Bd3",
+      "uci": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": [
+        "d5",
+        "e4",
+        "d3"
+      ],
+      "white_plan": "Symmetrical position. Play 0-0, c4 to attack d5, Re1 and look for Nc3 with pressure on the center.",
+      "black_plan": "Perfect equality! Develop ...Be7, ...0-0, ...Nc6 or ...Nd7. Maintain symmetry and exchange towards a draw."
+    },
+    {
+      "name": "Steinitz Variation",
+      "moves": "3.Nxe5 d6 4.Nf3 Nxe4 5.Nc3",
+      "uci": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 b1c3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "c3",
+        "e4",
+        "d5"
+      ],
+      "white_plan": "Attack the Ne4 immediately! After Nxe4 dxe4, White has easier play with Bc4, 0-0 and d3.",
+      "black_plan": "Defend the Knight with ...Nf6 or ...Nc6. If Nxe4 dxe4 accept the structure and play ...Bf5, ...Qe7."
+    },
+    {
+      "name": "Three Knights Attack",
+      "moves": "3.Nc3 Nc6 4.Bb5",
+      "uci": "e2e4 e7e5 g1f3 g8f6 b1c3 b8c6 f1b5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "b5",
+        "c6",
+        "e5"
+      ],
+      "white_plan": "Avoid the classical Petrov! Transpose to the Four Knights with Bb5. Active play with 0-0, d3, then Bg5 or Nd5.",
+      "black_plan": "We exit the pure Petrov. Play ...Bb4 (symmetry), ...Nd4 or ...a6 to chase the Bishop and look for ...d5."
+    }
+  ]
+}

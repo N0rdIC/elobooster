@@ -1,0 +1,136 @@
+{
+  "name": "ALEKHINE DEFENSE",
+  "alt_name": "",
+  "moves": "1.e4 Nf6",
+  "uci_moves": "e2e4 g8f6",
+  "complexity": "Intermediate",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Alekhine, Fischer, Carlsen",
+  "idea": "The most provocative defense! Black attacks e4 immediately with the Knight and INVITES White to advance their pawns. After 2.e5 Nd5 3.d4 d6, White has an imposing center but Black will attack it with ...c5, ...Nc6, ...e6. Alekhine's brilliant idea: advanced pawns become targets! This is an opening for brave players who love dynamic counterplay.",
+  "highlights_green": [
+    "d5",
+    "c5",
+    "f6"
+  ],
+  "highlights_red": [
+    "e5",
+    "d4",
+    "c4"
+  ],
+  "errors_white": [
+    "Pushing all pawns (e5, d4, c4, f4): the center becomes overstretched and Black attacks it",
+    "Not playing c4 to chase the Nd5: the Knight stays centralized and bothers White",
+    "Ignoring ...c5: this move undermines d4, you must defend the center or exchange"
+  ],
+  "errors_black": [
+    "Letting White's pawns settle without attacking them: ...c5 and ...d6 are urgent",
+    "Retreating the Knight to f6 too early: exf6 gives White the open e-file",
+    "Playing ...g6 without preparation: the fianchetto is slow, White's center can crush"
+  ],
+  "development": [
+    [
+      "Nf6",
+      "Attacks e4, then retreats to d5 after e5 - that's the Knight's journey!"
+    ],
+    [
+      "d6 pawn",
+      "Attacks e5 immediately - essential thematic move"
+    ],
+    [
+      "c5 pawn",
+      "Attacks d4 - the second key move to undermine the center"
+    ],
+    [
+      "Nb8",
+      "Nc6 puts pressure on d4 and e5 - reinforces the center attack"
+    ],
+    [
+      "Bc8",
+      "Come out to f5, g4 or e6 depending on structure - stay flexible"
+    ],
+    [
+      "Bf8",
+      "e6 then Be7 (solid) or g6/Bg7 (fianchetto) in certain lines"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Chase Trap",
+      "fen": "rnbqkb1r/pppppppp/8/3nP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+      "highlights": [
+        "d5",
+        "c4",
+        "e5"
+      ],
+      "desc": "After 2.e5 Nd5 3.d4, if Black plays ...d6 4.c4 Nb6 5.f4?! (too aggressive) ...dxe5 6.fxe5 Nc6! and White's center collapses. AVOID (White): Play 5.Nf3 solidly instead of f4."
+    },
+    {
+      "name": "Four Pawns Trap",
+      "fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 4",
+      "highlights": [
+        "c4",
+        "d4",
+        "e5"
+      ],
+      "desc": "Four Pawns Variation: 4.c4 Nb6 5.f4 (4 pawns!) but after ...dxe5 6.fxe5 Nc6 7.Be3 Bf5! Black has excellent counterplay. AVOID (White): This variation is double-edged - prefer 5.exd6."
+    },
+    {
+      "name": "Knight Trap",
+      "fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 4",
+      "highlights": [
+        "d5",
+        "c4",
+        "b6"
+      ],
+      "desc": "After 4.Nf3 if Black plays ...Bg4?! 5.c4! Nb6 6.Be2 and the Knight must move again (Nc6 or Na6), losing time. AVOID (Black): Play ...dxe5 or ...g6 before ...Bg4."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Modern Variation",
+      "moves": "2.e5 Nd5 3.d4 d6 4.Nf3 dxe5 5.Nxe5",
+      "uci": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 d6e5 f3e5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "e5",
+        "d4",
+        "c5"
+      ],
+      "white_plan": "The Ne5 is strong in the center. Develop Bd3, 0-0, c4 (chases the Nd5), then attack with f4 or Qg4.",
+      "black_plan": "...c6 prepares ...Nc7, or ...Nd7 attacks the Ne5. Then ...e6, ...Be7, ...0-0 with solid position."
+    },
+    {
+      "name": "Four Pawns Variation",
+      "moves": "2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.f4 dxe5 6.fxe5 Nc6",
+      "uci": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "f4",
+        "e5",
+        "c6"
+      ],
+      "white_plan": "Massive but fragile center. Play Be3, Nc3, Nf3 and defend the pawns. The attack can be strong if Black errs.",
+      "black_plan": "Attack the center! ...Bg4 (pins Nf3), ...e6, ...Bb4+ then ...Bf5 or ...f6 to demolish e5."
+    },
+    {
+      "name": "Exchange Variation",
+      "moves": "2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.exd6 exd6",
+      "uci": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 e7d6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "d6",
+        "c4",
+        "d4"
+      ],
+      "white_plan": "Calmer position. White has more space. Nc3, Nf3, Be2, 0-0 then pressure on isolated d6.",
+      "black_plan": "The d6 pawn is isolated but pieces are active. ...Be7, ...0-0, ...Nc6, ...Bf5 and seek ...d5 to free."
+    }
+  ]
+}

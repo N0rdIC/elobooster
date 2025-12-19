@@ -1,0 +1,93 @@
+{
+  "name": "GAMBIT BUDAPEST",
+  "alt_name": "",
+  "moves": "1.d4 Nf6 2.c4 e5",
+  "uci_moves": "d2d4 g8f6 c2c4 e7e5",
+  "complexity": "Intermédiaire",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Maroczy, Tartakower, Rapport",
+  
+  "idea": "Une surprise explosive contre 1.d4! Les Noirs sacrifient un pion pour obtenir un développement rapide et des cases actives pour les pièces. Après 3.dxe5 Ng4, le Cavalier attaque e5 et vise f2. Les Blancs doivent être précis sinon les Noirs récupèrent le pion avec initiative. C'est l'arme parfaite contre les joueurs de 1.d4 qui veulent une partie calme - le Budapest leur impose un combat immédiat!",
+
+  "highlights_green": ["e5", "g4", "f2"],
+  "highlights_red": ["e5", "d4"],
+
+  "errors_white": [
+    "Garder le pion e5 à tout prix : les Noirs obtiennent trop d'activité, mieux vaut rendre le pion sainement",
+    "Jouer Bf4?? : après ...Nc6 et ...Bb4+ les Blancs perdent du matériel",
+    "Sous-estimer l'initiative noire : le développement rapide des Noirs compense le pion"
+  ],
+  
+  "errors_black": [
+    "Ne pas récupérer le pion : il faut mettre la pression sur e5 avec ...Ng4, ...Nc6, ...Bc5",
+    "Jouer ...Nxe5 trop vite : certaines lignes sont meilleures avec ...Ng4 d'abord",
+    "Oublier le développement : l'initiative s'évapore si les Noirs jouent lentement"
+  ],
+
+  "development": [
+    ["Cavalier f6", "Va en g4 pour attaquer e5 et viser f2 - le voyage clé!"],
+    ["Cavalier b8", "Nc6 attaque e5 et développe rapidement"],
+    ["Fou f8", "Bc5 ou Bb4+ selon la ligne - pièces actives!"],
+    ["Roi", "Petit roque rapide après ...Be7 ou rester flexible"],
+    ["Dame", "...Qe7 dans certaines lignes pour récupérer e5"],
+    ["Pion d", "...d6 pour soutenir e5 ou ...d5 pour ouvrir le jeu"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Cavalier",
+      "fen": "rnbqkb1r/pppp1ppp/8/4P3/2P3n1/8/PP2PPPP/RNBQKBNR w KQkq - 1 4",
+      "highlights": ["g4", "e5", "f2"],
+      "desc": "Après 3...Ng4, si les Blancs jouent 4.Bf4?? ...Nc6 5.Nf3 Bb4+! et après 6.Nbd2 Qe7 le pion e5 tombe avec avantage. ÉVITER (Blancs): Jouer 4.Nf3 ou 4.e4 pour défendre e5 correctement."
+    },
+    {
+      "name": "Piège Fajarowicz",
+      "fen": "rnbqkb1r/pppp1ppp/8/4P3/2Pn4/8/PP2PPPP/RNBQKBNR w KQkq - 1 4",
+      "highlights": ["d4", "e5", "b4"],
+      "desc": "3...Ne4?! (Fajarowicz) est risqué. Après 4.Nf3! les Noirs n'ont pas de compensation claire. ÉVITER (Noirs): Préférer 3...Ng4 qui est plus sain."
+    },
+    {
+      "name": "Piège de la Dame",
+      "fen": "r1bqkb1r/pppp1ppp/2n5/4P3/2P3n1/5N2/PP2PPPP/RNBQKB1R w KQkq - 3 5",
+      "highlights": ["e5", "g4", "e7"],
+      "desc": "Après 4.Nf3 Nc6, si 5.Bf4?? ...Bb4+! 6.Nbd2 Qe7 7.a3 Ngxe5! les Noirs gagnent du matériel. ÉVITER (Blancs): 5.e3 ou 5.Nc3 sont corrects."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Adler",
+      "moves": "3.dxe5 Ng4 4.Nf3 Nc6 5.Bf4 Bb4+ 6.Nbd2",
+      "uci": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 b8c6 c1f4 f8b4 b1d2",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["g4", "c6", "b4"],
+      "white_plan": "Défendre e5 et développer. Après a3 et e3, les Blancs consolident. Le pion de plus est réel mais les Noirs ont du jeu.",
+      "black_plan": "Pression sur e5! ...Qe7, ...Ngxe5 récupère le pion. Puis ...d6, ...0-0 avec position active."
+    },
+    {
+      "name": "Variante Rubinstein",
+      "moves": "3.dxe5 Ng4 4.Bf4 Nc6 5.Nf3 Bb4+ 6.Nc3 Bxc3+",
+      "uci": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1c3 b4c3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["c3", "f4", "e5"],
+      "white_plan": "Après bxc3, les Blancs ont la paire de Fous. e3, Be2, 0-0 avec structure solide.",
+      "black_plan": "Récupérer e5 avec ...Qe7 et ...Ngxe5. La structure blanche avec c3-c4 a des trous sur d4 et d3."
+    },
+    {
+      "name": "Variante Alekhine",
+      "moves": "3.dxe5 Ng4 4.e4 Nxe5 5.f4 Nec6 6.Be3",
+      "uci": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4 e5c6 c1e3",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["e4", "f4", "c6"],
+      "white_plan": "Centre massif e4-f4. Développer Nc3, Nf3, Bd3 avec beaucoup d'espace.",
+      "black_plan": "Le centre blanc est imposant mais les Noirs ont récupéré le pion. ...Bb4, ...d6, ...0-0 et chercher ...f5."
+    }
+  ]
+}

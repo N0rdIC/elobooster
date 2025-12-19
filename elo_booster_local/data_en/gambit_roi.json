@@ -1,0 +1,136 @@
+{
+  "name": "KING'S GAMBIT",
+  "alt_name": "",
+  "moves": "1.e4 e5 2.f4",
+  "uci_moves": "e2e4 e7e5 f2f4",
+  "complexity": "Beginner",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Spassky, Bronstein, Short",
+  "idea": "The most romantic opening in chess! White sacrifices the f2 pawn for rapid development and open lines against the Black King. The idea is simple: after 2...exf4, White plays Nf3 and Bc4, aiming at f7. Black can keep the pawn with ...g5 but the King becomes exposed. It's all-out attack vs solid defense. Fischer called it 'a decisive opening' - you either win or lose brilliantly!",
+  "highlights_green": [
+    "f7",
+    "f4",
+    "g7"
+  ],
+  "highlights_red": [
+    "f2",
+    "e1",
+    "g1"
+  ],
+  "errors_white": [
+    "Playing Bc4 without Nf3: allows ...Qh4+ with check",
+    "Forgetting to castle: the King in the center is vulnerable",
+    "Pushing too many pawns: development is the key, not pawn advances"
+  ],
+  "errors_black": [
+    "Keeping the f4 pawn at all costs: development matters more",
+    "Playing ...g5 without preparation: h4 can become dangerous",
+    "Forgetting to develop: ...d5 and piece development are urgent"
+  ],
+  "development": [
+    [
+      "Knight g1",
+      "Nf3 is almost always the first move - defends and attacks, prepares 0-0"
+    ],
+    [
+      "Bishop f1",
+      "Bc4 targets f7 directly - the Bc4+Qb3/Qf3 battery is deadly"
+    ],
+    [
+      "King",
+      "Sometimes 0-0 even while sacrificing material! Or Kf1-Kf2 if castling is compromised"
+    ],
+    [
+      "Queen",
+      "Can go to f3 (attacks f7) or h5 (pressure on f7 and e5) depending on variation"
+    ],
+    [
+      "Knight b1",
+      "Nc3 then Nd5 - the Knight on d5 is a monster"
+    ],
+    [
+      "Rook h1",
+      "After fxe5 or if Black takes on g3, the Rook on f1 is devastating"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Muzio Gambit",
+      "fen": "rnbqkbnr/pppp1p1p/8/6p1/2B1Pp2/5N2/PPPP2PP/RNBQK2R w KQkq - 0 4",
+      "highlights": [
+        "f7",
+        "f3",
+        "g5"
+      ],
+      "desc": "After 3.Nf3 g5 4.Bc4 g4, White plays 5.0-0!! sacrificing the Knight! After gxf3 6.Qxf3 the attack on f7 is irresistible. AVOID (Black): Don't play ...g4 - prefer ...Bg7 or ...d6."
+    },
+    {
+      "name": "Kieseritzky Trap",
+      "fen": "rnbqkb1r/pppp1p1p/5n2/4N1p1/2B1Pp2/8/PPPP2PP/RNBQK2R b KQkq - 0 5",
+      "highlights": [
+        "f7",
+        "e5",
+        "c4"
+      ],
+      "desc": "After 3.Nf3 g5 4.h4 g4 5.Ne5, if ...Nf6?? 6.Bc4! Threatens Nxf7 and Bxf7+. Double attack! AVOID (Black): Play ...d5! or ...Qe7 instead of ...Nf6 to block the diagonals."
+    },
+    {
+      "name": "Declined Trap",
+      "fen": "rnbqk1nr/pppp1ppp/8/2b1p3/2B1PP2/8/PPPP2PP/RNBQK1NR b KQkq - 0 3",
+      "highlights": [
+        "f7",
+        "c5",
+        "g1"
+      ],
+      "desc": "2...Bc5 (Declined) 3.Bc4!? Targets f7. If ...Nc6? 4.fxe5! Threatens Qh5 or Bxf7+. The Bc5 no longer defends anything! AVOID (Black): Play ...d6 or ...Nf6 to defend e5 before developing the Bishop."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical Gambit Accepted",
+      "moves": "2...exf4 3.Nf3 g5 4.h4 g4 5.Ne5",
+      "uci": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "e5",
+        "f7",
+        "h4"
+      ],
+      "white_plan": "The Ne5 attacks f7. After Bc4, the pressure is enormous. Possible sacrifices on f7 or g4 to open lines.",
+      "black_plan": "Defend f7 with ...Qe7 or counter-attack with ...d5! The g4 and f4 pawns can become strong in the endgame."
+    },
+    {
+      "name": "Cunningham Defense",
+      "moves": "2...exf4 3.Nf3 Be7 4.Bc4 Bh4+ 5.Kf1",
+      "uci": "e2e4 e7e5 f2f4 e5f4 g1f3 f8e7 f1c4 e7h4 e1f1",
+      "eval": "+0.2",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "h4",
+        "f1",
+        "f7"
+      ],
+      "white_plan": "The King goes to f1-f2 (without castling). White has the center and development. Attack with d4, Bxf4, Nc3.",
+      "black_plan": "The check on h4 forced Kf1 but the Bishop is exposed. Play ...d5! to open the game and activate the Bc8."
+    },
+    {
+      "name": "Gambit Declined",
+      "moves": "2...Bc5 3.Nf3 d6 4.Nc3 Nf6",
+      "uci": "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 b1c3 g8f6",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": [
+        "c5",
+        "d6",
+        "e5"
+      ],
+      "white_plan": "Black refuses the gambit. Play fxe5 dxe5 and Bc4 to maintain pressure. The game is calmer.",
+      "black_plan": "Solid structure with ...d6 defending e5. Develop ...0-0, ...Nc6, ...Bg4 and look for ...d5 at the right moment."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE HOLLANDAISE",
+  "alt_name": "",
+  "moves": "1.d4 f5",
+  "uci_moves": "d2d4 f7f5",
+  "complexity": "Intermédiaire",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Nakamura, Short, Malaniuk",
+  
+  "idea": "Les Noirs prennent le contrôle de e4 dès le premier coup! C'est une défense agressive et déséquilibrée contre 1.d4. Le pion f5 empêche e4 et prépare une attaque sur l'aile roi avec ...Nf6, ...e6, ...Be7, ...0-0 puis ...Ne4 ou la poussée ...g5-g4. Le prix? La diagonale e8-h5 est affaiblie (attention à Qh5+) et le Roi noir peut être exposé. C'est l'ouverture du joueur combatif qui refuse les positions calmes du Gambit Dame.",
+
+  "highlights_green": ["f5", "e4", "g5"],
+  "highlights_red": ["e8", "h5", "g7"],
+
+  "errors_white": [
+    "Sous-estimer l'attaque noire : si les Blancs jouent passivement, l'attaque ...g5-g4 peut être dévastatrice",
+    "Ne pas exploiter la diagonale a2-g8 : Bc4 ou Bd3 + Qc2 peuvent créer des menaces sur le Roi",
+    "Jouer e4 sans préparation : si mal fait, les Noirs obtiennent ...fxe4 avec un bon contrôle central"
+  ],
+  
+  "errors_black": [
+    "Oublier la faiblesse de e8-h5 : Qh5+ (ou Bg6-h5) peut être mortel si le Roi n'a pas roqué",
+    "Jouer ...f4 trop tôt : ferme la position mais le Fou peut devenir passif et e4 est libéré",
+    "Négliger le développement : l'attaque ne marche que si les pièces sont prêtes (surtout ...0-0)"
+  ],
+
+  "development": [
+    ["Cavalier g8", "Nf6 est essentiel - contrôle e4 et prépare ...Ne4 après 0-0"],
+    ["Pion e", "e6 soutient f5 et libère le Fou f8 - structure Mur de Pierre (Stonewall)"],
+    ["Fou f8", "Be7 (solide) ou Bd6 (agressif, vise h2) selon le système"],
+    ["Roi", "Roquer rapidement! La diagonale h5-e8 est faible, le Roi doit être en sécurité"],
+    ["Fou c8", "Le problème de la Hollandaise! Sort en d7-e8-h5 ou reste passif"],
+    ["Pion g", "La poussée ...g5-g4 est le plan d'attaque principal - ouvrir la colonne g"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de la Dame",
+      "fen": "rnbqkbnr/ppppp1pp/8/5p1Q/3P4/8/PPP1PPPP/RNB1KBNR b KQkq - 1 2",
+      "highlights": ["h5", "e8", "f5"],
+      "desc": "2.Qh5+?! semble fort mais après ...g6 3.Qh4 (ou Qh3) les Noirs jouent ...Nf6 et la Dame est mal placée. ÉVITER (Noirs): Pas de panique! ...g6 puis développement normal."
+    },
+    {
+      "name": "Gambit Staunton",
+      "fen": "rnbqkbnr/ppppp1pp/8/5p2/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2",
+      "highlights": ["e4", "f5", "d5"],
+      "desc": "2.e4!? Gambit Staunton - sacrifice de pion pour ouvrir les lignes. Après ...fxe4 3.Nc3 Nf6 4.Bg5 les Blancs ont de l'activité. ÉVITER (Noirs): Accepter avec ...fxe4 puis ...d5! pour fermer le centre."
+    },
+    {
+      "name": "Piège du Fou",
+      "fen": "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "highlights": ["h3", "g4", "f5"],
+      "desc": "Dans le Leningrad, si les Blancs jouent h3?! les Noirs préparent ...g5-g4! ouvrant la colonne g. ÉVITER (Blancs): Jouer plutôt Qc2 ou Bf4 pour contrôler e4 sans affaiblir l'aile roi."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Mur de Pierre (Stonewall)",
+      "moves": "2.c4 Nf6 3.g3 e6 4.Bg2 d5 5.Nf3 c6",
+      "uci": "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 d7d5 g1f3 c7c6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["d5", "f5", "e4"],
+      "white_plan": "Le centre noir est solide mais le Fou c8 est mauvais. Jouer b3/Bb2, Qc2 et chercher à échanger le mauvais Fou ou percer avec e3-e4.",
+      "black_plan": "Mur de pions d5-e6-f5! Le Cavalier va en e4 via d7. Plan: ...Bd6, ...Qe7, ...Ne4, puis attaque sur l'aile roi."
+    },
+    {
+      "name": "Leningrad",
+      "moves": "2.c4 Nf6 3.g3 g6 4.Bg2 Bg7 5.Nc3 0-0",
+      "uci": "d2d4 f7f5 c2c4 g8f6 g2g3 g7g6 f1g2 f8g7 b1c3 e8g8",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["g7", "f5", "e4"],
+      "white_plan": "Double fianchetto. Les Blancs jouent Nf3, 0-0, d5 (ferme le Fg7) ou Rb1/b4 pour l'attaque à l'aile dame.",
+      "black_plan": "Le Fou g7 est un monstre! Plan: ...d6, ...Nc6, ...e5 (si possible) pour ouvrir la diagonale. Attaque ...g5-g4 si occasion."
+    },
+    {
+      "name": "Classique",
+      "moves": "2.c4 Nf6 3.Nc3 e6 4.Nf3 Be7 5.Bg5",
+      "uci": "d2d4 f7f5 c2c4 g8f6 b1c3 e7e6 g1f3 f8e7 c1g5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["g5", "e7", "e4"],
+      "white_plan": "Développement classique. Le clouage Bg5 gêne les Noirs. Plan: e3, Bd3, Qc2, 0-0 puis chercher e4 au bon moment.",
+      "black_plan": "Jouer ...0-0, ...d6, ...Qe8 (libère la Dame pour h5) et préparer ...Ne4 ou ...e5. Le Fou sort par d7-e8."
+    }
+  ]
+}

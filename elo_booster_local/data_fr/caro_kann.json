@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE CARO-KANN",
+  "alt_name": "",
+  "moves": "1.e4 c6",
+  "uci_moves": "e2e4 c7c6",
+  "complexity": "Intermédiaire",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Karpov, Capablanca, Anand",
+  
+  "idea": "Les Noirs préparent ...d5 avec le soutien du pion c6. Contrairement à la Française (1...e6), le Fou c8 n'est pas enfermé et peut sortir activement en f5 ou g4. La structure est solide et symétrique. Les Noirs acceptent moins d'espace au début pour obtenir une position sans faiblesses. C'est l'ouverture idéale pour les joueurs positionnels qui aiment des positions claires et solides.",
+
+  "highlights_green": ["d5", "f5", "c5"],
+  "highlights_red": ["e6", "d6"],
+
+  "errors_white": [
+    "Échanger exd5 cxd5 trop tôt : donne aux Noirs une position confortable sans contrepartie",
+    "Ignorer la poussée ...c5 : ce coup attaque le centre blanc et libère le jeu noir",
+    "Surestimer l'avantage d'espace : la position noire est solide et difficile à percer"
+  ],
+  
+  "errors_black": [
+    "Jouer ...dxe4 puis ...Bf5 de façon automatique : parfois ...Bg4 ou ...Nf6 d'abord est meilleur",
+    "Oublier de jouer ...e6 au bon moment : le Fou c8 peut rester enfermé si on attend trop",
+    "Être trop passif : les Noirs doivent chercher ...c5 pour libérer leur position et créer du contre-jeu"
+  ],
+
+  "development": [
+    ["Pion d5", "Jouer ...d5 immédiatement au 2ème coup - c'est tout l'intérêt de 1...c6"],
+    ["Fou c8", "Sortir AVANT ...e6! Aller en f5 (classique) ou g4 (pour échanger contre Cf3)"],
+    ["Cavaliers", "Schéma typique: ...Nd7 d'abord, puis ...Ngf6 - flexible et solide"],
+    ["Fou f8", "Développer en e7 (solide) ou d6 (plus actif) selon la variante"],
+    ["Roi", "Petit roque classique une fois les pièces mineures développées"],
+    ["Pion c6", "Peut avancer en ...c5 plus tard pour attaquer le centre blanc"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de l'Avance",
+      "fen": "rn2kbnr/pp3ppp/1qp1p1b1/3pP3/6P1/2N5/PPPPNP1P/R1BQKB1R w KQkq - 2 7",
+      "highlights": ["b2", "b6", "g4"],
+      "desc": "Variante d'Avance: 3.e5 Bf5 4.Nc3 e6 5.g4 Bg6 6.Nge2?? Qb6! attaque b2 non défendu. ÉVITER (Blancs): Jouer 6.Nf3 ou défendre b2 avec Rb1 avant Nge2."
+    },
+    {
+      "name": "Piège Tal",
+      "fen": "r1bqkb1r/pp3ppp/2p2n2/3pN3/3P4/8/PPP2PPP/R1BQKB1R w KQkq - 0 6",
+      "highlights": ["f7", "b3", "c4"],
+      "desc": "Après 4...Nf6?? 5.Nxf6+ exf6 (ou gxf6) 6.Bc4! menace Qb3 attaquant b7 et f7. ÉVITER: Ne pas reprendre sur f6! Jouer 4...Bf5 ou 4...Nd7 d'abord."
+    },
+    {
+      "name": "Piège de la Fantaisie",
+      "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR b KQkq - 0 3",
+      "highlights": ["e5", "f3", "e4"],
+      "desc": "3.f3!? prépare e4-e5 avec gain d'espace. Si les Noirs ignorent, e5 donne un centre puissant. ÉVITER: Jouer ...e6 ou ...dxe4 fxe4 ...e5! pour casser le centre."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Classique",
+      "moves": "2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6",
+      "uci": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["g6", "e6", "c5"],
+      "white_plan": "Jouer Nf3, h4 pour attaquer le Fou g6, Bd3 pour l'échanger. Structure saine et jeu technique.",
+      "black_plan": "Structure ultra-solide. Jouer ...e6, ...Nf6, ...Nbd7, ...Be7, ...0-0 puis chercher ...c5 pour libérer."
+    },
+    {
+      "name": "Variante d'Avance",
+      "moves": "2.d4 d5 3.e5 Bf5 4.Nf3 e6 5.Be2",
+      "uci": "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2",
+      "eval": "+0.2",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["c5", "f6", "e5"],
+      "white_plan": "Garder la chaîne de pions e5-d4. Attaquer à l'aile roi avec 0-0, Nh4 (chassant Bf5) puis f4-f5.",
+      "black_plan": "Attaquer la base de la chaîne! ...c5 est thématique. ...Nc6, ...Qb6 mettent la pression sur d4. ...f6 sape e5."
+    },
+    {
+      "name": "Variante Panov",
+      "moves": "2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3",
+      "uci": "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3",
+      "eval": "=",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["d5", "c4", "e4"],
+      "white_plan": "Créer un pion isolé noir en d5 avec cxd5. Le pion isolé est une faiblesse à attaquer en finale.",
+      "black_plan": "Le pion d5 est isolé mais donne des cases actives (c4, e4). Développer vite et chercher l'activité des pièces."
+    }
+  ]
+}

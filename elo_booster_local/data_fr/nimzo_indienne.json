@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE NIMZO-INDIENNE",
+  "alt_name": "",
+  "moves": "1.d4 Nf6 2.c4 e6 3.Nc3 Bb4",
+  "uci_moves": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4",
+  "complexity": "Avancé",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Nimzowitsch, Karpov, Kramnik",
+  
+  "idea": "La défense la plus respectée contre 1.d4! Avec 3...Bb4, les Noirs clouent le Cavalier c3 qui défend e4. Si les Blancs veulent jouer e4, ils devront accepter les pions doublés après ...Bxc3. L'idée de Nimzowitsch était révolutionnaire: le contrôle positionnel prime sur l'occupation du centre. Les Noirs obtiennent une structure saine et un jeu harmonieux. C'est l'ouverture préférée des champions du monde positionnels!",
+
+  "highlights_green": ["b4", "e4", "c3"],
+  "highlights_red": ["c3", "d4"],
+
+  "errors_white": [
+    "Jouer e4 sans accepter les conséquences : après ...Bxc3+ bxc3, les pions doublés sont une faiblesse",
+    "Ignorer le clouage : le Cc3 est paralysé, il faut jouer Qc2, Bd2 ou a3 pour résoudre le problème",
+    "Développer passivement : les Blancs ont de l'espace, ils doivent l'utiliser activement"
+  ],
+  
+  "errors_black": [
+    "Échanger ...Bxc3 sans raison : le Fou est une bonne pièce, l'échanger doit avoir un but",
+    "Jouer ...d5 trop tôt : bloque le Fou c8, préférer ...d6 ou ...b6 d'abord",
+    "Négliger le centre : ...c5 ou ...d5 doit venir pour contester d4"
+  ],
+
+  "development": [
+    ["Fou b4", "Cloue le Cc3 - c'est toute l'idée de la Nimzo!"],
+    ["Pion d", "...d6 (flexible) ou ...d5 (central) selon la variante"],
+    ["Pion c5", "Attaque d4 - coup thématique dans beaucoup de lignes"],
+    ["Fou c8", "Sort en b7 (après ...b6) ou reste pour ...d5 selon le plan"],
+    ["Cavalier b8", "...Nc6 ou ...Nbd7 selon la structure choisie"],
+    ["Roi", "Petit roque classique après ...Be7 ou ...Bd6"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Pion Doublé",
+      "fen": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+      "highlights": ["b4", "c3", "e4"],
+      "desc": "Si les Blancs jouent 4.e4?! ...Bxc3+ 5.bxc3 d5! attaque le centre et les pions c3-c4 sont doublés. ÉVITER (Blancs): Jouer 4.Qc2, 4.e3 ou 4.Nf3 avant e4."
+    },
+    {
+      "name": "Variante Sämisch",
+      "fen": "rnbqk2r/pppp1ppp/4pn2/8/2PP4/P1P5/4PPPP/R1BQKBNR b KQkq - 0 5",
+      "highlights": ["c3", "a3", "e4"],
+      "desc": "4.a3 Bxc3+ 5.bxc3 - les Blancs acceptent les pions doublés pour la paire de Fous et e4. Position double tranchant! ÉVITER (Noirs): Jouer ...c5 et ...d5 pour attaquer le centre fragile."
+    },
+    {
+      "name": "Piège Rubinstein",
+      "fen": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4",
+      "highlights": ["e3", "b4", "c5"],
+      "desc": "4.e3 est solide. Si les Noirs jouent ...c5? trop vite, 5.Ne2! et le clouage est levé, les Blancs préparent a3. ÉVITER (Noirs): Jouer ...0-0 d'abord, puis ...d5 ou ...c5 selon la réponse."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Rubinstein",
+      "moves": "4.e3 0-0 5.Bd3 d5 6.Nf3 c5 7.0-0",
+      "uci": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 c7c5 e1g1",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["d3", "c5", "d5"],
+      "white_plan": "Position classique. cxd5 exd5 crée un pion isolé. a3 force l'échange du Fou. Développer et attaquer d5.",
+      "black_plan": "Structure solide avec ...d5, ...c5. Après ...Nc6, ...dxc4, ...Bxc3 selon le timing. ...b6/...Bb7 possible."
+    },
+    {
+      "name": "Variante Classique (Qc2)",
+      "moves": "4.Qc2 0-0 5.a3 Bxc3+ 6.Qxc3 b6 7.Bg5",
+      "uci": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8 a2a3 b4c3 c2c3 b7b6 c1g5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["c2", "c3", "b6"],
+      "white_plan": "Qc2 défend e4 et évite les pions doublés. Après Bxc3 Qxc3, développer e3, Bd3, Nf3, 0-0 avec position saine.",
+      "black_plan": "...b6 et ...Bb7 pour le fianchetto. Le Fou b7 vise e4 et g2. ...c5 ou ...d5 pour le contre-jeu central."
+    },
+    {
+      "name": "Variante Sämisch",
+      "moves": "4.a3 Bxc3+ 5.bxc3 c5 6.e3 d5 7.cxd5 exd5",
+      "uci": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 c7c5 e2e3 d7d5 c4d5 e6d5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["c3", "e4", "d5"],
+      "white_plan": "Les pions doublés donnent e4! Jouer Bd3, Ne2, 0-0, f3 puis e4. La paire de Fous et le centre compensent.",
+      "black_plan": "Attaquer les pions c3-c4! ...Nc6, ...0-0, ...cxd4 puis ...Na5 ou ...Qa5 pour viser les faiblesses."
+    }
+  ]
+}

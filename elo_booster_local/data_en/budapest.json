@@ -1,0 +1,135 @@
+{
+  "name": "BUDAPEST GAMBIT",
+  "alt_name": "",
+  "moves": "1.d4 Nf6 2.c4 e5",
+  "uci_moves": "d2d4 g8f6 c2c4 e7e5",
+  "complexity": "Intermediate",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Maroczy, Tartakower, Rapport",
+  "idea": "The most aggressive response to 1.d4! After 2.c4 e5!? Black sacrifices a pawn for active piece play. After 3.dxe5 Ng4, the Knight attacks e5 and f2, creating immediate complications. White must be precise or get in trouble. It's a gambit that relies on activity and tactics rather than long-term compensation. Perfect for players who love surprises and complications!",
+  "highlights_green": [
+    "e5",
+    "g4",
+    "f2"
+  ],
+  "highlights_red": [
+    "e5",
+    "d4"
+  ],
+  "errors_white": [
+    "Taking on e5 then playing passively: Black gets excellent compensation",
+    "Advancing f3 to defend e5: weakens the King and opens the a7-g1 diagonal",
+    "Keeping the pawn at all costs: development is more important"
+  ],
+  "errors_black": [
+    "Not following up on the gambit: the Knight on g4 must be active",
+    "Exchanging pieces too early: Black needs pieces for the attack",
+    "Forgetting development: ...Nc6, ...Bc5, ...d6 and ...0-0 must come quickly"
+  ],
+  "development": [
+    [
+      "Knight f6",
+      "Goes to g4 to attack e5 and target f2 - the key journey!"
+    ],
+    [
+      "Knight b8",
+      "Nc6 attacks e5 and develops quickly"
+    ],
+    [
+      "Bishop f8",
+      "Bc5 or Bb4+ depending on the line - active pieces!"
+    ],
+    [
+      "King",
+      "Quick kingside castle after ...Be7 or stay flexible"
+    ],
+    [
+      "Queen",
+      "...Qe7 in certain lines to recover e5"
+    ],
+    [
+      "Pawn d",
+      "...d6 to support e5 or ...d5 to open the game"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Knight Trap",
+      "fen": "rnbqkb1r/pppp1ppp/8/4P3/2P3n1/8/PP2PPPP/RNBQKBNR w KQkq - 1 4",
+      "highlights": [
+        "g4",
+        "e5",
+        "f2"
+      ],
+      "desc": "After 3...Ng4, if White plays 4.Bf4?? ...Nc6 5.Nf3 Bb4+! and after 6.Nbd2 Qe7 the e5 pawn falls with advantage. AVOID (White): Play 4.Nf3 or 4.e4 to defend e5 correctly."
+    },
+    {
+      "name": "Fajarowicz Trap",
+      "fen": "rnbqkb1r/pppp1ppp/8/4P3/2Pn4/8/PP2PPPP/RNBQKBNR w KQkq - 1 4",
+      "highlights": [
+        "d4",
+        "e5",
+        "b4"
+      ],
+      "desc": "3...Ne4?! (Fajarowicz) is risky. After 4.Nf3! Black has no clear compensation. AVOID (Black): Prefer 3...Ng4 which is sounder."
+    },
+    {
+      "name": "Queen Trap",
+      "fen": "r1bqkb1r/pppp1ppp/2n5/4P3/2P3n1/5N2/PP2PPPP/RNBQKB1R w KQkq - 3 5",
+      "highlights": [
+        "e5",
+        "g4",
+        "e7"
+      ],
+      "desc": "After 4.Nf3 Nc6, if 5.Bf4?? ...Bb4+! 6.Nbd2 Qe7 7.a3 Ngxe5! Black wins material. AVOID (White): 5.e3 or 5.Nc3 are correct."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Adler Variation",
+      "moves": "3.dxe5 Ng4 4.Nf3 Nc6 5.Bf4 Bb4+ 6.Nbd2",
+      "uci": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 b8c6 c1f4 f8b4 b1d2",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "g4",
+        "c6",
+        "b4"
+      ],
+      "white_plan": "Defend e5 and develop. After a3 and e3, White consolidates. The extra pawn is real but Black has play.",
+      "black_plan": "Pressure on e5! ...Qe7, ...Ngxe5 recovers the pawn. Then ...d6, ...0-0 with active position."
+    },
+    {
+      "name": "Rubinstein Variation",
+      "moves": "3.dxe5 Ng4 4.Bf4 Nc6 5.Nf3 Bb4+ 6.Nc3 Bxc3+",
+      "uci": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1c3 b4c3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "c3",
+        "f4",
+        "e5"
+      ],
+      "white_plan": "After bxc3, White has the bishop pair. e3, Be2, 0-0 with solid structure.",
+      "black_plan": "Recover e5 with ...Qe7 and ...Ngxe5. White's structure with c3-c4 has holes on d4 and d3."
+    },
+    {
+      "name": "Alekhine Variation",
+      "moves": "3.dxe5 Ng4 4.e4 Nxe5 5.f4 Nec6 6.Be3",
+      "uci": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4 e5c6 c1e3",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "e4",
+        "f4",
+        "c6"
+      ],
+      "white_plan": "Massive e4-f4 center. Develop Nc3, Nf3, Bd3 with lots of space.",
+      "black_plan": "White's center is imposing but Black has recovered the pawn. ...Bb4, ...d6, ...0-0 and look for ...f5."
+    }
+  ]
+}

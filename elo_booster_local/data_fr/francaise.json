@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE FRANÇAISE",
+  "alt_name": "",
+  "moves": "1.e4 e6",
+  "uci_moves": "e2e4 e7e6",
+  "complexity": "Intermédiaire",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Botvinnik, Petrosian, Morozevich",
+  
+  "idea": "Les Noirs préparent ...d5 pour contester le centre immédiatement. Contrairement à la Caro-Kann, le Fou c8 est enfermé derrière le pion e6 - c'est le prix à payer! En échange, les Noirs obtiennent une structure solide et un plan clair: attaquer la chaîne de pions blancs à sa base (d4) avec ...c5. La Française crée des positions déséquilibrées où les deux camps ont des plans clairs - les Blancs attaquent à l'aile roi, les Noirs contre-attaquent au centre et à l'aile dame.",
+
+  "highlights_green": ["d5", "c5", "f6"],
+  "highlights_red": ["e6", "c8", "d4"],
+
+  "errors_white": [
+    "Ne pas choisir de système : il faut décider entre e5 (Avance), exd5 (Échange) ou Nc3/Nd2 (Tarrasch/Winawer)",
+    "Ignorer ...c5 : ce coup sape d4, si on ne réagit pas la chaîne s'effondre",
+    "Échanger exd5 sans raison : libère le Fou c8 et donne aux Noirs un jeu facile"
+  ],
+  
+  "errors_black": [
+    "Oublier d'attaquer la chaîne : ...c5 est le coup thématique, sans lui les Noirs sont passifs",
+    "Laisser le Fou c8 mourir : il faut trouver un plan pour l'activer (...b6/...Ba6 ou ...Qb6/...Bd7)",
+    "Jouer ...f6 au mauvais moment : ce coup affaiblit e6 et peut être prématuré"
+  ],
+
+  "development": [
+    ["Pion d5", "Jouer ...d5 au coup 2 - c'est tout l'intérêt de 1...e6"],
+    ["Pion c5", "Le coup clé! Attaque la base de la chaîne d4, à jouer rapidement"],
+    ["Fou c8", "Le problème de la Française! Solutions: ...b6/...Ba6, ...Qb6/...Bd7, ou sacrifice sur b4"],
+    ["Cavaliers", "Cd7 soutient ...c5 et peut aller en f6 ou b6, Cf6 (si pas d'Avance) attaque e4"],
+    ["Fou f8", "En Winawer ...Bb4 cloue le Cc3, sinon ...Be7 solide ou ...Bd6 actif"],
+    ["Roi", "Souvent petit roque, mais parfois le Roi reste au centre en Winawer"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de l'Avance",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+      "highlights": ["e5", "c5", "d4"],
+      "desc": "Après 3.e5, si les Noirs jouent ...c5 4.c3 Nc6 5.Nf3 Qb6?! 6.Bd3! (pas a3?? Qxb2) les Blancs sont bien développés. ÉVITER (Noirs): Jouer ...Bd7 et ...Bb5 pour échanger le mauvais Fou, ou ...Nh6-f7."
+    },
+    {
+      "name": "Piège Winawer",
+      "fen": "rnbqk1nr/ppp2ppp/4p3/3pP3/1b1P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4",
+      "highlights": ["b4", "c3", "g7"],
+      "desc": "3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 et les Blancs ont la paire de Fous et visent Qg4 attaquant g7! ÉVITER (Noirs): Jouer ...Qc7! (défend g7) ou ...Ne7 avant ...Qa5."
+    },
+    {
+      "name": "Piège de l'Échange",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3",
+      "highlights": ["d5", "c5", "e6"],
+      "desc": "3.exd5 exd5 semble ennuyeux mais si les Noirs ne font pas attention: 4.Bd3 Nc6 5.c3 Bd6?! 6.Qh5! crée des menaces sur h7 et d5. ÉVITER (Noirs): Jouer ...Nf6 rapidement pour contrôler h5."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante d'Avance",
+      "moves": "2.d4 d5 3.e5 c5 4.c3 Nc6 5.Nf3",
+      "uci": "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["e5", "c5", "d4"],
+      "white_plan": "Garder la chaîne e5-d4-c3. Développer Bd3, 0-0, et attaquer à l'aile roi avec Na3-c2, f4 puis assaut de pions.",
+      "black_plan": "Attaquer d4! ...Qb6 met la pression, ...cxd4 cxd4 puis ...Nh6-f7 et ...Be7. Le Fou c8 sort via d7-b5."
+    },
+    {
+      "name": "Winawer",
+      "moves": "2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+",
+      "uci": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["b4", "c3", "g7"],
+      "white_plan": "Après bxc3, structure abîmée mais paire de Fous! Qg4 menace g7, Bd3, Ne2 et attaque à l'aile roi.",
+      "black_plan": "...Qc7 défend g7, ...cxd4 cxd4 crée un pion isolé blanc. Plans: ...Ne7-f5 ou ...Qa5+, ...Bd7, roque long."
+    },
+    {
+      "name": "Tarrasch",
+      "moves": "2.d4 d5 3.Nd2 Nf6 4.e5 Nfd7 5.Bd3",
+      "uci": "e2e4 e7e6 d2d4 d7d5 b1d2 g8f6 e4e5 f6d7 f1d3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["d2", "e5", "f7"],
+      "white_plan": "Le Cavalier d2 évite le clouage ...Bb4. Jouer c3, Ne2, 0-0 et attaquer avec f4-f5 ou Qg4.",
+      "black_plan": "Plan classique: ...c5, ...Nc6, ...Qb6 (pression b2 et d4). Le Fou sort par ...b6/...Ba6 pour échanger Bd3."
+    }
+  ]
+}

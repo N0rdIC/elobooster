@@ -1,0 +1,135 @@
+{
+  "name": "NIMZO-INDIAN DEFENSE",
+  "alt_name": "",
+  "moves": "1.d4 Nf6 2.c4 e6 3.Nc3 Bb4",
+  "uci_moves": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4",
+  "complexity": "Advanced",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Nimzowitsch, Karpov, Kramnik",
+  "idea": "The most respected defense against 1.d4! With 3...Bb4, Black pins the Nc3 which defends e4. If White wants to play e4, they will have to accept doubled pawns after ...Bxc3. Nimzowitsch's idea was revolutionary: positional control takes precedence over occupying the center. Black gets a healthy structure and harmonious play. It's the favorite opening of positional world champions!",
+  "highlights_green": [
+    "b4",
+    "e4",
+    "c3"
+  ],
+  "highlights_red": [
+    "c3",
+    "d4"
+  ],
+  "errors_white": [
+    "Playing e4 without accepting the consequences: after ...Bxc3+ bxc3, the doubled pawns are a weakness",
+    "Ignoring the pin: the Nc3 is paralyzed, you must play Qc2, Bd2 or a3 to solve the problem",
+    "Developing passively: White has space, they must use it actively"
+  ],
+  "errors_black": [
+    "Exchanging ...Bxc3 without reason: the Bishop is a good piece, exchanging it must have a purpose",
+    "Playing ...d5 too early: blocks the Bc8, prefer ...d6 or ...b6 first",
+    "Neglecting the center: ...c5 or ...d5 must come to contest d4"
+  ],
+  "development": [
+    [
+      "Bb4",
+      "Pins the Nc3 - that's the whole idea of the Nimzo!"
+    ],
+    [
+      "d-pawn",
+      "...d6 (flexible) or ...d5 (central) depending on the variation"
+    ],
+    [
+      "c5 pawn",
+      "Attacks d4 - thematic move in many lines"
+    ],
+    [
+      "Bc8",
+      "Comes out to b7 (after ...b6) or stays for ...d5 depending on the plan"
+    ],
+    [
+      "Nb8",
+      "...Nc6 or ...Nbd7 depending on the chosen structure"
+    ],
+    [
+      "King",
+      "Classical kingside castle after ...Be7 or ...Bd6"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Doubled Pawn Trap",
+      "fen": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+      "highlights": [
+        "b4",
+        "c3",
+        "e4"
+      ],
+      "desc": "If White plays 4.e4?! ...Bxc3+ 5.bxc3 d5! attacks the center and the c3-c4 pawns are doubled. AVOID (White): Play 4.Qc2, 4.e3 or 4.Nf3 before e4."
+    },
+    {
+      "name": "Sämisch Variation",
+      "fen": "rnbqk2r/pppp1ppp/4pn2/8/2PP4/P1P5/4PPPP/R1BQKBNR b KQkq - 0 5",
+      "highlights": [
+        "c3",
+        "a3",
+        "e4"
+      ],
+      "desc": "4.a3 Bxc3+ 5.bxc3 - White accepts doubled pawns for the bishop pair and e4. Double-edged position! AVOID (Black): Play ...c5 and ...d5 to attack the fragile center."
+    },
+    {
+      "name": "Rubinstein Trap",
+      "fen": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4",
+      "highlights": [
+        "e3",
+        "b4",
+        "c5"
+      ],
+      "desc": "4.e3 is solid. If Black plays ...c5? too fast, 5.Ne2! and the pin is lifted, White prepares a3. AVOID (Black): Play ...0-0 first, then ...d5 or ...c5 depending on the response."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Rubinstein Variation",
+      "moves": "4.e3 0-0 5.Bd3 d5 6.Nf3 c5 7.0-0",
+      "uci": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 c7c5 e1g1",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "d3",
+        "c5",
+        "d5"
+      ],
+      "white_plan": "Classical position. cxd5 exd5 creates an isolated pawn. a3 forces the Bishop exchange. Develop and attack d5.",
+      "black_plan": "Solid structure with ...d5, ...c5. After ...Nc6, ...dxc4, ...Bxc3 depending on timing. ...b6/...Bb7 possible."
+    },
+    {
+      "name": "Classical Variation (Qc2)",
+      "moves": "4.Qc2 0-0 5.a3 Bxc3+ 6.Qxc3 b6 7.Bg5",
+      "uci": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8 a2a3 b4c3 c2c3 b7b6 c1g5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c2",
+        "c3",
+        "b6"
+      ],
+      "white_plan": "Qc2 defends e4 and avoids doubled pawns. After Bxc3 Qxc3, develop e3, Bd3, Nf3, 0-0 with healthy position.",
+      "black_plan": "...b6 and ...Bb7 for the fianchetto. The Bb7 targets e4 and g2. ...c5 or ...d5 for central counterplay."
+    },
+    {
+      "name": "Sämisch Variation",
+      "moves": "4.a3 Bxc3+ 5.bxc3 c5 6.e3 d5 7.cxd5 exd5",
+      "uci": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 c7c5 e2e3 d7d5 c4d5 e6d5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c3",
+        "e4",
+        "d5"
+      ],
+      "white_plan": "The doubled pawns give e4! Play Bd3, Ne2, 0-0, f3 then e4. The bishop pair and center compensate.",
+      "black_plan": "Attack the c3-c4 pawns! ...Nc6, ...0-0, ...cxd4 then ...Na5 or ...Qa5 to target the weaknesses."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "OUVERTURE ANGLAISE",
+  "alt_name": "",
+  "moves": "1.c4",
+  "uci_moves": "c2c4",
+  "complexity": "Intermédiaire",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Botvinnik, Kasparov, Kramnik",
+  
+  "idea": "Les Blancs contrôlent d5 sans jouer e4! C'est une ouverture flexible qui peut transposer dans de nombreux systèmes (Gambit Dame, Catalane, positions de type Sicilienne inversée). L'idée principale est de fianchettoer le Fou en g2 pour contrôler la grande diagonale et le centre de loin. Les Blancs évitent les lignes théoriques de 1.e4 et 1.d4 tout en gardant toutes les options ouvertes. C'est l'ouverture du joueur stratégique qui veut imposer son style.",
+
+  "highlights_green": ["c4", "d5", "g2"],
+  "highlights_red": ["d4", "e4"],
+
+  "errors_white": [
+    "Jouer sans plan : il faut choisir entre g3/Bg2 (fianchetto), Nc3/e3 (classique) ou d4 (transposition)",
+    "Pousser d4 trop tôt sans préparation : peut permettre aux Noirs de prendre l'initiative au centre",
+    "Négliger le centre : le fianchetto seul ne suffit pas, il faut aussi préparer d4 ou e4"
+  ],
+  
+  "errors_black": [
+    "Répondre passivement : les Noirs doivent occuper le centre avec ...e5, ...d5 ou ...c5",
+    "Ignorer la diagonale a1-h8 : si Bg2, le Fou peut devenir très dangereux",
+    "Jouer ...d5 sans préparation : après cxd5, les Blancs peuvent prendre le contrôle de d5"
+  ],
+
+  "development": [
+    ["Pion c4", "Contrôle d5 et prépare Nc3 - premier pas vers le contrôle du centre"],
+    ["Fou g2", "Le fianchetto Bg2 est le plan principal - le Fou domine la grande diagonale"],
+    ["Cavaliers", "Nc3 contrôle d5, Nf3 prépare le développement classique"],
+    ["Pion d", "d3 (solide) ou d4 (central) selon le plan choisi"],
+    ["Pion e", "e3 (solide) ou e4 (agressif) pour un centre de pions"],
+    ["Roi", "Petit roque après g3/Bg2/Nf3 - position sûre et Tour active sur e1/d1"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Gambit",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2",
+      "highlights": ["e5", "c4", "d4"],
+      "desc": "1...e5 (Sicilienne inversée). Si 2.Nc3 Nf6 3.Nf3?! e4! gagne du temps. ÉVITER (Blancs): Jouer 2.g3! d'abord, ou 3.d3 pour contrôler e4."
+    },
+    {
+      "name": "Piège de la Symétrie",
+      "fen": "rnbqkbnr/pp1ppppp/8/2p5/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2",
+      "highlights": ["c5", "c4", "d4"],
+      "desc": "1...c5 (Symétrique). Si les Blancs jouent Nc3/Nf3/g3 sans d4, les Noirs égalisent facilement. ÉVITER (Blancs): Préparer d4 avec Nf3, g3, Bg2 puis d4 au bon moment."
+    },
+    {
+      "name": "Piège du Centre",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2",
+      "highlights": ["d5", "c4", "d4"],
+      "desc": "1...e6 2.d4 d5 transpose dans le Gambit Dame! Si les Noirs ne sont pas préparés, ils peuvent souffrir. ÉVITER (Noirs): Connaître le Gambit Dame ou jouer 1...c5/1...e5 pour éviter."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Sicilienne Inversée",
+      "moves": "1...e5 2.Nc3 Nf6 3.g3 d5 4.cxd5 Nxd5",
+      "uci": "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["e5", "d5", "g2"],
+      "white_plan": "Les Blancs ont une Sicilienne avec un temps de plus! Fianchetto Bg2, puis Nf3, 0-0 et d3. Pression lente sur e5.",
+      "black_plan": "Les Noirs ont un centre fort avec e5. Développer ...Nc6, ...Be7/...Bc5, ...0-0 et maintenir la présence centrale."
+    },
+    {
+      "name": "Défense Symétrique",
+      "moves": "1...c5 2.Nc3 Nc6 3.g3 g6 4.Bg2 Bg7",
+      "uci": "c2c4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["c5", "g7", "g2"],
+      "white_plan": "Double fianchetto possible. Jouer Nf3, 0-0, d3, puis chercher e3/e4 ou b3/Bb2 pour la pression.",
+      "black_plan": "Structure miroir! ...Nf6, ...0-0, ...d6, puis ...Rb8 et ...b5 pour contre-jeu à l'aile dame."
+    },
+    {
+      "name": "Système Hérisson",
+      "moves": "1...Nf6 2.Nc3 e6 3.Nf3 b6 4.g3 Bb7",
+      "uci": "c2c4 g8f6 b1c3 e7e6 g1f3 b7b6 g2g3 c8b7",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["b7", "e6", "d5"],
+      "white_plan": "Le Hérisson est solide mais passif. Jouer Bg2, 0-0, d4, et chercher à exploiter l'espace avec e4 ou Nd5.",
+      "black_plan": "Structure compacte comme un hérisson! ...Be7, ...0-0, ...d6, ...c5, ...Qc7. Attendre puis contre-attaquer avec ...d5 ou ...b5."
+    }
+  ]
+}

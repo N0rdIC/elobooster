@@ -1,0 +1,135 @@
+{
+  "name": "SCANDINAVIAN DEFENSE",
+  "alt_name": "Centre Counter",
+  "moves": "1.e4 d5",
+  "uci_moves": "e2e4 d7d5",
+  "complexity": "Beginner",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Tiviakov, Pytel, Brynell",
+  "idea": "The simplest response to 1.e4! Black immediately attacks the e4 pawn with ...d5. After 2.exd5 Qxd5 3.Nc3, the Queen must move but Black develops quickly. The modern approach is ...Qa5 (keeping the Queen active) or ...Qd6 (defending d5). It's an opening with very little theory - Black knows the positions better than most White players. Perfect for club players who want practical chances!",
+  "highlights_green": [
+    "d5",
+    "d8",
+    "c6"
+  ],
+  "highlights_red": [
+    "d5",
+    "e4"
+  ],
+  "errors_white": [
+    "Playing without a plan: Nc3, Nf3, d4, Bc4 is the standard setup",
+    "Trying to 'punish' Black: the Scandinavian is sound, play normal chess",
+    "Overestimating the Queen move: Black develops quickly after ...Qa5"
+  ],
+  "errors_black": [
+    "Playing ...Qxd5 then ...Qa5 without a plan: the Queen must find a good square",
+    "Forgetting development: ...Nf6, ...Bf5/...Bg4, ...e6, ...c6 is the standard setup",
+    "Playing ...Nf6 gambits without knowing the theory: can backfire"
+  ],
+  "development": [
+    [
+      "Queen",
+      "After Qxd5 Nc3, retreat to a5 (aggressive) or d6 (solid) - never d8!"
+    ],
+    [
+      "Bishop c8",
+      "It's the key piece! Develop to f5 (classical) or g4 (pins the Nf3)"
+    ],
+    [
+      "Knights",
+      "Nf6 attacks e4 and develops, Nc6/Nd7 supports the center"
+    ],
+    [
+      "Pawn c",
+      "...c6 is essential to support d5 and prepare ...e6 or ...e5"
+    ],
+    [
+      "Bishop f8",
+      "Develop to e7 (solid) or g7 after ...g6 (fianchetto)"
+    ],
+    [
+      "King",
+      "Classical kingside castle after ...e6 and ...Be7"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Queen Trap",
+      "fen": "rnb1kbnr/ppp1pppp/8/q7/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4",
+      "highlights": [
+        "a5",
+        "b4",
+        "d2"
+      ],
+      "desc": "After 2...Qxd5 3.Nc3 Qa5 4.d4?? ...Qxd1+? No! 4...e5! and if 5.dxe5?? Qxe5+ wins a piece. AVOID (White): Play Nf3 or Bd2 before d4."
+    },
+    {
+      "name": "Gambit Trap",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3P4/8/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3",
+      "highlights": [
+        "d5",
+        "f6",
+        "e4"
+      ],
+      "desc": "2...Nf6 (gambit) 3.d4?? ...Nxd5! Recovers the pawn with good play. AVOID (White): Play 3.Bb5+ or 3.c4 to keep the pawn or complicate."
+    },
+    {
+      "name": "Portuguese Trap",
+      "fen": "rn2kb1r/ppp1pppp/5n2/q4b2/3P2P1/2N5/PPP2P1P/R1BQKBNR b KQkq - 0 5",
+      "highlights": [
+        "f5",
+        "g4",
+        "c2"
+      ],
+      "desc": "Portuguese Variation: 3...Qa5 4.d4 Nf6 5.g4?? (chases the Bishop) ...Bxc2! wins the c2 pawn since the Queen defends. AVOID (White): Don't play g4 - develop normally with Nf3."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Modern Variation (Qa5)",
+      "moves": "2.exd5 Qxd5 3.Nc3 Qa5 4.d4 Nf6",
+      "uci": "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "a5",
+        "f5",
+        "c6"
+      ],
+      "white_plan": "Develop Nf3, Bd2 (defends c3 and prepares Bc4), 0-0. Keep central pressure with a space advantage.",
+      "black_plan": "Play ...Bf5! (develop the Bishop before ...e6), then ...c6, ...e6, ...Nbd7, ...Be7 and castle. Solid position."
+    },
+    {
+      "name": "Classical Variation (Qd6)",
+      "moves": "2.exd5 Qxd5 3.Nc3 Qd6 4.d4 Nf6",
+      "uci": "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "d6",
+        "f5",
+        "a6"
+      ],
+      "white_plan": "Develop Nf3, Bd3 or Bc4, 0-0. The d4 center is strong. Look to open the game to exploit the development advantage.",
+      "black_plan": "The Queen on d6 is solid but passive. Play ...a6 (prepares ...b5), ...Bf5, ...c6 then ...e6 and castle."
+    },
+    {
+      "name": "Scandinavian Gambit (Nf6)",
+      "moves": "2.exd5 Nf6 3.d4 Nxd5 4.c4 Nb6",
+      "uci": "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "b6",
+        "c4",
+        "d4"
+      ],
+      "white_plan": "Powerful c4-d4 center. Develop Nf3, Nc3, Bd3 and 0-0. The position is very comfortable for White.",
+      "black_plan": "Counter-attack the center! ...g6 and ...Bg7 (fianchetto) or ...Bf5, ...e6, ...Be7. The Nb6 targets c4 and d5."
+    }
+  ]
+}

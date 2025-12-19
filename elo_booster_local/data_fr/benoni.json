@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE BENONI",
+  "alt_name": "Modern Benoni",
+  "moves": "1.d4 Nf6 2.c4 c5 3.d5 e6 4.Nc3 exd5 5.cxd5 d6",
+  "uci_moves": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6",
+  "complexity": "Avancé",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Tal, Topalov, Vugar Gashimov",
+  
+  "idea": "Le Benoni crée un déséquilibre maximal! Les Noirs acceptent un pion arriéré en d6 et un trou en d5 pour obtenir une majorité de pions à l'aile dame (a7, b7, c5 contre a2, b2) et du contre-jeu dynamique. Le plan noir est simple: ...b5, ...Nb6-c4 ou ...a6/...b5/...b4 pour créer un pion passé. Pendant ce temps, les Blancs attaquent l'aile roi avec e4-e5 ou Bf4/Bg5. C'est une course entre les deux attaques!",
+
+  "highlights_green": ["c5", "b5", "g7"],
+  "highlights_red": ["d6", "d5", "e4"],
+
+  "errors_white": [
+    "Jouer passivement : les Blancs ont e4-d5 mais doivent utiliser cet espace pour attaquer",
+    "Ignorer ...b5 : cette poussée crée un pion passé, il faut jouer a4 pour l'empêcher",
+    "Échanger en d6 sans raison : le pion d6 est faible, dxd6 le libère!"
+  ],
+  
+  "errors_black": [
+    "Ne jamais jouer ...b5 : sans cette poussée l'aile dame est bloquée, les Noirs n'ont rien",
+    "Laisser e5 arriver sans contre-jeu : e4-e5 étouffe les Noirs, il faut avoir du jeu ailleurs",
+    "Oublier le Roi : le Roi noir est souvent exposé, attention aux sacrifices en e6 ou f7!"
+  ],
+
+  "development": [
+    ["Pion d6", "Pion arriéré mais essentiel - il contrôle e5 et protège le centre"],
+    ["Fou g7", "Fianchetto obligatoire - le Fg7 attaque d5 et a1, défend le Roi"],
+    ["Cavalier b8", "...Nbd7 ou ...Na6-c7 pour préparer ...b5 ou ...Nb6-c4"],
+    ["Pion a6 + b5", "LE plan! ...a6 puis ...b5 crée la majorité et menace ...b4"],
+    ["Roi", "Petit roque rapide - le Roi doit être en sécurité avant l'attaque blanche"],
+    ["Tour a8", "...Ra8-b8 soutient ...b5, ou ...Qa5 avec pression sur a2"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Pion d5",
+      "fen": "rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4",
+      "highlights": ["d5", "e6", "b5"],
+      "desc": "Après 4.Nc3, les Noirs DOIVENT jouer ...exd5! Si ...d6?! d'abord, les Blancs gardent plus d'espace. ÉVITER (Noirs): Toujours prendre ...exd5 pour ouvrir la diagonale du Ff8."
+    },
+    {
+      "name": "Piège du Cavalier",
+      "fen": "rn1qkb1r/pp3ppp/3p1n2/2pP4/4P1b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 7",
+      "highlights": ["g4", "f3", "d1"],
+      "desc": "Si les Noirs jouent ...Bg4?! trop tôt, les Blancs ont h3! Bxf3 Qxf3 avec une Dame active et d6 est faible. ÉVITER (Noirs): Développer ...g6/...Bg7 d'abord, ...Bg4 seulement si utile."
+    },
+    {
+      "name": "Piège de l'Aile Roi",
+      "fen": "rn1q1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 0 9",
+      "highlights": ["e5", "f4", "h6"],
+      "desc": "Position typique. Les Blancs préparent e5 ou Bf4-e5. Si les Noirs sont passifs, e5! dxe5 d6! crée un pion passé dévastateur. ÉVITER (Noirs): Jouer ...a6, ...b5 VITE pour créer du contre-jeu!"
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Benoni Classique",
+      "moves": "6.e4 g6 7.Nf3 Bg7 8.Be2 0-0 9.0-0 a6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 a7a6",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["a6", "b5", "e5"],
+      "white_plan": "a4 (empêche ...b5), Bf4 ou Bg5, puis e5 ou f4 pour l'attaque. Nd2-c4 vise d6.",
+      "black_plan": "...Nbd7, ...Rb8, puis ...b5 (même après a4, ...b5 axb5 ...Bxa1). ...Ne8-c7 soutient ...b5."
+    },
+    {
+      "name": "Variante Taimanov",
+      "moves": "6.e4 g6 7.f4 Bg7 8.Bb5+ Nfd7 9.a4 0-0",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4 f8g7 f1b5 f6d7 a2a4 e8g8",
+      "eval": "+0.5",
+      "white_win": 56,
+      "black_win": 44,
+      "highlights": ["f4", "b5", "a4"],
+      "white_plan": "f4 prépare e5 et bloque la case f5. Nf3, 0-0, puis e5 avec attaque. a4 bloque l'aile dame noire.",
+      "black_plan": "Contre-jeu difficile! ...Na6, ...Nc7, ...Rb8 et chercher ...b6/...b5 malgré a4. ...f5 possible pour bloquer."
+    },
+    {
+      "name": "Système Fianchetto",
+      "moves": "6.Nf3 g6 7.g3 Bg7 8.Bg2 0-0 9.0-0 a6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 g1f3 g7g6 g2g3 f8g7 f1g2 e8g8 e1g1 a7a6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["g2", "g7", "b5"],
+      "white_plan": "Double fianchetto possible avec b3/Bb2. Moins agressif mais solide. Nd2, a4, Nc4 avec pression.",
+      "black_plan": "Plus d'espace pour respirer! ...Nbd7, ...Rb8, ...b5 et contre-jeu normal. ...Re8, ...Ne5 actif."
+    }
+  ]
+}

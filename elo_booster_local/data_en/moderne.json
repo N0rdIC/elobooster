@@ -1,0 +1,135 @@
+{
+  "name": "MODERN DEFENSE",
+  "alt_name": "Robatsch",
+  "moves": "1.e4 g6",
+  "uci_moves": "e2e4 g7g6",
+  "complexity": "Beginner",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Seirawan, Speelman, Tiger Hillarp Persson",
+  "idea": "The most flexible hypermodern defense! With ...g6 and ...Bg7, Black attacks White's center from afar without committing to a pawn structure. The idea is to let White build a center, then strike with ...c5, ...d6, ...e5 or ...d5 depending on the setup. It's like the Pirc but even more flexible since Black delays ...Nf6. Perfect for players who like to improvise!",
+  "highlights_green": [
+    "g7",
+    "d6",
+    "c5"
+  ],
+  "highlights_red": [
+    "g6",
+    "e5"
+  ],
+  "errors_white": [
+    "Building a huge center then not using it: the pawns become targets",
+    "Ignoring the Bg7: this Bishop is dangerous on the long diagonal",
+    "Attacking without development: piece activity is key"
+  ],
+  "errors_black": [
+    "Being too passive: Black must attack the center at some point",
+    "Delaying development too much: ...Nf6, ...d6, ...0-0 must come",
+    "Playing ...d5 at the wrong time: can be premature"
+  ],
+  "development": [
+    [
+      "Pawn g6 + Bishop",
+      "g6 then Bg7 - the fianchetto is the basic idea"
+    ],
+    [
+      "Pawn d6",
+      "Flexible - allows ...Nf6 (Pirc) or ...e5/...Ne7 (pure Modern)"
+    ],
+    [
+      "Knight g8",
+      "Nf6 transposes to Pirc, or ...Ne7 stays in the Modern"
+    ],
+    [
+      "Pawn c5",
+      "Counter-attack on d4 - thematic in many lines"
+    ],
+    [
+      "King",
+      "Quick kingside castle after ...Bg7 - essential for safety"
+    ],
+    [
+      "Knight b8",
+      "...Nc6 or ...Nd7 depending on chosen plan"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Center Trap",
+      "fen": "rnbqkbnr/pppppp1p/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2",
+      "highlights": [
+        "e4",
+        "d4",
+        "g7"
+      ],
+      "desc": "After 2.d4, White has an ideal center. If Black plays ...Bg7 without a plan, White crushes with Nc3, Be3, Qd2, 0-0-0 and attack. AVOID (Black): Play ...d6 and prepare ...c5 or ...e5 to contest."
+    },
+    {
+      "name": "Attack Trap",
+      "fen": "rnbqk1nr/ppppppbp/6p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3",
+      "highlights": [
+        "d4",
+        "e4",
+        "h6"
+      ],
+      "desc": "If Black is passive, White plays Be3, Qd2, Bh6! (exchange the Bg7), then 0-0-0 and h4-h5 to open the Black King. AVOID (Black): Play ...d6, ...c6 or ...c5 quickly for counterplay."
+    },
+    {
+      "name": "f-Pawn Trap",
+      "fen": "rnbqk1nr/ppppppbp/6p1/8/3PPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3",
+      "highlights": [
+        "f4",
+        "e5",
+        "d6"
+      ],
+      "desc": "3.f4!? aggressive. If ...d6 4.Nf3 Nf6 5.e5!? dxe5 6.fxe5 Nd5 7.c4 Black loses the Knight or has a difficult position. AVOID (Black): Play ...d5! or ...c5 to contest the center before f4-e5."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical Modern",
+      "moves": "2.d4 Bg7 3.Nc3 d6 4.Be3 a6 5.Qd2",
+      "uci": "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 c1e3 a7a6 d1d2",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "d2",
+        "e3",
+        "h6"
+      ],
+      "white_plan": "Attack system! Bh6 (exchange the Bg7), 0-0-0, f3, then g4-h4-h5 to open the kingside.",
+      "black_plan": "...a6 prepares ...b5. Play ...Nd7, ...c5 or ...e5 for counterplay. ...h5 can prevent g4."
+    },
+    {
+      "name": "Pterodactyl",
+      "moves": "2.d4 Bg7 3.Nc3 c5 4.dxc5 Qa5",
+      "uci": "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 d8a5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "a5",
+        "c5",
+        "c3"
+      ],
+      "white_plan": "The Qa5 is aggressive but exposed. Bd2, Nf3, Bc4 and rapid development to exploit the lead.",
+      "black_plan": "...Qxc5 recovers the pawn. Then ...Nc6, ...Nf6, ...0-0, ...d6 with playable position. The Bg7 is active."
+    },
+    {
+      "name": "Hippopotamus",
+      "moves": "2.d4 Bg7 3.Nc3 d6 4.Nf3 Nd7 5.Be2 e6",
+      "uci": "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 b8d7 f1e2 e7e6",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "e6",
+        "d6",
+        "g7"
+      ],
+      "white_plan": "Black is very solid but passive. 0-0, Be3, Qd2 and look for a weakness. a4 or h4 possible.",
+      "black_plan": "Ultra-solid! ...Ne7, ...0-0, ...b6, ...Bb7, ...c5 or ...e5 at the right moment. Hard to beat but hard to win."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "name": "KING'S INDIAN DEFENSE",
+  "alt_name": "King's Indian Defense",
+  "moves": "1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6",
+  "uci_moves": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+  "complexity": "Advanced",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Kasparov, Fischer, Nakamura",
+  "idea": "The most combative defense against 1.d4! Black lets White build a massive e4-d4 center, then launches a furious kingside attack with ...e5, ...f5, ...Nf6-d7-f6, ...g5, ...Rf7-g7 and ...h5. It's a real battle: White attacks on the queenside (c5, b4) while Black attacks the White King. Kasparov and Fischer won immortal games with this opening. Very theoretical but spectacular!",
+  "highlights_green": [
+    "g7",
+    "f5",
+    "h4"
+  ],
+  "highlights_red": [
+    "d6",
+    "e5",
+    "c5"
+  ],
+  "errors_white": [
+    "Ignoring Black's kingside attack: the ...f5, ...g5, ...h5 attack can be devastating",
+    "Playing too slowly on the queenside: the race is on, you must push c5, b4, a4 quickly",
+    "Exchanging the Bg7 without reason: this Bishop is Black's strength but also a King defender"
+  ],
+  "errors_black": [
+    "Never playing ...f5: without this push the attack doesn't exist, Black gets crushed",
+    "Playing ...e5 then ...exd4: opens the center for White, you must keep the tension",
+    "Forgetting defense: attacking is good, but the Black King must also be protected!"
+  ],
+  "development": [
+    [
+      "d6 + e5 pawns",
+      "d6 first (solid), then ...e5 to block the center and prepare ...f5"
+    ],
+    [
+      "Bg7",
+      "The monster of the King's Indian! Targets d4, a1 and defends the King"
+    ],
+    [
+      "Nf6",
+      "Attacks e4, then often ...Nfd7 to prepare ...f5 without blocking the f-pawn"
+    ],
+    [
+      "Nb8",
+      "...Nbd7 (supports e5) or ...Na6-c5 (attacks e4)"
+    ],
+    [
+      "King",
+      "Kingside castle, then the King stays on g8 during the f5-g5-h5 attack"
+    ],
+    [
+      "Rf8",
+      "After ...f5, the Rook goes to f7, then g7 or h7 for the attack!"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Center Trap",
+      "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQK2R b KQ - 0 6",
+      "highlights": [
+        "e5",
+        "d4",
+        "f5"
+      ],
+      "desc": "Classical position. If Black plays ...e5 too early without preparation, 6.dxe5 dxe5 7.Qxd8 Rxd8 8.Nxe5! wins a pawn. AVOID (Black): Play ...e5 only after 0-0, or play ...Nbd7 first."
+    },
+    {
+      "name": "Four Pawns Attack",
+      "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/2PPPP2/2N5/PP4PP/R1BQKBNR b KQ - 0 5",
+      "highlights": [
+        "f4",
+        "e4",
+        "e5"
+      ],
+      "desc": "5.f4!? Aggressive attack. The 4 pawns e4-d4-c4-f4 are imposing but Black plays ...c5! to counter-attack. AVOID (Black): Don't be passive! ...c5 immediately to open the game."
+    },
+    {
+      "name": "Bayonet Attack Trap",
+      "fen": "r1bq1rk1/ppp1npbp/3p2p1/3Pp3/2P1P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 0 8",
+      "highlights": [
+        "b4",
+        "f5",
+        "c5"
+      ],
+      "desc": "Bayonet Attack: White plays b4 to attack. Black must respond quickly with ...f5 or ...a5. AVOID (Black): Don't play passively! ...f5 or ...a5 to create counterplay."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical Variation",
+      "moves": "5.Nf3 0-0 6.Be2 e5 7.0-0 Nc6 8.d5 Ne7",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6e7",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "d5",
+        "f5",
+        "c5"
+      ],
+      "white_plan": "Closed center. Queenside attack with c5, b4, a4, Rb1. The Knight goes to d3 to support c5 or b4.",
+      "black_plan": "Kingside attack! ...Nd7, ...f5, then ...f4, ...g5, ...Nf6, ...Rf7-g7, ...h5-h4 to open the lines."
+    },
+    {
+      "name": "Sämisch Variation",
+      "moves": "5.f3 0-0 6.Be3 e5 7.d5 c6",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1e3 e7e5 d4d5 c7c6",
+      "eval": "+0.3",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "f3",
+        "e3",
+        "c6"
+      ],
+      "white_plan": "Solid structure with f3 (protects e4). Qd2, 0-0-0 and kingside attack with g4-h4 or Bh6.",
+      "black_plan": "...c6 prepares ...cxd5. Plans: ...a6, ...b5 or ...f5 after preparation. ...Nh5 to exchange the Be3."
+    },
+    {
+      "name": "Four Pawns Attack",
+      "moves": "5.f4 0-0 6.Nf3 c5 7.d5 e6 8.Be2 exd5",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f4 e8g8 g1f3 c7c5 d4d5 e7e6 f1e2 e6d5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "f4",
+        "c5",
+        "d5"
+      ],
+      "white_plan": "Imposing but fragile center. cxd5 or exd5 depending on desired structure. 0-0 and attack with e5.",
+      "black_plan": "Counter-attack! ...exd5 opens lines for the Bg7. ...Bg4, ...Re8, ...Qa5 with active play."
+    }
+  ]
+}

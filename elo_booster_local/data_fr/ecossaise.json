@@ -1,0 +1,93 @@
+{
+  "name": "PARTIE ÉCOSSAISE",
+  "alt_name": "",
+  "moves": "1.e4 e5 2.Nf3 Nc6 3.d4",
+  "uci_moves": "e2e4 e7e5 g1f3 b8c6 d2d4",
+  "complexity": "Débutant",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Kasparov, Carlsen, Caruana",
+  
+  "idea": "Les Blancs ouvrent immédiatement le centre avec d4, évitant les longues lignes théoriques de l'Espagnole. Après 3...exd4 4.Nxd4, le Cavalier est magnifiquement centralisé et les Blancs ont un développement rapide. L'idée est d'obtenir des positions ouvertes avec du jeu actif pour les pièces. C'est une ouverture honnête et directe, très populaire chez les joueurs qui veulent du jeu concret.",
+
+  "highlights_green": ["d4", "e5", "c6"],
+  "highlights_red": ["f7", "d5"],
+
+  "errors_white": [
+    "Nxc6 bxc6 sans raison : double les pions mais donne aux Noirs le centre et la colonne b",
+    "Bc4 trop tôt dans certaines lignes : permet ...Nxe4! gagnant un pion",
+    "Négliger le développement pour attaquer : l'attaque prématurée sans pièces développées échoue"
+  ],
+  
+  "errors_black": [
+    "...Qh4?! prématuré : après Nc3! la Dame est exposée et les Blancs développent avec tempo",
+    "...Bc5 sans ...Nf6 : le Fou peut être attaqué par c3-d4 ou Nb3",
+    "Laisser le Cavalier d4 dominer : il faut le contester avec ...Nf6 ou le chasser avec ...c5"
+  ],
+
+  "development": [
+    ["Cavalier d4", "Déjà centralisé! Peut aller en f5, b5 ou rester dominant au centre"],
+    ["Fou c1", "Développer en e3 (soutient d4) ou c4 (vise f7) selon la variante"],
+    ["Cavalier b1", "Aller en c3 pour contrôler d5 et soutenir e4"],
+    ["Fou f1", "c4 (agressif, Scotch Gambit) ou e2/d3 (solide)"],
+    ["Roi", "Petit roque rapide, ou parfois 0-0-0 dans les lignes agressives"],
+    ["Tours", "Centraliser sur d1 et e1 pour contrôler les colonnes ouvertes"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de la Dame",
+      "fen": "r1b1kbnr/pppp1ppp/2n5/4p3/3NP2q/8/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+      "highlights": ["h4", "c3", "e3"],
+      "desc": "Après 4...Qh4?! 5.Nc3! (pas g3?? Qxe4+) les Blancs menacent Ndb5 et Nd5. La Dame est mal placée et doit fuir. ÉVITER (Noirs): Ne pas sortir la Dame si tôt! Jouer ...Nf6 ou ...Bc5."
+    },
+    {
+      "name": "Scotch Gambit",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 4",
+      "highlights": ["c4", "f7", "d4"],
+      "desc": "4.Bc4!? (au lieu de Nxd4) sacrifie un pion pour le développement. Après ...Bc5?! 5.c3! les Blancs récupèrent d4 avec initiative. ÉVITER (Noirs): Jouer ...Nf6! attaquant e4, ou ...d6 solide."
+    },
+    {
+      "name": "Piège du Cavalier",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+      "highlights": ["c6", "f6", "e5"],
+      "desc": "Après 4...Nf6 5.Nxc6?! bxc6 les Noirs ont un excellent centre avec ...d5! et la colonne b pour attaquer. ÉVITER (Blancs): Garder le Cd4 ou jouer Nc3 d'abord."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Classique",
+      "moves": "3...exd4 4.Nxd4 Bc5 5.Be3 Qf6",
+      "uci": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5 c1e3 d8f6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["d4", "f2", "c3"],
+      "white_plan": "c3 pour sécuriser le Cd4, puis Nc3 et Qd2. Le grand roque (0-0-0) est possible pour une attaque sur l'aile roi.",
+      "black_plan": "...Qf6 attaque d4 et prépare ...Nge7-g6. Les Noirs visent ...d5 pour libérer et égaliser."
+    },
+    {
+      "name": "Scotch Gambit",
+      "moves": "3...exd4 4.Bc4 Nf6 5.e5",
+      "uci": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f1c4 g8f6 e4e5",
+      "eval": "+0.2",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["c4", "e5", "f7"],
+      "white_plan": "Sacrifier le pion d4 pour un développement ultra-rapide. e5 chasse le Cf6 et ouvre des lignes d'attaque sur f7.",
+      "black_plan": "Reculer ...d5! bloque le Fou c4 et rend le pion. Après exf6 dxc4, les Noirs ont un bon jeu."
+    },
+    {
+      "name": "Variante Mieses",
+      "moves": "3...exd4 4.Nxd4 Nf6 5.Nxc6 bxc6",
+      "uci": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["c6", "d5", "e4"],
+      "white_plan": "Les pions doublés c6 sont une faiblesse à long terme. Développer Bd3, 0-0, puis pression sur l'aile dame.",
+      "black_plan": "Les pions doublés donnent le contrôle de d5! Jouer ...d5 rapidement pour activer les pièces et ouvrir le jeu."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "name": "PHILIDOR DEFENSE",
+  "alt_name": "",
+  "moves": "1.e4 e5 2.Nf3 d6",
+  "uci_moves": "e2e4 e7e5 g1f3 d7d6",
+  "complexity": "Beginner",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Philidor, Kramnik, Shirov",
+  "idea": "The solid response to 1.e4 e5 2.Nf3! With ...d6, Black defends e5 solidly but blocks the Bf8. The modern approach is ...Nf6, ...Be7, ...0-0, ...c6 then ...Nbd7 and ...Re8 preparing ...d5 or ...exd4 followed by ...d5. Philidor himself said 'pawns are the soul of chess' and this defense reflects that philosophy - solid structure over piece activity!",
+  "highlights_green": [
+    "e5",
+    "d6",
+    "f5"
+  ],
+  "highlights_red": [
+    "f8",
+    "f7"
+  ],
+  "errors_white": [
+    "Playing d4 too early: after ...exd4 Nxd4 Black is fine",
+    "Ignoring the ...d5 break: this frees Black's position",
+    "Trading too many pieces: helps Black equalize"
+  ],
+  "errors_black": [
+    "Blocking the Bf8 forever: find a way to activate it via ...g6 or ...Be7-f8-g7",
+    "Playing ...Bg4 too early: can be refuted by d4-d5",
+    "Being too passive: the Hanham setup with ...Nbd7 is more active"
+  ],
+  "development": [
+    [
+      "Pawn d6",
+      "Defends e5 solidly but locks in the Bishop - it's the price to pay"
+    ],
+    [
+      "Knight g8",
+      "Nf6 is natural but blocks ...f5, sometimes ...Ne7 is better!"
+    ],
+    [
+      "Bishop f8",
+      "Be7 first (frees the f8 square for the King), then look for ...f5"
+    ],
+    [
+      "Knight b8",
+      "Nc6 or Nd7 depending on plan - Nd7 prepares ...f5 better"
+    ],
+    [
+      "King",
+      "Kingside castle after ...Be7 - very safe position"
+    ],
+    [
+      "Pawn f",
+      "...f5! is the liberating move - breaks White's chain and activates the Bc8"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Legal Trap",
+      "fen": "r1bqkbnr/ppp2ppp/2np4/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+      "highlights": [
+        "c4",
+        "f7",
+        "g4"
+      ],
+      "desc": "After 3.Bc4 Bg4?? (classical mistake) 4.Nc3 Nc6 5.h3 Bh5 6.Nxe5!! Bxd1?? 7.Bxf7+ Ke7 8.Nd5# mate! AVOID (Black): Never play ...Bg4 in the Philidor! Play ...Be7 or ...Nf6."
+    },
+    {
+      "name": "Center Trap",
+      "fen": "rnbqkbnr/ppp2ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3",
+      "highlights": [
+        "d4",
+        "e5",
+        "d6"
+      ],
+      "desc": "3.d4 exd4 (forced otherwise d5 gains space) 4.Nxd4 and White has an ideal center. If ...Nf6? 5.Nc3 Be7 6.Bf4 Black is passive. AVOID (Black): Play 4...Nf6 5.Nc3 Be7 then ...0-0 and ...Re8 to prepare ...d5."
+    },
+    {
+      "name": "Endgame Trap",
+      "fen": "r1bqkb1r/pppn1ppp/3p1n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+      "highlights": [
+        "c4",
+        "d5",
+        "f7"
+      ],
+      "desc": "Normal position. If White plays 0-0 Be7 Re1 0-0 and Black can never play ...f5 because e5 falls! AVOID (Black): Play ...c6 and ...Qc7 to prepare ...d5, or ...h6 and ...g5 to prevent Bg5."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Hanham Variation",
+      "moves": "3.d4 Nf6 4.Nc3 Nbd7 5.Bc4 Be7",
+      "uci": "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7 f1c4 f8e7",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "d7",
+        "e7",
+        "c6"
+      ],
+      "white_plan": "Strong d4-e4 center. Play 0-0, a4 (prevents ...b5), then attack with Qe2, Rd1 and look to open the center.",
+      "black_plan": "Hanham structure: ...Nbd7, ...Be7, ...0-0, ...c6 then ...Qc7. Prepare ...d5 or ...f5 at the right moment."
+    },
+    {
+      "name": "Philidor Counterattack",
+      "moves": "3.d4 exd4 4.Nxd4 Nf6 5.Nc3 Be7 6.Bf4",
+      "uci": "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6 b1c3 f8e7 c1f4",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "d4",
+        "f4",
+        "d5"
+      ],
+      "white_plan": "Ideal center with Knight on d4. Develop Qf3 or Qd2, 0-0-0 possible for aggressive attack.",
+      "black_plan": "Play ...0-0, ...Re8, ...Nc6 or ...a6 then ...b5. The move ...d5! is the goal to equalize."
+    },
+    {
+      "name": "Lion Variation",
+      "moves": "3.d4 Nf6 4.Nc3 Nbd7 5.Bc4 Be7 6.0-0 0-0 7.a4 c6",
+      "uci": "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7 f1c4 f8e7 e1g1 e8g8 a2a4 c7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c6",
+        "d5",
+        "f5"
+      ],
+      "white_plan": "Stable position. Play Re1, h3, Be3 and look to break with d5 or attack the kingside.",
+      "black_plan": "The modern Lion! ...c6, ...Qc7, ...Rfe8, then ...Nf8-g6 and ...d5 or ...f5 to counter-attack."
+    }
+  ]
+}

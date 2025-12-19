@@ -1,0 +1,93 @@
+{
+  "name": "ATTAQUE EST-INDIENNE",
+  "alt_name": "King's Indian Attack",
+  "moves": "1.Nf3 d5 2.g3",
+  "uci_moves": "g1f3 d7d5 g2g3",
+  "complexity": "Avancé",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Fischer, Korchnoi, Ivanchuk",
+  
+  "idea": "Un système universel que les Blancs peuvent jouer contre presque tout! La structure est toujours la même: Nf3, g3, Bg2, 0-0, d3, Nbd2, e4. C'est la Défense Est-Indienne jouée avec un temps de plus. L'idée est de construire une position solide puis de lancer une attaque sur l'aile roi avec e4-e5, Qe2, puis h4 ou f4-f5. Fischer a utilisé cette attaque pour battre de nombreux grands maîtres avec les Noirs jouant la Française ou la Sicilienne.",
+
+  "highlights_green": ["g2", "e4", "e5"],
+  "highlights_red": ["d3", "f3"],
+
+  "errors_white": [
+    "Pousser e4 trop tôt sans préparation : d3 et Nbd2 d'abord pour soutenir e4 solidement",
+    "Jouer passivement sans plan : il faut viser e4-e5 ou l'attaque f4-f5 à l'aile roi",
+    "Négliger le centre : si les Noirs jouent ...e5 et ...d4, le Fou g2 peut devenir passif"
+  ],
+  
+  "errors_black": [
+    "Jouer ...e5 puis ...d4 trop vite : ferme le centre et donne aux Blancs l'attaque libre à l'aile roi",
+    "Ignorer la poussée e4-e5 : si les Blancs obtiennent e5 avec f4, l'attaque peut être dévastatrice",
+    "Rester passif au centre : les Noirs doivent chercher ...c5 ou ...e5 pour du contre-jeu"
+  ],
+
+  "development": [
+    ["Cavalier g1", "Nf3 est toujours le premier coup - flexible et solide"],
+    ["Pion g3 + Fou", "g3 puis Bg2 - le fianchetto contrôle la grande diagonale et le centre de loin"],
+    ["Roi", "0-0 rapidement pour mettre le Roi en sécurité et activer la Tour f1"],
+    ["Pion d3", "Soutient e4 et garde une structure flexible - PAS d4 au début"],
+    ["Cavalier b1", "Nbd2 soutient e4 et peut aller en f1-e3 ou h3 pour l'attaque"],
+    ["Pion e4", "Le coup thématique! Après préparation, e4 ouvre le jeu pour le Fou g2"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège de l'Attaque",
+      "fen": "r1bq1rk1/ppp1bppp/2n1pn2/3p4/4P3/3P1NP1/PPP1NPBP/R1BQ1RK1 w - - 0 8",
+      "highlights": ["e4", "e5", "f4"],
+      "desc": "Position typique. Les Blancs préparent e5 avec Qe2, h3, puis e5! Si ...Nfd7 f4-f5 ouvre les lignes pour une attaque mortelle. ÉVITER (Noirs): Jouer ...dxe4 dxe4 ...e5 pour bloquer l'avance."
+    },
+    {
+      "name": "Piège du Centre Fermé",
+      "fen": "r1bq1rk1/ppp1bppp/2n1pn2/3pP3/5P2/3P1NP1/PPP1N1BP/R1BQ1RK1 b - - 0 9",
+      "highlights": ["e5", "f4", "f5"],
+      "desc": "Après e5 Nfd7 f4, les Blancs visent f5! L'ouverture de la colonne f sera dévastatrice pour le Roi noir. ÉVITER (Noirs): Jouer ...f6 ou ...f5 pour bloquer l'avance des pions blancs."
+    },
+    {
+      "name": "Piège du Fianchetto",
+      "fen": "r1bqk2r/ppp1bppp/2n1pn2/3p4/4P3/3P1NP1/PPP2PBP/RNBQK2R w KQkq - 0 6",
+      "highlights": ["g2", "d5", "c6"],
+      "desc": "Si les Noirs jouent ...dxe4?! 5.dxe4 Qxd1+ Rxd1, les Blancs ont un bon milieu de jeu avec le Fou g2 actif et la colonne d. ÉVITER (Noirs): Garder la tension au centre, ne pas échanger en e4."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Contre la Française",
+      "moves": "1.e4 e6 2.d3 d5 3.Nd2 Nf6 4.Ngf3 Nc6 5.g3",
+      "uci": "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 b8c6 g2g3",
+      "eval": "+0.3",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["g2", "e5", "f4"],
+      "white_plan": "Bg2, 0-0, puis préparer e5 avec Qe2 et Re1. Si ...dxe4 dxe4, le centre est ouvert pour le Fou g2.",
+      "black_plan": "Les Noirs peuvent jouer ...Be7, ...0-0, ...b6/...Bb7 ou ...dxe4 suivi de ...e5 pour bloquer le Fou."
+    },
+    {
+      "name": "Contre la Sicilienne",
+      "moves": "1.e4 c5 2.Nf3 e6 3.d3 Nc6 4.g3 d5 5.Nbd2",
+      "uci": "e2e4 c7c5 g1f3 e7e6 d2d3 b8c6 g2g3 d7d5 b1d2",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["g2", "e5", "d5"],
+      "white_plan": "Éviter les lignes théoriques de la Sicilienne Ouverte. Bg2, 0-0, puis e5 ou exd5 selon la position.",
+      "black_plan": "Les Noirs ont un centre fort avec ...d5 et ...c5. Jouer ...Nge7, ...g6 et chercher ...d4 pour bloquer le Fou g2."
+    },
+    {
+      "name": "Système Universel",
+      "moves": "1.Nf3 d5 2.g3 Nf6 3.Bg2 c6 4.0-0 Bg4 5.d3",
+      "uci": "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 d2d3",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["g2", "e4", "g4"],
+      "white_plan": "Structure flexible. Nbd2, e4 quand c'est prêt, puis selon la réponse noire: h3 (chasse le Fou) ou Qe2 et e5.",
+      "black_plan": "...Bg4 cloue le Cavalier avant e4. Jouer ...Nbd7, ...e6, ...Be7 puis ...0-0 avec une position solide."
+    }
+  ]
+}

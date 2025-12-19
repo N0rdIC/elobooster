@@ -1,0 +1,136 @@
+{
+  "name": "PIRC DEFENSE",
+  "alt_name": "",
+  "moves": "1.e4 d6 2.d4 Nf6 3.Nc3 g6",
+  "uci_moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6",
+  "complexity": "Beginner",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Pirc, Seirawan, Ivanchuk",
+  "idea": "The aggressive hypermodern defense! Black lets White build a big center with e4-d4, then attacks it with ...d6, ...Nf6, ...g6, ...Bg7 and later ...e5 or ...c5. The fianchettoed Bishop on g7 is a monster on the long diagonal. White often plays the Austrian Attack (f4) or Classical (Nf3, Be2), but Black has dynamic counterplay. It's the opening for players who love counter-attacking chess!",
+  "highlights_green": [
+    "g7",
+    "e5",
+    "c5"
+  ],
+  "highlights_red": [
+    "d6",
+    "e7",
+    "f6"
+  ],
+  "errors_white": [
+    "Overextending in the center: the pawns become targets for ...c5 or ...e5",
+    "Ignoring the Bg7: this Bishop can become very powerful",
+    "Attacking without development: piece coordination is key"
+  ],
+  "errors_black": [
+    "Being too passive: ...e5 or ...c5 must come to challenge the center",
+    "Delaying castling: the King must be safe before starting counterplay",
+    "Exchanging the Bg7: this Bishop is Black's best piece"
+  ],
+  "development": [
+    [
+      "Pawn d6",
+      "Prepares the fianchetto and controls e5 - always play before ...g6"
+    ],
+    [
+      "Pawn g6 + Bishop",
+      "g6 then Bg7 - the Bishop becomes a monster on the long diagonal"
+    ],
+    [
+      "Knight f6",
+      "Attacks e4 and prepares ...0-0 - classical position"
+    ],
+    [
+      "King",
+      "Quick kingside castle - the King is well defended by the Bg7"
+    ],
+    [
+      "Knight b8",
+      "Nc6 or Nbd7 depending on plan - prepares ...e5 or ...c5"
+    ],
+    [
+      "Pawn c or e",
+      "...c5 (attacks d4) or ...e5 (central) are the liberating moves"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Austrian Attack",
+      "fen": "rnbqkb1r/ppp1pp1p/3p1np1/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4",
+      "highlights": [
+        "f4",
+        "e5",
+        "g7"
+      ],
+      "desc": "4.f4!? Aggressive attack. White aims for e5 and f5. If Black is passive, the attack is devastating. AVOID (Black): Play ...Bg7, ...0-0, ...c5! immediately to counter-attack d4."
+    },
+    {
+      "name": "e5 Pawn Trap",
+      "fen": "rnbqkb1r/ppp1pp1p/3p1np1/4P3/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4",
+      "highlights": [
+        "e5",
+        "d7",
+        "g7"
+      ],
+      "desc": "If e5?! premature, Black plays ...Nfd7! then ...c5 and the e5 pawn is attacked. After dxe5 dxe5, the center is open for the Bg7. AVOID (White): Prepare e5 with f4 or Be3 first."
+    },
+    {
+      "name": "Fianchetto Trap",
+      "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 5",
+      "highlights": [
+        "g7",
+        "d4",
+        "c5"
+      ],
+      "desc": "Normal position. If White plays Bc4?! Black has ...c5! attacking d4, and if dxc5 dxc5 the Bg7 is very active. AVOID (White): Play Be2 or Bd3, more solid than Bc4."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical",
+      "moves": "4.Nf3 Bg7 5.Be2 0-0 6.0-0 c6",
+      "uci": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 c7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c6",
+        "e5",
+        "d5"
+      ],
+      "white_plan": "Solid development. Plans: a4 (prevents ...b5), h3/Be3, then central pressure or f4-f5 attack.",
+      "black_plan": "...c6 prepares ...b5 or ...d5. Play ...Nbd7, ...e5 and look to activate the Bg7 with ...exd4 or ...c5."
+    },
+    {
+      "name": "Austrian Attack",
+      "moves": "4.f4 Bg7 5.Nf3 0-0 6.Bd3 c5",
+      "uci": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8 f1d3 c7c5",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "f4",
+        "c5",
+        "e5"
+      ],
+      "white_plan": "Aggressive! e5 or f5 to open lines. 0-0, Qe1-h4 and kingside attack.",
+      "black_plan": "...c5! immediate counter-attack. If dxc5 dxc5, the Bg7 dominates. ...Nc6, ...Qa5 for pressure."
+    },
+    {
+      "name": "150 Attack System",
+      "moves": "4.Be3 Bg7 5.Qd2 0-0 6.f3 c6",
+      "uci": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1e3 f8g7 d1d2 e8g8 f2f3 c7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "d2",
+        "h6",
+        "e3"
+      ],
+      "white_plan": "Attack with 0-0-0, Bh6 (exchange the Bg7), then g4-h4-h5 to open the h-file.",
+      "black_plan": "Avoid exchanging the Bg7! Play ...a6, ...b5 and counter-attack on the queenside before White's attack."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "GAMBIT DAME",
+  "alt_name": "",
+  "moves": "1.d4 d5 2.c4",
+  "uci_moves": "d2d4 d7d5 c2c4",
+  "complexity": "Intermédiaire-Avancé",
+  "white_win": 56,
+  "black_win": 44,
+  "champions": "Carlsen, Kramnik, Botvinnik",
+  
+  "idea": "Le 'gambit' est un faux sacrifice : si les Noirs prennent 2...dxc4, les Blancs récupèrent facilement le pion avec e3 puis Bxc4. L'idée est d'attaquer le centre noir avec c4. Si les Noirs défendent avec ...e6 (Décliné), leur Fou c8 reste enfermé. Si ...c6 (Slave), ils gardent la possibilité de sortir le Fou. C'est l'ouverture stratégique par excellence, jouée au plus haut niveau depuis plus d'un siècle.",
+
+  "highlights_green": ["d5", "c4", "e4"],
+  "highlights_red": ["c6", "e6", "c8"],
+
+  "errors_white": [
+    "Jouer e4 trop tôt sans préparation : le centre s'effondre si les Noirs sont bien développés",
+    "cxd5 prématuré : libère les Noirs et leur donne un jeu facile avec ...exd5 ou ...cxd5",
+    "Négliger le Cavalier b1 : ce Cavalier doit aller en c3 pour soutenir e4 et contrôler d5"
+  ],
+  
+  "errors_black": [
+    "Garder le pion c4 après ...dxc4 : coûte trop de temps et les Blancs récupèrent avec avantage",
+    "...Bf5 avant ...e6 dans le Décliné : le Fou peut être attaqué par Qb3 ou cxd5 suivi de Qb3",
+    "...c5 sans préparation : ouvre la position alors que les Noirs sont en retard de développement"
+  ],
+
+  "development": [
+    ["Cavaliers", "Nf3 et Nc3 sont les coups naturels - contrôlent e5 et d5 respectivement"],
+    ["Fou c1", "Bf4 (Système de Londres), Bg5 (cloue Cf6) ou e3 puis Bd3 selon la variante"],
+    ["Fou f1", "Après e3, développer en d3 (contrôle e4) ou prendre en c4 si ...dxc4"],
+    ["Roi", "Petit roque classique après e3 et Bd3/Be2"],
+    ["Dame", "Rester flexible - éviter les sorties prématurées, souvent c2 pour la colonne c"],
+    ["Tours", "Tc1 pour la colonne c semi-ouverte, Td1 pour soutenir d4"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège Elephant",
+      "fen": "rnbqkbnr/ppp2ppp/8/3pP3/2Pp4/8/PP2PPPP/RNBQKBNR w KQkq - 0 4",
+      "highlights": ["e5", "d4", "d8"],
+      "desc": "2...e5?? 3.dxe5 d4 (espérant récupérer) 4.e3! dxe3 5.Qxd8+ Kxd8 6.fxe3 et les Blancs ont un pion de plus en finale. ÉVITER (Noirs): Ne jamais jouer ...e5 au 2ème coup! C'est une gaffe."
+    },
+    {
+      "name": "Piège de l'Accepté",
+      "fen": "rnbqkbnr/p1p1pppp/8/1p6/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4",
+      "highlights": ["b5", "a4", "c4"],
+      "desc": "Après 2...dxc4 3.Nf3 b5?? (voulant garder le pion) 4.a4! a6 5.axb5 axb5 6.Rxa8 et les Blancs gagnent la Tour! ÉVITER (Noirs): Ne pas jouer ...b5 - rendre le pion avec ...e6 et ...c5."
+    },
+    {
+      "name": "Cambridge Springs",
+      "fen": "r1b1kb1r/pp1n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 7",
+      "highlights": ["a5", "c3", "g5"],
+      "desc": "5...Nbd7 6.Bg5 Qa5! cloue le Cc3 et menace ...Ne4 ou ...Bb4. Le Fg5 est attaqué par ...h6 et ...Ne4. ÉVITER (Blancs): Jouer Nd2 au lieu de Nf3, ou Bd2 pour défendre c3."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Gambit Décliné",
+      "moves": "2...e6 3.Nc3 Nf6 4.Bg5 Be7 5.e3",
+      "uci": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3",
+      "eval": "+0.3",
+      "white_win": 56,
+      "black_win": 44,
+      "highlights": ["e6", "c8", "d5"],
+      "white_plan": "Le Fou g5 cloue le Cf6 défenseur de d5. Après Nf3, Bd3, 0-0, la pression sur d5 est énorme. Viser cxd5 exd5 pour créer un pion isolé.",
+      "black_plan": "Défendre solidement avec ...0-0, ...Nbd7, ...c6. Chercher à libérer le Fou c8 avec ...dxc4 puis ...b6/...Bb7 ou ...e5."
+    },
+    {
+      "name": "Gambit Accepté",
+      "moves": "2...dxc4 3.Nf3 Nf6 4.e3 e6 5.Bxc4",
+      "uci": "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3 e7e6 f1c4",
+      "eval": "+0.2",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["c4", "c5", "e4"],
+      "white_plan": "Récupérer le pion et développer rapidement. Après 0-0 et Qe2, préparer e4 pour un centre idéal.",
+      "black_plan": "Rendre le pion gracieusement et jouer ...c5 pour attaquer le centre. Développement rapide avec ...Be7, ...0-0, ...a6/...b5."
+    },
+    {
+      "name": "Défense Slave",
+      "moves": "2...c6 3.Nf3 Nf6 4.Nc3 dxc4",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["c6", "f5", "c4"],
+      "white_plan": "Récupérer le pion avec a4 et e4. La structure est ouverte et les Blancs ont plus d'espace mais les Noirs sont solides.",
+      "black_plan": "Sortir le Fou AVANT ...e6! Jouer ...Bf5 (Slave classique) puis ...e6. Le Fou est actif contrairement au Décliné."
+    }
+  ]
+}

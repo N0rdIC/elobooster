@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE SLAVE",
+  "alt_name": "",
+  "moves": "1.d4 d5 2.c4 c6",
+  "uci_moves": "d2d4 d7d5 c2c4 c7c6",
+  "complexity": "Intermédiaire",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Lasker, Euwe, Anand",
+  
+  "idea": "La grande sœur du Gambit Dame Décliné! Avec ...c6 au lieu de ...e6, les Noirs gardent la possibilité de sortir le Fou c8 en f5 ou g4 AVANT de jouer ...e6. C'est l'avantage majeur sur le Décliné où le Fou reste souvent enfermé. La structure est très solide avec les pions d5-c6 qui forment un mur. Les Noirs peuvent choisir entre la Slave Pure (...Bf5), la Semi-Slave (...e6) ou même prendre le pion avec ...dxc4.",
+
+  "highlights_green": ["c6", "f5", "d5"],
+  "highlights_red": ["c4", "e6"],
+
+  "errors_white": [
+    "Prendre cxd5 trop tôt : après ...cxd5, les Noirs ont une position symétrique et solide",
+    "Ignorer ...Bf5 : ce Fou peut devenir très actif, il faut parfois jouer Qb3 pour le gêner",
+    "Jouer e4 sans préparation : dans la Slave, e4 doit être bien préparé sinon ...dxe4 donne du contre-jeu"
+  ],
+  
+  "errors_black": [
+    "Jouer ...e6 avant ...Bf5 : le Fou reste enfermé comme dans le Décliné - c'est perdre l'avantage de la Slave!",
+    "Prendre ...dxc4 sans plan : si les Blancs récupèrent facilement, les Noirs ont juste perdu du temps",
+    "Négliger le développement du Cavalier b8 : ...Nbd7 est souvent meilleur que ...Nc6 (bloque le pion c)"
+  ],
+
+  "development": [
+    ["Pion c6", "Soutient d5 et prépare ...Bf5 - jouer AVANT ...e6!"],
+    ["Fou c8", "LA pièce clé! Sortir en f5 (classique) ou g4 avant de fermer avec ...e6"],
+    ["Cavalier g8", "Nf6 attaque e4 et développe - coup naturel"],
+    ["Cavalier b8", "Nbd7 (flexible, soutient Cf6) est souvent meilleur que Nc6"],
+    ["Pion e", "...e6 APRÈS la sortie du Fou - sinon la Slave perd son intérêt"],
+    ["Roi", "Petit roque classique après ...Be7 ou ...Bd6"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Fou",
+      "fen": "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3",
+      "highlights": ["f5", "b3", "c8"],
+      "desc": "Après 3.Nc3 (ou 3.Nf3) les Noirs DOIVENT jouer ...Nf6 puis ...Bf5 (ou ...dxc4 puis ...Bf5). Si ...e6? d'abord, le Fou c8 est enfermé pour toujours! ÉVITER (Noirs): Toujours sortir le Fou avant ...e6."
+    },
+    {
+      "name": "Gambit Slave",
+      "fen": "rnbqkbnr/pp2pppp/2p5/5b2/2pP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 1 5",
+      "highlights": ["c4", "f5", "e4"],
+      "desc": "Après ...dxc4 ...Bf5, les Noirs essaient de garder le pion. Si 5.e4?? Bxe4! gagne un pion. Les Blancs doivent jouer 5.a4 pour empêcher ...b5. ÉVITER (Blancs): Ne pas jouer e4 trop vite! a4 d'abord."
+    },
+    {
+      "name": "Piège Meran",
+      "fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "highlights": ["e6", "c8", "d5"],
+      "desc": "Si les Noirs jouent ...e6 SANS avoir sorti le Fou, c'est la Semi-Slave. Le Fou c8 est enfermé mais les Noirs préparent ...dxc4, ...b5 (Méran). ÉVITER (Noirs): Soit Slave pure (...Bf5), soit accepter la Semi-Slave mais connaître les plans."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Slave Pure (Bf5)",
+      "moves": "3.Nf3 Nf6 4.Nc3 Bf5 5.cxd5 cxd5 6.Qb3",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 c8f5 c4d5 c6d5 d1b3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["f5", "b3", "b7"],
+      "white_plan": "Qb3 attaque b7 et d5. Après ...Qb6 Qxb6 axb6, les Blancs ont un léger avantage positionnel avec e3, Bd3, 0-0.",
+      "black_plan": "Le Fou f5 est actif! Jouer ...Qb6 (échange simplifie), ou ...e6, ...Be7, ...0-0 et défendre solidement."
+    },
+    {
+      "name": "Semi-Slave (e6)",
+      "moves": "3.Nf3 Nf6 4.Nc3 e6 5.e3 Nbd7 6.Bd3",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["e6", "d3", "c4"],
+      "white_plan": "Le Fou c8 est enfermé. Jouer 0-0, Qc2, e4 pour ouvrir le centre et exploiter l'avantage d'espace.",
+      "black_plan": "Préparer ...dxc4 Bxc4 ...b5 ...Bb7 (Méran) pour libérer le Fou. Ou jouer ...Bd6 et attaquer à l'aile roi."
+    },
+    {
+      "name": "Slave Acceptée",
+      "moves": "3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["c4", "a4", "f5"],
+      "white_plan": "a4 empêche ...b5. Récupérer le pion avec Bxc4 et développer avec 0-0, Qe2. Pression centrale.",
+      "black_plan": "Le Fou f5 est sorti! Jouer ...e6, ...Nbd7, ...Be7, ...0-0 et le pion c4 a coûté du temps aux Blancs."
+    }
+  ]
+}

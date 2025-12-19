@@ -1,0 +1,136 @@
+{
+  "name": "QUEEN'S GAMBIT",
+  "alt_name": "",
+  "moves": "1.d4 d5 2.c4",
+  "uci_moves": "d2d4 d7d5 c2c4",
+  "complexity": "Intermediate-Advanced",
+  "white_win": 56,
+  "black_win": 44,
+  "champions": "Carlsen, Kramnik, Botvinnik",
+  "idea": "The 'gambit' is a false sacrifice: if Black takes 2...dxc4, White easily recovers the pawn with e3 then Bxc4. The idea is to attack Black's center with c4. If Black defends with ...e6 (Declined), their Bc8 remains locked in. If ...c6 (Slav), they keep the possibility of bringing out the Bishop. This is the quintessential strategic opening, played at the highest level for over a century.",
+  "highlights_green": [
+    "d5",
+    "c4",
+    "e4"
+  ],
+  "highlights_red": [
+    "c6",
+    "e6",
+    "c8"
+  ],
+  "errors_white": [
+    "Playing e4 too early without preparation: the center collapses if Black is well developed",
+    "Premature cxd5: frees Black and gives them easy play with ...exd5 or ...cxd5",
+    "Neglecting the Nb1: this Knight must go to c3 to support e4 and control d5"
+  ],
+  "errors_black": [
+    "Keeping the c4 pawn after ...dxc4: costs too much time and White recovers with advantage",
+    "...Bf5 before ...e6 in the Declined: the Bishop can be attacked by Qb3 or cxd5 followed by Qb3",
+    "...c5 without preparation: opens the position when Black is behind in development"
+  ],
+  "development": [
+    [
+      "Knights",
+      "Nf3 and Nc3 are the natural moves - control e5 and d5 respectively"
+    ],
+    [
+      "Bc1",
+      "Bf4 (London System), Bg5 (pins Nf6) or e3 then Bd3 depending on the variation"
+    ],
+    [
+      "Bf1",
+      "After e3, develop to d3 (controls e4) or take on c4 if ...dxc4"
+    ],
+    [
+      "King",
+      "Classical kingside castle after e3 and Bd3/Be2"
+    ],
+    [
+      "Queen",
+      "Stay flexible - avoid premature sorties, often c2 for the c-file"
+    ],
+    [
+      "Rooks",
+      "Rc1 for the semi-open c-file, Rd1 to support d4"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Elephant Trap",
+      "fen": "rnbqkbnr/ppp2ppp/8/3pP3/2Pp4/8/PP2PPPP/RNBQKBNR w KQkq - 0 4",
+      "highlights": [
+        "e5",
+        "d4",
+        "d8"
+      ],
+      "desc": "2...e5?? 3.dxe5 d4 (hoping to recover) 4.e3! dxe3 5.Qxd8+ Kxd8 6.fxe3 and White has an extra pawn in the endgame. AVOID (Black): Never play ...e5 on move 2! It's a blunder."
+    },
+    {
+      "name": "Accepted Trap",
+      "fen": "rnbqkbnr/p1p1pppp/8/1p6/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4",
+      "highlights": [
+        "b5",
+        "a4",
+        "c4"
+      ],
+      "desc": "After 2...dxc4 3.Nf3 b5?? (wanting to keep the pawn) 4.a4! a6 5.axb5 axb5 6.Rxa8 and White wins the Rook! AVOID (Black): Don't play ...b5 - return the pawn with ...e6 and ...c5."
+    },
+    {
+      "name": "Cambridge Springs",
+      "fen": "r1b1kb1r/pp1n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 7",
+      "highlights": [
+        "a5",
+        "c3",
+        "g5"
+      ],
+      "desc": "5...Nbd7 6.Bg5 Qa5! pins the Nc3 and threatens ...Ne4 or ...Bb4. The Bg5 is attacked by ...h6 and ...Ne4. AVOID (White): Play Nd2 instead of Nf3, or Bd2 to defend c3."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Queen's Gambit Declined",
+      "moves": "2...e6 3.Nc3 Nf6 4.Bg5 Be7 5.e3",
+      "uci": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3",
+      "eval": "+0.3",
+      "white_win": 56,
+      "black_win": 44,
+      "highlights": [
+        "e6",
+        "c8",
+        "d5"
+      ],
+      "white_plan": "The Bg5 pins the Nf6 defending d5. After Nf3, Bd3, 0-0, the pressure on d5 is enormous. Aim for cxd5 exd5 to create an isolated pawn.",
+      "black_plan": "Defend solidly with ...0-0, ...Nbd7, ...c6. Seek to free the Bc8 with ...dxc4 then ...b6/...Bb7 or ...e5."
+    },
+    {
+      "name": "Queen's Gambit Accepted",
+      "moves": "2...dxc4 3.Nf3 Nf6 4.e3 e6 5.Bxc4",
+      "uci": "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3 e7e6 f1c4",
+      "eval": "+0.2",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "c4",
+        "c5",
+        "e4"
+      ],
+      "white_plan": "Recover the pawn and develop quickly. After 0-0 and Qe2, prepare e4 for an ideal center.",
+      "black_plan": "Return the pawn gracefully and play ...c5 to attack the center. Rapid development with ...Be7, ...0-0, ...a6/...b5."
+    },
+    {
+      "name": "Slav Defense",
+      "moves": "2...c6 3.Nf3 Nf6 4.Nc3 dxc4",
+      "uci": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "c6",
+        "f5",
+        "c4"
+      ],
+      "white_plan": "Recover the pawn with a4 and e4. The structure is open and White has more space but Black is solid.",
+      "black_plan": "Bring out the Bishop BEFORE ...e6! Play ...Bf5 (classical Slav) then ...e6. The Bishop is active unlike in the Declined."
+    }
+  ]
+}

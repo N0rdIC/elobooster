@@ -1,0 +1,136 @@
+{
+  "name": "BENKO GAMBIT",
+  "alt_name": "Volga Gambit",
+  "moves": "1.d4 Nf6 2.c4 c5 3.d5 b5",
+  "uci_moves": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5",
+  "complexity": "Intermediate",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Benko, Topalov, Ivanchuk",
+  "idea": "The quintessential positional gambit! Black sacrifices a pawn (sometimes two with ...a6) to get lasting pressure on the open a and b files. This is not a gambit to mate, but to create long-term pressure. The fianchettoed Bg7 and Rooks on a8-b8 target the a2 and b2 pawns. Even in the endgame, the pressure continues! It's a gambit that White hates because it's hard to refute and boring to defend.",
+  "highlights_green": [
+    "a1",
+    "b2",
+    "g7"
+  ],
+  "highlights_red": [
+    "b5",
+    "a6",
+    "d5"
+  ],
+  "errors_white": [
+    "Keeping the b5 pawn at all costs: this costs time and Black gets their pressure",
+    "Playing passively: White must counter-attack in the center or kingside, not defend",
+    "Neglecting development: if White plays a4, Ra3 etc. to defend, they fall behind"
+  ],
+  "errors_black": [
+    "Not following up on the gambit: ...Bxa6, ...d6, ...g6/...Bg7 and Rooks on a-b files quickly",
+    "Attacking too slowly: the pressure must be constant, don't let White consolidate",
+    "Forgetting the center: the d6-e6 pawns must support the queenside attack"
+  ],
+  "development": [
+    [
+      "Pawn b5",
+      "The sacrifice! After cxb5 a6 bxa6, the a and b files are open"
+    ],
+    [
+      "Pawn g6 + Bishop",
+      "g6 then Bg7 - the Bishop targets a1 and the center on the long diagonal"
+    ],
+    [
+      "Rooks",
+      "Ra8 and Rb8 (or Rfb8 after castling) - pressure on a2 and b2 is the plan"
+    ],
+    [
+      "Knight b8",
+      "Nbd7 then Nb6 - the Knight targets c4 or a4 to reinforce the pressure"
+    ],
+    [
+      "King",
+      "Kingside castle after ...Bg7 - safe position and f8 Rook freed for b8"
+    ],
+    [
+      "Queen",
+      "Qa5 or Qb6 to reinforce queenside pressure"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Full Gambit Trap",
+      "fen": "rnbqkb1r/p2ppppp/5n2/1PpP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 4",
+      "highlights": [
+        "b5",
+        "a6",
+        "a1"
+      ],
+      "desc": "After 4.cxb5 a6! (second sacrifice) 5.bxa6 Bxa6 and Black has two open files for the price of two pawns. AVOID (White): Accept but counter-attack quickly in the center with e4, Nc3, Nf3."
+    },
+    {
+      "name": "Diagonal Trap",
+      "fen": "rn1qkb1r/p2ppppp/b4n2/1PpP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 5",
+      "highlights": [
+        "a6",
+        "f1",
+        "g7"
+      ],
+      "desc": "The Ba6 targets f1, preventing natural development! If White plays e4?? the Bishop takes f1. AVOID (White): Play Nf3, e3 (not e4), then develop the Bishop to e2 or b5."
+    },
+    {
+      "name": "Rook Trap",
+      "fen": "r4rk1/p2pppbp/1qn2np1/1PpP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 0 9",
+      "highlights": [
+        "b6",
+        "b2",
+        "a1"
+      ],
+      "desc": "Typical position. Black Rooks go to a8 and b8, the Qb6 targets b2. If White is passive, the pressure becomes unbearable. AVOID (White): Play actively! e4, Re1, Bf4 and counter-attack."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Gambit Accepted",
+      "moves": "4.cxb5 a6 5.bxa6 Bxa6 6.Nc3 d6 7.Nf3 g6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 g1f3 g7g6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "a6",
+        "g6",
+        "a1"
+      ],
+      "white_plan": "Counter-attack! e4 (takes space), Nd2 (protects b2), then 0-0, Re1, Bf4 and active central play.",
+      "black_plan": "Classical pressure. ...Bg7, ...0-0, ...Nbd7, ...Qa5 or ...Qb6, then ...Rfb8 and ...Rb8-b4 or ...Nb6-c4."
+    },
+    {
+      "name": "Gambit Declined (b6)",
+      "moves": "4.Nf3 g6 5.b6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3 g7g6 b5b6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "b6",
+        "g6",
+        "a7"
+      ],
+      "white_plan": "Keeping the advanced pawn on b6 annoys Black. Develop Nc3, e4, Be2, 0-0 with space and passed pawn.",
+      "black_plan": "Recover the b6 pawn with ...Qxb6 or ...Bg7/...0-0/...Na6-c7xb6. The position remains imbalanced."
+    },
+    {
+      "name": "Fianchetto Variation",
+      "moves": "4.cxb5 a6 5.bxa6 g6 6.Nc3 Bxa6 7.g3 d6 8.Bg2",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 g7g6 b1c3 c8a6 g2g3 d7d6 f1g2",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": [
+        "g2",
+        "g7",
+        "a6"
+      ],
+      "white_plan": "Double fianchetto! The Bg2 controls the center and defends. Nf3, 0-0, Rb1, then b3 and Bb2 possible.",
+      "black_plan": "Both Bishops are active! ...Bg7, ...0-0, ...Nbd7-b6, ...Qa5 and the usual queenside pressure."
+    }
+  ]
+}

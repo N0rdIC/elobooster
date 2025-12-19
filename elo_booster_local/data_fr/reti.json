@@ -1,0 +1,93 @@
+{
+  "name": "OUVERTURE RÉTI",
+  "alt_name": "",
+  "moves": "1.Nf3 d5 2.c4",
+  "uci_moves": "g1f3 d7d5 c2c4",
+  "complexity": "Avancé",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Réti, Kramnik, Aronian",
+  
+  "idea": "L'ouverture hypermoderne par excellence! Les Blancs attaquent le centre noir d5 sans avoir de pion au centre eux-mêmes. L'idée est de jouer c4 (attaque d5), puis g3/Bg2 (contrôle à distance), et garder la flexibilité avec d3 ou d4 selon les réponses noires. La Réti transpose souvent dans l'Anglaise, la Catalane, ou le Gambit Dame. C'est l'arme du joueur flexible qui veut éviter la théorie et jouer sur tous les tableaux.",
+
+  "highlights_green": ["c4", "g2", "d5"],
+  "highlights_red": ["d5", "e4"],
+
+  "errors_white": [
+    "Jouer d4 trop tôt : perd la flexibilité de la Réti et transpose dans le Gambit Dame standard",
+    "Ne jamais jouer c4 : sans ce coup l'attaque sur d5 n'existe pas, les Noirs égalisent facilement",
+    "Ignorer ...c5 : si les Noirs jouent ...c5, le centre change complètement, il faut s'adapter"
+  ],
+  
+  "errors_black": [
+    "Pousser ...d4 trop vite : le pion peut devenir faible et le Bg2 devient un monstre",
+    "Garder la tension sans plan : il faut décider entre ...d4, ...dxc4 ou ...e6 pour stabiliser",
+    "Négliger le développement : les Blancs sont flexibles, les Noirs doivent se développer activement"
+  ],
+
+  "development": [
+    ["Cavalier f3", "Toujours en premier - contrôle e5 et d4, flexible"],
+    ["Pion c4", "Attaque d5 - c'est le cœur de la Réti"],
+    ["Pion g3 + Fou", "g3 puis Bg2 - le fianchetto contrôle la grande diagonale"],
+    ["Pion d", "d3 (solide) ou d4 (transpose) selon le plan"],
+    ["Cavalier b1", "Nc3 ou Nbd2 selon la structure choisie"],
+    ["Roi", "Petit roque après g3/Bg2 - position très sûre"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Centre",
+      "fen": "rnbqkbnr/ppp1pppp/8/3p4/2P5/5N2/PP1PPPPP/RNBQKB1R b KQkq - 0 2",
+      "highlights": ["c4", "d5", "d4"],
+      "desc": "Après 2.c4, si les Noirs jouent ...d4?! 3.e3! dxe3 4.fxe3 et les Blancs ont un centre fort ou si ...d4 3.b4! gambit Blumenfeld inversé avec initiative. ÉVITER (Noirs): Jouer ...e6, ...c6 ou ...dxc4."
+    },
+    {
+      "name": "Piège de la Transposition",
+      "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/2P5/5NP1/PP1PPP1P/RNBQKB1R b KQkq - 0 3",
+      "highlights": ["g3", "c4", "d5"],
+      "desc": "Après ...e6 3.g3, on est proche de la Catalane! Si les Noirs ne connaissent pas, ils peuvent souffrir du Bg2 qui vise d5. ÉVITER (Noirs): Connaître la Catalane ou jouer ...c6 (structure Slave)."
+    },
+    {
+      "name": "Piège du Gambit",
+      "fen": "rnbqkbnr/ppp1pppp/8/8/2Pp4/5N2/PP1PPPPP/RNBQKB1R w KQkq - 0 3",
+      "highlights": ["c4", "d4", "e3"],
+      "desc": "Si ...dxc4 2...d4?! les Blancs ont 3.e3! et le pion d4 tombe ou crée des faiblesses. La structure noire est compromise. ÉVITER (Noirs): Après ...dxc4, jouer ...e6 ou ...c6, pas ...d4."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Réti Accepté",
+      "moves": "2...dxc4 3.e3 c5 4.Bxc4 Nc6 5.0-0 Nf6",
+      "uci": "g1f3 d7d5 c2c4 d5c4 e2e3 c7c5 f1c4 b8c6 e1g1 g8f6",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["c4", "c5", "d4"],
+      "white_plan": "Récupérer le pion et développer. Nc3, d4 et position type Gambit Dame ou Anglaise avec bon jeu.",
+      "black_plan": "Centre ...c5 est solide. ...e6, ...Be7, ...0-0 puis ...a6/...b5 ou ...Qc7 pour équilibrer."
+    },
+    {
+      "name": "Réti avec Bg2",
+      "moves": "2...e6 3.g3 Nf6 4.Bg2 Be7 5.0-0 0-0 6.b3",
+      "uci": "g1f3 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 b2b3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["g2", "b2", "d5"],
+      "white_plan": "Double fianchetto possible! Bb2, d3, Nbd2 et contrôle à distance. cxd5 puis e4 au bon moment.",
+      "black_plan": "Position solide. ...c5 ou ...c6 pour renforcer d5. ...Nc6/...Nbd7, ...b6/...Bb7 pour contester la diagonale."
+    },
+    {
+      "name": "Transposition Catalane",
+      "moves": "2...e6 3.g3 Nf6 4.Bg2 dxc4 5.Qa4+ Nbd7 6.Qxc4",
+      "uci": "g1f3 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 d5c4 d1a4 b8d7 a4c4",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["c4", "g2", "a4"],
+      "white_plan": "On transpose dans la Catalane Ouverte! Même plans: Qc2, 0-0, d4, Nc3 avec pression positionnelle.",
+      "black_plan": "Plans de la Catalane: ...a6, ...b5 ou ...c5 pour libérer. ...Bb7, ...Be7, ...0-0 avec position défendable."
+    }
+  ]
+}

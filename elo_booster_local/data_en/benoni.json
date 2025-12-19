@@ -1,0 +1,136 @@
+{
+  "name": "BENONI DEFENSE",
+  "alt_name": "Modern Benoni",
+  "moves": "1.d4 Nf6 2.c4 c5 3.d5 e6 4.Nc3 exd5 5.cxd5 d6",
+  "uci_moves": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6",
+  "complexity": "Advanced",
+  "white_win": 55,
+  "black_win": 45,
+  "champions": "Tal, Topalov, Vugar Gashimov",
+  "idea": "The Benoni creates maximum imbalance! Black accepts a backward pawn on d6 and a hole on d5 to get a queenside pawn majority (a7, b7, c5 against a2, b2) and dynamic counterplay. Black's plan is simple: ...b5, ...Nb6-c4 or ...a6/...b5/...b4 to create a passed pawn. Meanwhile, White attacks the kingside with e4-e5 or Bf4/Bg5. It's a race between the two attacks!",
+  "highlights_green": [
+    "c5",
+    "b5",
+    "g7"
+  ],
+  "highlights_red": [
+    "d6",
+    "d5",
+    "e4"
+  ],
+  "errors_white": [
+    "Playing passively: White has e4-d5 but must use this space to attack",
+    "Ignoring ...b5: this push creates a passed pawn, you must play a4 to prevent it",
+    "Exchanging on d6 without reason: the d6 pawn is weak, dxd6 frees it!"
+  ],
+  "errors_black": [
+    "Playing ...b5 without preparation: a4 can stop it, prepare with ...a6 first",
+    "Forgetting the kingside: ...h6 and ...Kh7 can be useful against the white attack",
+    "Exchanging pieces: Black needs pieces for the attack, avoid unnecessary exchanges"
+  ],
+  "development": [
+    [
+      "Pawn d6",
+      "Backward pawn but essential - it controls e5 and protects the center"
+    ],
+    [
+      "Bishop g7",
+      "Mandatory fianchetto - the Bg7 attacks d5 and a1, defends the King"
+    ],
+    [
+      "Knight b8",
+      "...Nbd7 or ...Na6-c7 to prepare ...b5 or ...Nb6-c4"
+    ],
+    [
+      "Pawn a6 + b5",
+      "THE plan! ...a6 then ...b5 creates the majority and threatens ...b4"
+    ],
+    [
+      "King",
+      "Quick kingside castle - the King must be safe before White's attack"
+    ],
+    [
+      "Rook a8",
+      "...Ra8-b8 supports ...b5, or ...Qa5 with pressure on a2"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "d5 Pawn Trap",
+      "fen": "rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4",
+      "highlights": [
+        "d5",
+        "e6",
+        "b5"
+      ],
+      "desc": "After 4.Nc3, Black MUST play ...exd5! If ...d6?! first, White keeps more space. AVOID (Black): Always take ...exd5 to open the diagonal for the Bf8."
+    },
+    {
+      "name": "Knight Trap",
+      "fen": "rn1qkb1r/pp3ppp/3p1n2/2pP4/4P1b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 7",
+      "highlights": [
+        "g4",
+        "f3",
+        "d1"
+      ],
+      "desc": "If Black plays ...Bg4?! too early, White has h3! Bxf3 Qxf3 with an active Queen and d6 is weak. AVOID (Black): Develop ...g6/...Bg7 first, ...Bg4 only if useful."
+    },
+    {
+      "name": "Kingside Trap",
+      "fen": "rn1q1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 0 9",
+      "highlights": [
+        "e5",
+        "f4",
+        "h6"
+      ],
+      "desc": "Typical position. White prepares e5 or Bf4-e5. If Black is passive, e5! dxe5 d6! creates a devastating passed pawn. AVOID (Black): Play ...a6, ...b5 FAST to create counterplay!"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical Benoni",
+      "moves": "6.e4 g6 7.Nf3 Bg7 8.Be2 0-0 9.0-0 a6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 a7a6",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "a6",
+        "b5",
+        "e5"
+      ],
+      "white_plan": "a4 (prevents ...b5), Bf4 or Bg5, then e5 or f4 for the attack. Nd2-c4 targets d6.",
+      "black_plan": "...Nbd7, ...Rb8, then ...b5 (even after a4, ...b5 axb5 ...Bxa1). ...Ne8-c7 supports ...b5."
+    },
+    {
+      "name": "Taimanov Variation",
+      "moves": "6.e4 g6 7.f4 Bg7 8.Bb5+ Nfd7 9.a4 0-0",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4 f8g7 f1b5 f6d7 a2a4 e8g8",
+      "eval": "+0.5",
+      "white_win": 56,
+      "black_win": 44,
+      "highlights": [
+        "f4",
+        "b5",
+        "a4"
+      ],
+      "white_plan": "f4 prepares e5 and blocks the f5 square. Nf3, 0-0, then e5 with attack. a4 blocks Black's queenside.",
+      "black_plan": "Difficult counterplay! ...Na6, ...Nc7, ...Rb8 and look for ...b6/...b5 despite a4. ...f5 possible to block."
+    },
+    {
+      "name": "Fianchetto System",
+      "moves": "6.Nf3 g6 7.g3 Bg7 8.Bg2 0-0 9.0-0 a6",
+      "uci": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 g1f3 g7g6 g2g3 f8g7 f1g2 e8g8 e1g1 a7a6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "g2",
+        "g7",
+        "b5"
+      ],
+      "white_plan": "Double fianchetto possible with b3/Bb2. Less aggressive but solid. Nd2, a4, Nc4 with pressure.",
+      "black_plan": "More space to breathe! ...Nbd7, ...Rb8, ...b5 and normal counterplay. ...Re8, ...Ne5 active."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE EST-INDIENNE",
+  "alt_name": "King's Indian Defense",
+  "moves": "1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6",
+  "uci_moves": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+  "complexity": "Avancé",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Kasparov, Fischer, Nakamura",
+  
+  "idea": "La défense la plus combative contre 1.d4! Les Noirs laissent les Blancs construire un centre massif e4-d4, puis lancent une attaque furieuse à l'aile roi avec ...e5, ...f5, ...Nf6-d7-f6, ...g5, ...Rf7-g7 et ...h5. C'est une vraie bataille: les Blancs attaquent à l'aile dame (c5, b4) pendant que les Noirs attaquent le Roi blanc. Kasparov et Fischer ont gagné des parties immortelles avec cette ouverture. Très théorique mais spectaculaire!",
+
+  "highlights_green": ["g7", "f5", "h4"],
+  "highlights_red": ["d6", "e5", "c5"],
+
+  "errors_white": [
+    "Ignorer l'attaque noire à l'aile roi : l'attaque ...f5, ...g5, ...h5 peut être dévastatrice",
+    "Jouer trop lentement à l'aile dame : la course est lancée, il faut pousser c5, b4, a4 rapidement",
+    "Échanger le Fou g7 sans raison : ce Fou est la force des Noirs mais aussi un défenseur du Roi"
+  ],
+  
+  "errors_black": [
+    "Ne jamais jouer ...f5 : sans cette poussée l'attaque n'existe pas, les Noirs sont écrasés",
+    "Jouer ...e5 puis ...exd4 : ouvre le centre pour les Blancs, il faut garder la tension",
+    "Oublier la défense : l'attaque c'est bien, mais le Roi noir doit aussi être protégé!"
+  ],
+
+  "development": [
+    ["Pion d6 + e5", "d6 d'abord (solide), puis ...e5 pour bloquer le centre et préparer ...f5"],
+    ["Fou g7", "Le monstre de l'Est-Indienne! Vise d4, a1 et défend le Roi"],
+    ["Cavalier f6", "Attaque e4, puis souvent ...Nfd7 pour préparer ...f5 sans bloquer le pion f"],
+    ["Cavalier b8", "...Nbd7 (soutient e5) ou ...Na6-c5 (attaque e4)"],
+    ["Roi", "Petit roque, puis le Roi reste en g8 pendant l'attaque f5-g5-h5"],
+    ["Tour f8", "Après ...f5, la Tour va en f7, puis g7 ou h7 pour l'attaque!"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Centre",
+      "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQK2R b KQ - 0 6",
+      "highlights": ["e5", "d4", "f5"],
+      "desc": "Position classique. Si les Noirs jouent ...e5 trop tôt sans préparation, 6.dxe5 dxe5 7.Qxd8 Rxd8 8.Nxe5! gagne un pion. ÉVITER (Noirs): Jouer ...e5 seulement après 0-0, ou jouer ...Nbd7 d'abord."
+    },
+    {
+      "name": "Attaque des 4 Pions",
+      "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/2PPPP2/2N5/PP4PP/R1BQKBNR b KQ - 0 5",
+      "highlights": ["f4", "e4", "e5"],
+      "desc": "5.f4!? Attaque agressive. Les 4 pions e4-d4-c4-f4 sont imposants mais les Noirs jouent ...c5! pour contre-attaquer. ÉVITER (Noirs): Ne pas être passif! ...c5 immédiatement pour ouvrir le jeu."
+    },
+    {
+      "name": "Piège Bayonnette",
+      "fen": "r1bq1rk1/ppp1npbp/3p2p1/3Pp3/2P1P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 0 8",
+      "highlights": ["b4", "f5", "c5"],
+      "desc": "Attaque Bayonnette: les Blancs jouent b4 pour attaquer. Les Noirs doivent répondre vite avec ...f5 ou ...a5. ÉVITER (Noirs): Ne pas jouer passivement! ...f5 ou ...a5 pour créer du contre-jeu."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Classique",
+      "moves": "5.Nf3 0-0 6.Be2 e5 7.0-0 Nc6 8.d5 Ne7",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6e7",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["d5", "f5", "c5"],
+      "white_plan": "Centre fermé. Attaque aile dame avec c5, b4, a4, Rb1. Le Cavalier va en d3 pour soutenir c5 ou b4.",
+      "black_plan": "Attaque aile roi! ...Nd7, ...f5, puis ...f4, ...g5, ...Nf6, ...Rf7-g7, ...h5-h4 pour ouvrir les lignes."
+    },
+    {
+      "name": "Variante Sämisch",
+      "moves": "5.f3 0-0 6.Be3 e5 7.d5 c6",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1e3 e7e5 d4d5 c7c6",
+      "eval": "+0.3",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["f3", "e3", "c6"],
+      "white_plan": "Structure solide avec f3 (protège e4). Qd2, 0-0-0 et attaque à l'aile roi avec g4-h4 ou Bh6.",
+      "black_plan": "...c6 prépare ...cxd5. Plans: ...a6, ...b5 ou ...f5 après préparation. ...Nh5 pour échanger le Fe3."
+    },
+    {
+      "name": "Attaque des 4 Pions",
+      "moves": "5.f4 0-0 6.Nf3 c5 7.d5 e6 8.Be2 exd5",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f4 e8g8 g1f3 c7c5 d4d5 e7e6 f1e2 e6d5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["f4", "c5", "d5"],
+      "white_plan": "Centre imposant mais fragile. cxd5 ou exd5 selon la structure voulue. 0-0 et attaque avec e5.",
+      "black_plan": "Contre-attaque! ...exd5 ouvre les lignes pour le Bg7. ...Bg4, ...Re8, ...Qa5 avec jeu actif."
+    }
+  ]
+}

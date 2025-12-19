@@ -1,0 +1,93 @@
+{
+  "name": "SYSTÈME DE LONDRES",
+  "alt_name": "London System",
+  "moves": "1.d4 d5 2.Bf4",
+  "uci_moves": "d2d4 d7d5 c1f4",
+  "complexity": "Débutant",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Carlsen, Kamsky, Jobava",
+  
+  "idea": "Le système le plus facile à apprendre! Les Blancs jouent les mêmes coups peu importe la réponse noire: Bf4, e3, Nf3, Bd3, c3, Nbd2, 0-0. La structure est solide comme un roc et le plan est toujours le même: construire une pyramide de pions (d4-e3-c3) puis attaquer à l'aile roi avec Ne5, Qf3 ou h4-h5. Idéal pour les débutants qui veulent éviter toute théorie et jouer des positions familières à chaque partie.",
+
+  "highlights_green": ["f4", "e5", "h7"],
+  "highlights_red": ["c1", "f4"],
+
+  "errors_white": [
+    "Laisser le Fou f4 se faire échanger par ...Bd6 : le Fou est la pièce clé, reculer en g3 si menacé",
+    "Jouer e3 AVANT Bf4 : le Fou reste enfermé! Toujours sortir le Fou d'abord",
+    "Oublier de jouer c3 : ce pion protège d4 et empêche ...Nb4 ou ...Bb4"
+  ],
+  
+  "errors_black": [
+    "Jouer passivement : les Noirs doivent contre-attaquer au centre avec ...c5 ou ...e5",
+    "Laisser le Cavalier blanc s'installer en e5 : ce Cavalier devient un monstre, le chasser avec ...Nd7",
+    "Ignorer l'attaque h4-h5 : si les Blancs poussent h5 sans opposition, l'attaque peut être forte"
+  ],
+
+  "development": [
+    ["Fou c1", "TOUJOURS en f4 au coup 2 ou 3 - c'est la signature du Londres!"],
+    ["Pion e3", "Soutient d4 et libère le Fou f1 - jouer APRÈS Bf4"],
+    ["Cavalier g1", "Nf3 classique, puis Ne5 quand c'est possible - case forte"],
+    ["Fou f1", "Bd3 vise h7, la batterie Bd3+Qc2 peut être mortelle"],
+    ["Cavalier b1", "Nbd2 puis Ce5 ou Cf1-e3 pour contrôler les cases centrales"],
+    ["Roi", "Petit roque classique - la position est très sûre"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Fou",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3",
+      "highlights": ["f4", "d6", "g3"],
+      "desc": "Si les Noirs jouent ...Bd6 pour échanger le Fou, reculer Bg3! Après ...Bxg3 hxg3 les Blancs ont la colonne h ouverte pour attaquer. ÉVITER (Blancs): Ne jamais laisser prendre en f4 - Bg3 garde le Fou."
+    },
+    {
+      "name": "Piège du Cavalier",
+      "fen": "r1bqkb1r/ppp1pppp/2n2n2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "highlights": ["e5", "h7", "d3"],
+      "desc": "Les Blancs préparent Ne5. Si les Noirs ignorent: Ne5 Nxe5?! dxe5 et les Blancs dominent. Puis Bd3 et Qh5 menace mat sur h7! ÉVITER (Noirs): Jouer ...e6 et ...Bd6 pour contrôler e5."
+    },
+    {
+      "name": "Piège de la Dame",
+      "fen": "r1bqkb1r/ppp2ppp/2n1pn2/3p4/3P1B2/3BPN2/PPP2PPP/RN1QK2R w KQkq - 0 5",
+      "highlights": ["d3", "c2", "h7"],
+      "desc": "Après Bd3 et 0-0, la batterie Qc2 + Bd3 vise h7. Si les Noirs roquent sans défendre: Qc2 menace Bxh7+! ÉVITER (Noirs): Jouer ...g6 ou ...h6 avant de roquer, ou garder un Cavalier en f6."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Londres Classique",
+      "moves": "2...Nf6 3.e3 e6 4.Nf3 Bd6 5.Bg3",
+      "uci": "d2d4 d7d5 c1f4 g8f6 e2e3 e7e6 g1f3 f8d6 f4g3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["g3", "e5", "d3"],
+      "white_plan": "Après Bxg3 hxg3, la colonne h est ouverte! Jouer Bd3, c3, Nbd2-e5 et Qc2 avec pression sur h7.",
+      "black_plan": "Échanger le Fou en g3 pour affaiblir l'attaque. Jouer ...c5 pour contre-attaquer au centre et libérer le jeu."
+    },
+    {
+      "name": "Anti-Indien de Roi",
+      "moves": "1.d4 Nf6 2.Bf4 g6 3.Nc3 d5 4.e3",
+      "uci": "d2d4 g8f6 c1f4 g7g6 b1c3 d7d5 e2e3",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["f4", "c3", "h4"],
+      "white_plan": "Contre le fianchetto, le Londres reste solide. Plan: Nf3, Be2 ou Bd3, 0-0 puis h4-h5 pour attaquer le Roi fianchetté.",
+      "black_plan": "Le Fou g7 est moins efficace avec d4 solide. Jouer ...c5, ...Nc6 et chercher ...e5 pour ouvrir la diagonale."
+    },
+    {
+      "name": "Jobava London",
+      "moves": "2...Nf6 3.Nc3 e6 4.Nb5",
+      "uci": "d2d4 d7d5 c1f4 g8f6 b1c3 e7e6 c3b5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["b5", "c7", "a6"],
+      "white_plan": "Variante agressive! Nc3 au lieu de Nf3 pour sauter en b5 et menacer c7. Après ...Na6 ou ...c6, les Blancs gardent l'initiative.",
+      "black_plan": "Ne pas paniquer! Jouer ...a6 ou ...c6 pour chasser le Cavalier. Puis ...Bd6 et ...0-0 avec une position normale."
+    }
+  ]
+}

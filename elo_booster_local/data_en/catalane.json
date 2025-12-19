@@ -1,0 +1,136 @@
+{
+  "name": "CATALAN OPENING",
+  "alt_name": "",
+  "moves": "1.d4 d5 2.c4 e6 3.g3",
+  "uci_moves": "d2d4 d7d5 c2c4 e7e6 g2g3",
+  "complexity": "Advanced",
+  "white_win": 56,
+  "black_win": 44,
+  "champions": "Kramnik, Giri, Ding Liren",
+  "idea": "The King's Indian reversed for White! After 1.d4 d5 2.c4 e6 3.g3 and Bg2, White combines the control of d4 with the pressure of the fianchettoed Bishop on the long diagonal. The Bg2 targets b7 and the a8 Rook. If Black takes on c4, White recovers with perfect development. It's a strategic opening that leads to lasting positional pressure. The Catalan has no refutation!",
+  "highlights_green": [
+    "g2",
+    "c4",
+    "d5"
+  ],
+  "highlights_red": [
+    "b7",
+    "c6",
+    "d5"
+  ],
+  "errors_white": [
+    "Recovering the c4 pawn too quickly: sometimes it's better to develop first",
+    "Neglecting the Bg2: this Bishop must stay active on the long diagonal",
+    "Playing e4 prematurely: can weaken d4 if Black has played ...c5"
+  ],
+  "errors_black": [
+    "Taking on c4 without a plan: White recovers with excellent development",
+    "Leaving the b7 pawn undefended: the Bg2 and Qc2 target it",
+    "Playing ...c5 without preparation: can open the position in White's favor"
+  ],
+  "development": [
+    [
+      "Pawn g3 + Bishop",
+      "g3 then Bg2 - the Bishop dominates the long diagonal a8-h1"
+    ],
+    [
+      "Knight g1",
+      "Nf3 classical - controls e5 and d4, natural development"
+    ],
+    [
+      "King",
+      "0-0 quickly - the King is very safe with the fianchetto"
+    ],
+    [
+      "Queen",
+      "Qc2 is thematic - targets c4 if taken, controls e4, prepares Rd1"
+    ],
+    [
+      "Knight b1",
+      "Nbd2 or Nc3 depending on whether c4 is taken or not"
+    ],
+    [
+      "Rooks",
+      "Rd1 (pressure on d-file) and Rac1 (pressure on c-file)"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "c4 Pawn Trap",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4",
+      "highlights": [
+        "c4",
+        "g2",
+        "b7"
+      ],
+      "desc": "After 3...Nf6 4.Bg2 dxc4, Black takes the pawn. White does NOT play 5.Qa4+ but 5.Nf3! then 0-0, Qc2 with lasting pressure. AVOID (Black): Either return the pawn with ...c5, or defend with ...a6, ...b5 but beware of Bg2!"
+    },
+    {
+      "name": "Diagonal Trap",
+      "fen": "rnbqkb1r/pp3ppp/4pn2/2pp4/2P5/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 5",
+      "highlights": [
+        "g2",
+        "c6",
+        "a8"
+      ],
+      "desc": "After ...c5 (good move) if ...Nc6?! 6.cxd5 exd5 7.0-0 Be7 8.dxc5! and the d5 pawn is weak, the Bg2 targets it. AVOID (Black): Play ...cxd4 or ...Nbd7 instead of ...Nc6 directly."
+    },
+    {
+      "name": "Open Trap",
+      "fen": "rnbqkb1r/pp3ppp/4pn2/2pP4/2p5/5NP1/PP2PPBP/RNBQK2R b KQkq - 0 5",
+      "highlights": [
+        "d5",
+        "e6",
+        "g2"
+      ],
+      "desc": "Open Catalan: 5.cxd5 if ...exd5?! the Bg2 targets d5 directly. White plays Qc2, Nc3 and the d5 pawn is under constant pressure. AVOID (Black): Recapture ...Nxd5! (not exd5) to keep flexibility."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Open Catalan",
+      "moves": "3...Nf6 4.Bg2 dxc4 5.Nf3 Be7 6.0-0 0-0 7.Qc2",
+      "uci": "d2d4 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 d5c4 g1f3 f8e7 e1g1 e8g8 d1c2",
+      "eval": "+0.4",
+      "white_win": 56,
+      "black_win": 44,
+      "highlights": [
+        "c4",
+        "c2",
+        "b7"
+      ],
+      "white_plan": "Long-term pressure! Qc2 targets c4, a4 prevents ...b5, then Rd1, Nc3 or Na3 to recover c4 or maintain pressure.",
+      "black_plan": "Keeping the pawn with ...a6, ...b5? is risky. Better: return it with ...c5 or ...Nc6, ...Bd7, ...Rc8 to free up."
+    },
+    {
+      "name": "Closed Catalan",
+      "moves": "3...Nf6 4.Bg2 Be7 5.Nf3 0-0 6.0-0 Nbd7",
+      "uci": "d2d4 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 f8e7 g1f3 e8g8 e1g1 b8d7",
+      "eval": "+0.3",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "d5",
+        "c4",
+        "e4"
+      ],
+      "white_plan": "Black keeps d5 closed. Play Qc2, Rd1, Nc3 and look for cxd5 exd5 then e4 to open the center.",
+      "black_plan": "Solid structure. Play ...c6, ...b6, ...Bb7 to contest the diagonal. Look for ...dxc4 then ...e5 at the right moment."
+    },
+    {
+      "name": "Defense with ...c5",
+      "moves": "3...Nf6 4.Bg2 c5 5.Nf3 cxd4 6.Nxd4",
+      "uci": "d2d4 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 c7c5 g1f3 c5d4 f3d4",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "d4",
+        "d5",
+        "g2"
+      ],
+      "white_plan": "The Nd4 is well placed. After cxd5 Nxd5 or exd5, the Bg2 targets the center. 0-0, Nc3, Bg5 with pressure.",
+      "black_plan": "Good defensive choice! The center is open, the Bg2 has fewer targets. Play ...dxc4, ...Qc7, ...Nc6 to equalize."
+    }
+  ]
+}

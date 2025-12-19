@@ -1,0 +1,93 @@
+{
+  "name": "OUVERTURE CATALANE",
+  "alt_name": "",
+  "moves": "1.d4 d5 2.c4 e6 3.g3",
+  "uci_moves": "d2d4 d7d5 c2c4 e7e6 g2g3",
+  "complexity": "Avancé",
+  "white_win": 56,
+  "black_win": 44,
+  "champions": "Kramnik, Giri, Ding Liren",
+  
+  "idea": "La combinaison parfaite du Gambit Dame et du fianchetto! Le Fou g2 exerce une pression à long terme sur la grande diagonale, visant b7 et le centre. Si les Noirs prennent le pion c4, les Blancs ne le récupèrent pas toujours immédiatement mais obtiennent une pression positionnelle durable. C'est l'ouverture des joueurs d'élite qui veulent une position solide avec un avantage persistant. La Catalane demande de la patience mais offre des positions où les Blancs pressent sans risque.",
+
+  "highlights_green": ["g2", "c4", "d5"],
+  "highlights_red": ["b7", "c6", "d5"],
+
+  "errors_white": [
+    "Vouloir récupérer c4 immédiatement : la pression du Fou g2 compense souvent le pion",
+    "Jouer e4 trop tôt : ouvre le centre avant que le Fou g2 soit vraiment actif",
+    "Négliger le développement : Nf3, 0-0, Qc2 doivent venir avant les plans agressifs"
+  ],
+  
+  "errors_black": [
+    "Garder le pion c4 à tout prix avec ...b5 : affaiblit l'aile dame et le Fou g2 devient un monstre",
+    "Jouer ...c6 sans réflexion : la case c6 est souvent nécessaire pour le Cavalier",
+    "Sous-estimer la pression du Fou g2 : il vise b7 et d5, il faut défendre activement"
+  ],
+
+  "development": [
+    ["Pion g3 + Fou", "g3 puis Bg2 - le Fou domine la grande diagonale a8-h1"],
+    ["Cavalier g1", "Nf3 classique - contrôle e5 et d4, développement naturel"],
+    ["Roi", "0-0 rapidement - le Roi est très en sécurité avec le fianchetto"],
+    ["Dame", "Qc2 est thématique - vise c4 si pris, contrôle e4, prépare Rd1"],
+    ["Cavalier b1", "Nbd2 ou Nc3 selon que c4 est pris ou non"],
+    ["Tours", "Rd1 (pression colonne d) et Rac1 (pression colonne c)"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Pion c4",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4",
+      "highlights": ["c4", "g2", "b7"],
+      "desc": "Après 3...Nf6 4.Bg2 dxc4, les Noirs prennent le pion. Les Blancs ne jouent PAS 5.Qa4+ mais 5.Nf3! puis 0-0, Qc2 avec pression durable. ÉVITER (Noirs): Soit rendre le pion avec ...c5, soit défendre avec ...a6, ...b5 mais attention au Fg2!"
+    },
+    {
+      "name": "Piège de la Diagonale",
+      "fen": "rnbqkb1r/pp3ppp/4pn2/2pp4/2P5/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 5",
+      "highlights": ["g2", "c6", "a8"],
+      "desc": "Après ...c5 (bon coup) si ...Nc6?! 6.cxd5 exd5 7.0-0 Be7 8.dxc5! et le pion d5 est faible, le Fg2 le vise. ÉVITER (Noirs): Jouer ...cxd4 ou ...Nbd7 au lieu de ...Nc6 directement."
+    },
+    {
+      "name": "Piège Ouvert",
+      "fen": "rnbqkb1r/pp3ppp/4pn2/2pP4/2p5/5NP1/PP2PPBP/RNBQK2R b KQkq - 0 5",
+      "highlights": ["d5", "e6", "g2"],
+      "desc": "Catalane Ouverte: 5.cxd5 si ...exd5?! le Fg2 vise d5 directement. Les Blancs jouent Qc2, Nc3 et le pion d5 est sous pression constante. ÉVITER (Noirs): Reprendre ...Nxd5! (pas exd5) pour garder la flexibilité."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Catalane Ouverte",
+      "moves": "3...Nf6 4.Bg2 dxc4 5.Nf3 Be7 6.0-0 0-0 7.Qc2",
+      "uci": "d2d4 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 d5c4 g1f3 f8e7 e1g1 e8g8 d1c2",
+      "eval": "+0.4",
+      "white_win": 56,
+      "black_win": 44,
+      "highlights": ["c4", "c2", "b7"],
+      "white_plan": "Pression à long terme! Qc2 vise c4, a4 empêche ...b5, puis Rd1, Nc3 ou Na3 pour récupérer c4 ou maintenir la pression.",
+      "black_plan": "Garder le pion avec ...a6, ...b5? est risqué. Mieux: rendre avec ...c5 ou ...Nc6, ...Bd7, ...Rc8 pour libérer."
+    },
+    {
+      "name": "Catalane Fermée",
+      "moves": "3...Nf6 4.Bg2 Be7 5.Nf3 0-0 6.0-0 Nbd7",
+      "uci": "d2d4 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 f8e7 g1f3 e8g8 e1g1 b8d7",
+      "eval": "+0.3",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["d5", "c4", "e4"],
+      "white_plan": "Les Noirs gardent d5 fermé. Jouer Qc2, Rd1, Nc3 et chercher cxd5 exd5 puis e4 pour ouvrir le centre.",
+      "black_plan": "Structure solide. Jouer ...c6, ...b6, ...Bb7 pour contester la diagonale. Chercher ...dxc4 puis ...e5 au bon moment."
+    },
+    {
+      "name": "Défense avec ...c5",
+      "moves": "3...Nf6 4.Bg2 c5 5.Nf3 cxd4 6.Nxd4",
+      "uci": "d2d4 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 c7c5 g1f3 c5d4 f3d4",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["d4", "d5", "g2"],
+      "white_plan": "Le Cavalier d4 est bien placé. Après cxd5 Nxd5 ou exd5, le Fg2 vise le centre. 0-0, Nc3, Bg5 avec pression.",
+      "black_plan": "Bon choix défensif! Le centre est ouvert, le Fou g2 a moins de cibles. Jouer ...dxc4, ...Qc7, ...Nc6 pour égaliser."
+    }
+  ]
+}

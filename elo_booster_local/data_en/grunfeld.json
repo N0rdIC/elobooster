@@ -1,0 +1,136 @@
+{
+  "name": "GRÜNFELD DEFENSE",
+  "alt_name": "",
+  "moves": "1.d4 Nf6 2.c4 g6 3.Nc3 d5",
+  "uci_moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5",
+  "complexity": "Advanced",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Kasparov, Svidler, Grischuk",
+  "idea": "The ultimate hypermodern defense! Black lets White build an ideal pawn center with d4+e4+c4, then attacks it with pieces (...Bg7) and pawns (...c5, ...d5). The idea: the center is a target, not a strength! After ...d5 cxd5 Nxd5, Black trades the d-pawn for pressure against d4. Kasparov used it to become World Champion. Extremely theoretical but powerful!",
+  "highlights_green": [
+    "g7",
+    "c5",
+    "d4"
+  ],
+  "highlights_red": [
+    "d5",
+    "e4",
+    "c3"
+  ],
+  "errors_white": [
+    "Overprotecting the center: the pawns become passive",
+    "Exchanging the dark-squared Bishop: it defends d4",
+    "Ignoring ...c5: this move attacks d4 directly"
+  ],
+  "errors_black": [
+    "Not playing ...c5: this is the key move to attack d4",
+    "Exchanging the Bg7: this Bishop is the soul of the defense",
+    "Being too passive: Black must attack the center actively"
+  ],
+  "development": [
+    [
+      "Pawn d5",
+      "Strikes the center immediately - it's the difference from the King's Indian"
+    ],
+    [
+      "Pawn g6 + Bishop",
+      "g6 then Bg7 - the Bishop is a monster that targets d4 and a1"
+    ],
+    [
+      "Knight d5",
+      "After cxd5 Nxd5, the Knight goes to c3 (Exchange) or b6 depending on variation"
+    ],
+    [
+      "Pawn c5",
+      "THE thematic move! Attacks d4 and opens the Bg7's diagonal"
+    ],
+    [
+      "Knight b8",
+      "Nc6 puts pressure on d4 - natural development"
+    ],
+    [
+      "King",
+      "Kingside castle after ...Bg7 - the King is well protected"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Center Trap",
+      "fen": "rnbqkb1r/ppp1pp1p/5np1/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4",
+      "highlights": [
+        "d5",
+        "c4",
+        "e4"
+      ],
+      "desc": "After 3...d5, if White plays 4.Nf3?! (instead of cxd5) ...dxc4! and Black keeps the pawn or gets good play. AVOID (White): Play 4.cxd5 Nxd5 5.e4 for the classical center."
+    },
+    {
+      "name": "Exchange Trap",
+      "fen": "rnbqkb1r/ppp1pp1p/6p1/3n4/3PP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5",
+      "highlights": [
+        "d5",
+        "c3",
+        "e4"
+      ],
+      "desc": "After 5.e4 if Black plays ...Nb6?! (instead of Nxc3) 6.Be3! and the Nb6 is misplaced, blocking the c-pawn. AVOID (Black): Play 5...Nxc3 6.bxc3 then ...Bg7 and ...c5."
+    },
+    {
+      "name": "Russian Trap",
+      "fen": "rnbq1rk1/ppp1ppbp/6p1/3P4/3P4/2N1B3/PP3PPP/R2QKB1R b KQ - 0 8",
+      "highlights": [
+        "d5",
+        "g7",
+        "a1"
+      ],
+      "desc": "Russian Variation: White plays d5 to close the Bg7's diagonal. But ...c6! opens everything and the Bishop becomes a monster again. AVOID (White): Only close with d5 if well prepared, otherwise the pawn becomes weak."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Exchange Variation",
+      "moves": "4.cxd5 Nxd5 5.e4 Nxc3 6.bxc3 Bg7 7.Nf3 c5",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c3",
+        "e4",
+        "c5"
+      ],
+      "white_plan": "Strong e4-d4 center but doubled c3 pawns. Play Be3, Rc1, Be2, 0-0 and look to attack with d5 or f4-f5.",
+      "black_plan": "Attack the center! ...Bg7, ...0-0, ...cxd4 cxd4 and the Bg7 dominates. ...Nc6, ...Qa5, ...Bg4 for pressure."
+    },
+    {
+      "name": "Russian Variation",
+      "moves": "4.cxd5 Nxd5 5.e4 Nxc3 6.bxc3 Bg7 7.Be3 c5 8.Qd2",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 c1e3 c7c5 d1d2",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": [
+        "d2",
+        "e3",
+        "h6"
+      ],
+      "white_plan": "Aggressive system! Qd2 prepares Bh6 (exchange the Bg7) and 0-0-0 with kingside attack. Rc1 and d5 possible.",
+      "black_plan": "Avoid exchanging the Bg7! ...0-0, ...cxd4 cxd4 ...Qa5 puts pressure. ...Nc6, ...Rd8 and central counterplay."
+    },
+    {
+      "name": "Modern Variation",
+      "moves": "4.cxd5 Nxd5 5.e4 Nxc3 6.bxc3 Bg7 7.Bc4 c5 8.Ne2 Nc6",
+      "uci": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 c7c5 g1e2 b8c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c4",
+        "e2",
+        "c6"
+      ],
+      "white_plan": "Bc4 targets f7 and d5. Ne2 avoids the ...Bg4 pin. 0-0, Be3 then d5 or f4 for the attack.",
+      "black_plan": "...Nc6 attacks d4. After ...cxd4 cxd4 ...0-0, ...Bg4 (pins Ne2) or ...Na5 to chase the Bc4."
+    }
+  ]
+}

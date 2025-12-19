@@ -1,0 +1,138 @@
+{
+  "name": "FOUR KNIGHTS GAME",
+  "alt_name": "Four Knights",
+  "moves": "1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6",
+  "uci_moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6",
+  "complexity": "Beginner",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Svidler, Caruana, Rubinstein",
+  "idea": "The most symmetrical opening after 1.e4 e5! Both sides develop naturally with Nc3-Nf3 for White and ...Nc6-...Nf6 for Black. The position is balanced and solid. White can try to break the symmetry with Bb5 (Spanish Four Knights), Bc4 (Italian Four Knights), or d4 (Scotch Four Knights). It's the perfect opening for beginners and a safe choice for those who want solid positions!",
+  "highlights_green": [
+    "d4",
+    "d5",
+    "e4",
+    "e5"
+  ],
+  "highlights_red": [
+    "f3",
+    "f6",
+    "c3",
+    "c6"
+  ],
+  "errors_white": [
+    "Copying Black's moves too long: White must try to break the symmetry",
+    "Playing Bc4 without care: can fall into the Rubinstein Trap (...Nd4!)",
+    "Being too passive: White has the first move advantage, use it"
+  ],
+  "errors_black": [
+    "Copying White's moves forever: Black must also seek imbalance",
+    "Playing ...Nd4 at the wrong time: can backfire",
+    "Being afraid of Bb5: ...a6 and ...d6 handle it well"
+  ],
+  "development": [
+    [
+      "Bishops",
+      "Bb5 (Spanish style) or Bc4 (Italian style) for White, ...Bb4 or ...Bc5 for Black"
+    ],
+    [
+      "Center",
+      "d4 for White is thematic, ...d6 or ...d5 for Black"
+    ],
+    [
+      "King",
+      "Quick kingside castle on both sides - the position is open"
+    ],
+    [
+      "Rooks",
+      "After castling, centralize on e1/d1 (White) or e8/d8 (Black)"
+    ],
+    [
+      "Queen",
+      "Stay back at the start - the Knights do the work"
+    ],
+    [
+      "Pawns",
+      "Avoid premature pawn advances that create weaknesses"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Rubinstein Trap",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 0 4",
+      "highlights": [
+        "e4",
+        "d5",
+        "c4"
+      ],
+      "desc": "4.Bc4 Nxe4?? looks like winning a pawn, but 5.Nxe4! d5 6.Bxd5! Qxd5 7.Nc3! and the Queen is attacked, White wins material. AVOID (Black): Never take e4! Play ...Bc5 or ...Nxe4 only after ...d5."
+    },
+    {
+      "name": "Halloween Trap",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4N3/4P3/2N5/PPPP1PPP/R1BQKB1R b KQkq - 0 4",
+      "highlights": [
+        "e5",
+        "c6",
+        "d4"
+      ],
+      "desc": "4.Nxe5!? Halloween Gambit - Knight sacrifice! If ...Nxe5 5.d4 White's center is monstrous. AVOID (Black): Accept with ...Nxe5 5.d4 Nc6! (not Ng6?) 6.d5 Bb4! with counterplay."
+    },
+    {
+      "name": "Symmetry Trap",
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/1Bb1p3/4P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 0 5",
+      "highlights": [
+        "b5",
+        "c5",
+        "a6"
+      ],
+      "desc": "4.Bb5 Bc5?! copies White but 5.Nxe5! Nxe5 6.d4 wins a piece! The Bc5 and Ne5 are both hanging. AVOID (Black): Play 4...Bb4! (pins the Nc3) or 4...Nd4 (attacks the Bb5)."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Spanish Four Knights",
+      "moves": "4.Bb5 Bb4 5.0-0 0-0 6.d3",
+      "uci": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "b5",
+        "b4",
+        "d4"
+      ],
+      "white_plan": "Solid and symmetrical position. Prepare d4 with Bg5, Nd5 or a3 to chase the Bb4. Slow positional play.",
+      "black_plan": "Maintain symmetry with ...d6, or break with ...Nd4! to exchange pieces and simplify."
+    },
+    {
+      "name": "Italian Four Knights",
+      "moves": "4.Bc4 Bc5 5.d3 d6 6.0-0",
+      "uci": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1c4 f8c5 d2d3 d7d6 e1g1",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": [
+        "c4",
+        "c5",
+        "f7"
+      ],
+      "white_plan": "Typical Italian plans: Be3, Qd2, then look for d4 or attack with Nd5, Bg5.",
+      "black_plan": "Mirror position. Play ...0-0, ...Be6, ...a6 then look for ...d5 or ...Na5 to exchange the Bc4."
+    },
+    {
+      "name": "Scotch Four Knights",
+      "moves": "4.d4 exd4 5.Nxd4 Bb4 6.Nxc6 bxc6",
+      "uci": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 f3d4 f8b4 d4c6 b7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "d4",
+        "c6",
+        "e4"
+      ],
+      "white_plan": "White has a strong center and the doubled c6 pawns are weak. Play Bd3, 0-0 and exploit the structural advantage.",
+      "black_plan": "The doubled pawns give control of d5! Play ...d5 quickly, the bishop pair compensates for the structure."
+    }
+  ]
+}

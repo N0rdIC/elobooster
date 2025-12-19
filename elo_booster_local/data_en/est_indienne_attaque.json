@@ -1,0 +1,135 @@
+{
+  "name": "KING'S INDIAN ATTACK",
+  "alt_name": "King's Indian Attack",
+  "moves": "1.Nf3 d5 2.g3",
+  "uci_moves": "g1f3 d7d5 g2g3",
+  "complexity": "Advanced",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Fischer, Korchnoi, Ivanchuk",
+  "idea": "The universal attacking system for White! With Nf3, g3, Bg2, 0-0, d3, e4, Nbd2, White builds a solid setup that works against almost any Black response. The plan is simple: once developed, push e4-e5 or f2-f4-f5 to attack the kingside. It's the perfect opening for players who want to avoid theory and play their favorite positions. Fischer used it to crush strong opponents!",
+  "highlights_green": [
+    "g2",
+    "e4",
+    "e5"
+  ],
+  "highlights_red": [
+    "d3",
+    "f3"
+  ],
+  "errors_white": [
+    "Playing too slowly: once developed, the attack must start with e5 or f4",
+    "Forgetting the center: e4 is important, don't let Black play ...d4",
+    "Ignoring Black's counterplay: ...c5 and ...b5 can be annoying"
+  ],
+  "errors_black": [
+    "Being too passive: ...d5, ...c5 must fight for space",
+    "Ignoring the kingside attack: ...h6 can be useful to prevent Bg5",
+    "Castling kingside into the attack: sometimes queenside castle is better"
+  ],
+  "development": [
+    [
+      "Knight g1",
+      "Nf3 is always the first move - flexible and solid"
+    ],
+    [
+      "Pawn g3 + Bishop",
+      "g3 then Bg2 - the fianchetto controls the long diagonal and center from afar"
+    ],
+    [
+      "King",
+      "0-0 quickly to secure the King and activate the f1 Rook"
+    ],
+    [
+      "Pawn d3",
+      "Supports e4 and keeps a flexible structure - NOT d4 at the start"
+    ],
+    [
+      "Knight b1",
+      "Nbd2 supports e4 and can go to f1-e3 or h3 for the attack"
+    ],
+    [
+      "Pawn e4",
+      "The thematic move! After preparation, e4 opens the game for the Bg2"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Attack Trap",
+      "fen": "r1bq1rk1/ppp1bppp/2n1pn2/3p4/4P3/3P1NP1/PPP1NPBP/R1BQ1RK1 w - - 0 8",
+      "highlights": [
+        "e4",
+        "e5",
+        "f4"
+      ],
+      "desc": "Typical position. White prepares e5 with Qe2, h3, then e5! If ...Nfd7 f4-f5 opens lines for a deadly attack. AVOID (Black): Play ...dxe4 dxe4 ...e5 to block the advance."
+    },
+    {
+      "name": "Closed Center Trap",
+      "fen": "r1bq1rk1/ppp1bppp/2n1pn2/3pP3/5P2/3P1NP1/PPP1N1BP/R1BQ1RK1 b - - 0 9",
+      "highlights": [
+        "e5",
+        "f4",
+        "f5"
+      ],
+      "desc": "After e5 Nfd7 f4, White aims for f5! Opening the f-file will be devastating for the Black King. AVOID (Black): Play ...f6 or ...f5 to block White's pawn advance."
+    },
+    {
+      "name": "Fianchetto Trap",
+      "fen": "r1bqk2r/ppp1bppp/2n1pn2/3p4/4P3/3P1NP1/PPP2PBP/RNBQK2R w KQkq - 0 6",
+      "highlights": [
+        "g2",
+        "d5",
+        "c6"
+      ],
+      "desc": "If Black plays ...dxe4?! 5.dxe4 Qxd1+ Rxd1, White has a good middlegame with the active Bg2 and d-file. AVOID (Black): Keep tension in the center, don't exchange on e4."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Against the French",
+      "moves": "1.e4 e6 2.d3 d5 3.Nd2 Nf6 4.Ngf3 Nc6 5.g3",
+      "uci": "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 b8c6 g2g3",
+      "eval": "+0.3",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "g2",
+        "e5",
+        "f4"
+      ],
+      "white_plan": "Bg2, 0-0, then prepare e5 with Qe2 and Re1. If ...dxe4 dxe4, the center is open for the Bg2.",
+      "black_plan": "Black can play ...Be7, ...0-0, ...b6/...Bb7 or ...dxe4 followed by ...e5 to block the Bishop."
+    },
+    {
+      "name": "Against the Sicilian",
+      "moves": "1.e4 c5 2.Nf3 e6 3.d3 Nc6 4.g3 d5 5.Nbd2",
+      "uci": "e2e4 c7c5 g1f3 e7e6 d2d3 b8c6 g2g3 d7d5 b1d2",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "g2",
+        "e5",
+        "d5"
+      ],
+      "white_plan": "Avoid theoretical lines of the Open Sicilian. Bg2, 0-0, then e5 or exd5 depending on position.",
+      "black_plan": "Black has a strong center with ...d5 and ...c5. Play ...Nge7, ...g6 and look for ...d4 to block the Bg2."
+    },
+    {
+      "name": "Universal System",
+      "moves": "1.Nf3 d5 2.g3 Nf6 3.Bg2 c6 4.0-0 Bg4 5.d3",
+      "uci": "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 d2d3",
+      "eval": "+0.2",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "g2",
+        "e4",
+        "g4"
+      ],
+      "white_plan": "Flexible structure. Nbd2, e4 when ready, then depending on Black's response: h3 (chases the Bishop) or Qe2 and e5.",
+      "black_plan": "...Bg4 pins the Knight before e4. Play ...Nbd7, ...e6, ...Be7 then ...0-0 with a solid position."
+    }
+  ]
+}

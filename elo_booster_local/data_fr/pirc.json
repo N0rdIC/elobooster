@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE PIRC",
+  "alt_name": "",
+  "moves": "1.e4 d6 2.d4 Nf6 3.Nc3 g6",
+  "uci_moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6",
+  "complexity": "Débutant",
+  "white_win": 54,
+  "black_win": 46,
+  "champions": "Pirc, Seirawan, Ivanchuk",
+  
+  "idea": "Les Noirs laissent les Blancs construire un centre idéal avec e4-d4, puis contre-attaquent! Le fianchetto ...g6/...Bg7 crée un Fou puissant sur la grande diagonale qui vise le centre blanc. C'est une ouverture hypermoderne: au lieu d'occuper le centre avec des pions, on le contrôle de loin avec des pièces. Flexible et surprenant, mais les Blancs ont beaucoup d'espace au début. Idéal pour les joueurs qui aiment contre-attaquer.",
+
+  "highlights_green": ["g7", "e5", "c5"],
+  "highlights_red": ["d6", "e7", "f6"],
+
+  "errors_white": [
+    "Pousser e5 sans préparation : les Noirs jouent ...Nfd7 et le pion e5 peut devenir faible",
+    "Attaquer l'aile roi trop vite : le Fg7 défend bien, il faut d'abord consolider le centre",
+    "Ignorer ...c5 ou ...e5 : ces coups cassent le centre blanc, il faut réagir"
+  ],
+  
+  "errors_black": [
+    "Ne jamais jouer ...c5 ou ...e5 : sans contre-attaque centrale, les Noirs sont écrasés",
+    "Fianchetto sans ...d6 d'abord : permet e5 avec gain de temps sur le Cavalier",
+    "Laisser les Blancs attaquer sans contre-jeu : le centre doit être contesté!"
+  ],
+
+  "development": [
+    ["Pion d6", "Prépare le fianchetto et contrôle e5 - toujours jouer avant ...g6"],
+    ["Pion g6 + Fou", "g6 puis Bg7 - le Fou devient un monstre sur la grande diagonale"],
+    ["Cavalier f6", "Attaque e4 et prépare ...0-0 - position classique"],
+    ["Roi", "Petit roque rapide - le Roi est bien défendu par le Fg7"],
+    ["Cavalier b8", "Nc6 ou Nbd7 selon le plan - prépare ...e5 ou ...c5"],
+    ["Pion c ou e", "...c5 (attaque d4) ou ...e5 (central) sont les coups libérateurs"]
+  ],
+
+  "traps": [
+    {
+      "name": "Attaque Autrichienne",
+      "fen": "rnbqkb1r/ppp1pp1p/3p1np1/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4",
+      "highlights": ["f4", "e5", "g7"],
+      "desc": "4.f4!? Attaque agressive. Les Blancs visent e5 et f5. Si les Noirs sont passifs, l'attaque est dévastatrice. ÉVITER (Noirs): Jouer ...Bg7, ...0-0, ...c5! immédiatement pour contre-attaquer d4."
+    },
+    {
+      "name": "Piège du Pion e5",
+      "fen": "rnbqkb1r/ppp1pp1p/3p1np1/4P3/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4",
+      "highlights": ["e5", "d7", "g7"],
+      "desc": "Si e5?! prématuré, les Noirs jouent ...Nfd7! puis ...c5 et le pion e5 est attaqué. Après dxe5 dxe5, le centre est ouvert pour le Bg7. ÉVITER (Blancs): Préparer e5 avec f4 ou Be3 d'abord."
+    },
+    {
+      "name": "Piège du Fianchetto",
+      "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 5",
+      "highlights": ["g7", "d4", "c5"],
+      "desc": "Position normale. Si les Blancs jouent Bc4?! les Noirs ont ...c5! attaquant d4, et si dxc5 dxc5 le Bg7 est très actif. ÉVITER (Blancs): Jouer Be2 ou Bd3, plus solide que Bc4."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Classique",
+      "moves": "4.Nf3 Bg7 5.Be2 0-0 6.0-0 c6",
+      "uci": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 c7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["c6", "e5", "d5"],
+      "white_plan": "Développement solide. Plans: a4 (empêche ...b5), h3/Be3, puis pression centrale ou attaque f4-f5.",
+      "black_plan": "...c6 prépare ...b5 ou ...d5. Jouer ...Nbd7, ...e5 et chercher à activer le Fg7 avec ...exd4 ou ...c5."
+    },
+    {
+      "name": "Attaque Autrichienne",
+      "moves": "4.f4 Bg7 5.Nf3 0-0 6.Bd3 c5",
+      "uci": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8 f1d3 c7c5",
+      "eval": "+0.4",
+      "white_win": 55,
+      "black_win": 45,
+      "highlights": ["f4", "c5", "e5"],
+      "white_plan": "Agressif! e5 ou f5 pour ouvrir les lignes. 0-0, Qe1-h4 et attaque à l'aile roi.",
+      "black_plan": "...c5! contre-attaque immédiate. Si dxc5 dxc5, le Fou g7 domine. ...Nc6, ...Qa5 pour la pression."
+    },
+    {
+      "name": "Système 150 Attack",
+      "moves": "4.Be3 Bg7 5.Qd2 0-0 6.f3 c6",
+      "uci": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1e3 f8g7 d1d2 e8g8 f2f3 c7c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["d2", "h6", "e3"],
+      "white_plan": "Attaque avec 0-0-0, Bh6 (échange le Fg7), puis g4-h4-h5 pour ouvrir la colonne h.",
+      "black_plan": "Éviter l'échange du Fg7! Jouer ...a6, ...b5 et contre-attaquer à l'aile dame avant l'attaque blanche."
+    }
+  ]
+}

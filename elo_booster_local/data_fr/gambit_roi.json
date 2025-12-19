@@ -1,0 +1,93 @@
+{
+  "name": "GAMBIT DU ROI",
+  "alt_name": "",
+  "moves": "1.e4 e5 2.f4",
+  "uci_moves": "e2e4 e7e5 f2f4",
+  "complexity": "Débutant",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Spassky, Bronstein, Short",
+  
+  "idea": "Le plus ancien et le plus romantique des gambits! Les Blancs sacrifient un pion pour ouvrir la colonne f et attaquer f7, le talon d'Achille des Noirs. Après 2...exf4, les Blancs ont un centre fort (e4) et des lignes ouvertes pour leurs pièces. Le prix? Le Roi blanc est exposé (plus de roque sûr parfois) et le pion f4 peut devenir fort pour les Noirs. C'est l'ouverture du tout ou rien - attaque ou défaite!",
+
+  "highlights_green": ["f7", "f4", "g7"],
+  "highlights_red": ["f2", "e1", "g1"],
+
+  "errors_white": [
+    "Jouer sans plan après 2...exf4 : il faut attaquer immédiatement avec Nf3, Bc4 ou même d4",
+    "Oublier que le Roi est exposé : la case f2 est faible et le roque est parfois impossible",
+    "Attaquer sans développer : les sacrifices ne marchent que si les pièces sont actives"
+  ],
+  
+  "errors_black": [
+    "Vouloir garder le pion f4 à tout prix : ...g5?! est risqué et affaiblit le Roi noir",
+    "...Qh4+ trop tôt : après g3! fxg3 0-0!, les Blancs ont une attaque furieuse sur la colonne f",
+    "Négliger le développement : les Noirs doivent aussi sortir leurs pièces, pas juste défendre f4"
+  ],
+
+  "development": [
+    ["Cavalier g1", "Nf3 est presque toujours le premier coup - défend et attaque, prépare 0-0"],
+    ["Fou f1", "Bc4 vise directement f7 - la batterie Bc4+Qb3/Qf3 est mortelle"],
+    ["Roi", "Parfois 0-0 même en sacrifiant du matériel! Ou Kf1-Kf2 si le roque est compromis"],
+    ["Dame", "Peut aller en f3 (attaque f7) ou h5 (pression sur f7 et e5) selon la variante"],
+    ["Cavalier b1", "Nc3 puis Nd5 - le Cavalier en d5 est un monstre"],
+    ["Tour h1", "Après fxe5 ou si les Noirs prennent en g3, la Tour sur f1 est dévastatrice"]
+  ],
+
+  "traps": [
+    {
+      "name": "Gambit Muzio",
+      "fen": "rnbqkbnr/pppp1p1p/8/6p1/2B1Pp2/5N2/PPPP2PP/RNBQK2R w KQkq - 0 4",
+      "highlights": ["f7", "f3", "g5"],
+      "desc": "Après 3.Nf3 g5 4.Bc4 g4, les Blancs jouent 5.0-0!! sacrifiant le Cavalier! Après gxf3 6.Qxf3 l'attaque sur f7 est irrésistible. ÉVITER (Noirs): Ne pas jouer ...g4 - préférer ...Bg7 ou ...d6."
+    },
+    {
+      "name": "Piège Kieseritzky",
+      "fen": "rnbqkb1r/pppp1p1p/5n2/4N1p1/2B1Pp2/8/PPPP2PP/RNBQK2R b KQkq - 0 5",
+      "highlights": ["f7", "e5", "c4"],
+      "desc": "Après 3.Nf3 g5 4.h4 g4 5.Ne5, si ...Nf6?? 6.Bc4! menace Nxf7 et Bxf7+. Attaque double! ÉVITER (Noirs): Jouer ...d5! ou ...Qe7 au lieu de ...Nf6 pour bloquer les diagonales."
+    },
+    {
+      "name": "Piège du Décliné",
+      "fen": "rnbqk1nr/pppp1ppp/8/2b1p3/2B1PP2/8/PPPP2PP/RNBQK1NR b KQkq - 0 3",
+      "highlights": ["f7", "c5", "g1"],
+      "desc": "2...Bc5 (Décliné) 3.Bc4!? vise f7. Si ...Nc6? 4.fxe5! menace Qh5 ou Bxf7+. Le Fou c5 ne défend plus rien! ÉVITER (Noirs): Jouer ...d6 ou ...Nf6 pour défendre e5 avant de développer le Fou."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Gambit Accepté Classique",
+      "moves": "2...exf4 3.Nf3 g5 4.h4 g4 5.Ne5",
+      "uci": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": ["e5", "f7", "h4"],
+      "white_plan": "Le Ce5 attaque f7. Après Bc4, la pression est énorme. Sacrifices possibles sur f7 ou g4 pour ouvrir des lignes.",
+      "black_plan": "Défendre f7 avec ...Qe7 ou contre-attaquer avec ...d5! Les pions g4 et f4 peuvent devenir forts en finale."
+    },
+    {
+      "name": "Défense Cunningham",
+      "moves": "2...exf4 3.Nf3 Be7 4.Bc4 Bh4+ 5.Kf1",
+      "uci": "e2e4 e7e5 f2f4 e5f4 g1f3 f8e7 f1c4 e7h4 e1f1",
+      "eval": "+0.2",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["h4", "f1", "f7"],
+      "white_plan": "Le Roi va en f1-f2 (sans roquer). Les Blancs ont le centre et le développement. Attaquer avec d4, Bxf4, Nc3.",
+      "black_plan": "L'échec en h4 a forcé Kf1 mais le Fou est exposé. Jouer ...d5! pour ouvrir le jeu et activer le Fc8."
+    },
+    {
+      "name": "Gambit Décliné",
+      "moves": "2...Bc5 3.Nf3 d6 4.Nc3 Nf6",
+      "uci": "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 b1c3 g8f6",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["c5", "d6", "e5"],
+      "white_plan": "Les Noirs refusent le gambit. Jouer fxe5 dxe5 et Bc4 pour maintenir la pression. Le jeu est plus calme.",
+      "black_plan": "Structure solide avec ...d6 défendant e5. Développer ...0-0, ...Nc6, ...Bg4 et chercher ...d5 au bon moment."
+    }
+  ]
+}

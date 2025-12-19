@@ -1,0 +1,135 @@
+{
+  "name": "VIENNA GAME",
+  "alt_name": "Vienna Game",
+  "moves": "1.e4 e5 2.Nc3",
+  "uci_moves": "e2e4 e7e5 b1c3",
+  "complexity": "Beginner",
+  "white_win": 53,
+  "black_win": 47,
+  "champions": "Spielmann, Mieses, Tseshkovsky",
+  "idea": "The aggressive alternative to 2.Nf3! With 2.Nc3, White prepares f2-f4 (the Vienna Gambit) or Bc4 followed by d3 and f4. It's a dangerous attacking weapon that avoids the solid lines of the Italian and Spanish. The key idea: quick development and attack on f7. The Vienna can lead to sharp tactical battles or quiet positional games depending on Black's response. A great surprise weapon!",
+  "highlights_green": [
+    "c3",
+    "f4",
+    "f7"
+  ],
+  "highlights_red": [
+    "f2",
+    "e5"
+  ],
+  "errors_white": [
+    "Playing f4 without preparation: ...exf4 can be good for Black",
+    "Forgetting to develop: Bc4, d3, Nf3 must come before the attack",
+    "Being too slow: the Vienna is an attacking opening, play actively"
+  ],
+  "errors_black": [
+    "Being passive: ...Nf6, ...Bc5, ...d6 must fight for the center",
+    "Ignoring the f4 threat: ...d5 or ...d6 and ...Be7 handle it well",
+    "Taking on e4 too early: can give White a strong attack"
+  ],
+  "development": [
+    [
+      "Knight c3",
+      "Supports e4 and prepares d5 - logical development"
+    ],
+    [
+      "Pawn f4",
+      "The Vienna Gambit! Opens the f-file and attacks e5"
+    ],
+    [
+      "Bishop f1",
+      "Bc4 targets f7 - combined with Qh5 it's dangerous"
+    ],
+    [
+      "Queen",
+      "Qh5 in certain lines threatens mate on f7"
+    ],
+    [
+      "Knight g1",
+      "Nf3 or Nge2 depending on plan (f4 or not)"
+    ],
+    [
+      "King",
+      "Kingside castle after Bc4/Be2 and Nf3"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Frankenstein Trap",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR w KQkq - 4 4",
+      "highlights": [
+        "c4",
+        "e4",
+        "g4"
+      ],
+      "desc": "3.Bc4 Nf6 4.d3?! ...Nxe4! 5.Nxe4 d5 wins a piece since the Bc4 and Ne4 are both hanging! AVOID (White): Play 4.d3 only after f3, or play 3.f4 directly."
+    },
+    {
+      "name": "Vienna Gambit",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 3",
+      "highlights": [
+        "f4",
+        "e5",
+        "d4"
+      ],
+      "desc": "3.f4!? exf4 and White sacrifices a pawn for open lines. If Black accepts, 4.Nf3 with compensation. AVOID (Black): Accept with ...exf4 but play solidly, or decline with ...d6."
+    },
+    {
+      "name": "Max Lange Attack",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR b KQkq - 3 3",
+      "highlights": [
+        "c4",
+        "f7",
+        "h5"
+      ],
+      "desc": "3.Bc4 and if ...Bc5?! 4.Qg4! Threatens g7 and f7. Black must defend precisely. AVOID (Black): Play ...Nf6 first to control g4 and e4."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Vienna Gambit",
+      "moves": "2...Nf6 3.f4 d5 4.fxe5 Nxe4 5.Nf3",
+      "uci": "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 g1f3",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "f4",
+        "e4",
+        "e5"
+      ],
+      "white_plan": "Open and tactical position. Develop Bd3, 0-0 and attack the Ne4. d3 to chase the Knight.",
+      "black_plan": "The Ne4 is active but exposed. ...Bc5 or ...Be7, ...0-0, ...Nc6 with active play."
+    },
+    {
+      "name": "Falkbeer Variation",
+      "moves": "2...Nf6 3.Bc4 Nxe4 4.Qh5 Nd6 5.Bb3 Nc6",
+      "uci": "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3 b8c6",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "h5",
+        "d6",
+        "f7"
+      ],
+      "white_plan": "Qh5 puts pressure on f7 and e5. Nf3, d3, 0-0 with continued attack.",
+      "black_plan": "Defend f7 with the Nd6. ...Be7, ...0-0, then ...Nf5 to block the attack."
+    },
+    {
+      "name": "Classical Variation",
+      "moves": "2...Nc6 3.Bc4 Bc5 4.Qg4 Qf6 5.Nd5 Qxf2+",
+      "uci": "e2e4 e7e5 b1c3 b8c6 f1c4 f8c5 d1g4 d8f6 c3d5 f6f2",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": [
+        "g4",
+        "d5",
+        "f2"
+      ],
+      "white_plan": "Crazy tactical position! After Kd1, White has active pieces but the King is exposed.",
+      "black_plan": "The Qf2 is aggressive. ...Kd8 puts the King to safety, then develop and attack."
+    }
+  ]
+}

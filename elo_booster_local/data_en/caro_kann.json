@@ -1,0 +1,135 @@
+{
+  "name": "CARO-KANN DEFENSE",
+  "alt_name": "",
+  "moves": "1.e4 c6",
+  "uci_moves": "e2e4 c7c6",
+  "complexity": "Intermediate",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Karpov, Capablanca, Anand",
+  "idea": "Black prepares ...d5 with the support of the c6 pawn. Unlike the French (1...e6), the Bc8 is not locked in and can come out actively to f5 or g4. The structure is solid and symmetrical. Black accepts less space at the start to get a position without weaknesses. This is the ideal opening for positional players who like clear and solid positions.",
+  "highlights_green": [
+    "d5",
+    "f5",
+    "c5"
+  ],
+  "highlights_red": [
+    "e6",
+    "d6"
+  ],
+  "errors_white": [
+    "Exchanging exd5 cxd5 too early: gives Black a comfortable position without compensation",
+    "Ignoring the ...c5 push: this move attacks White's center and frees Black's game",
+    "Overestimating the space advantage: Black's position is solid and hard to break through"
+  ],
+  "errors_black": [
+    "Playing ...dxe4 then ...Bf5 automatically: sometimes ...Bg4 or ...Nf6 first is better",
+    "Forgetting to play ...e6 at the right time: the Bc8 can remain locked in if you wait too long",
+    "Being too passive: Black must seek ...c5 to free their position and create counterplay"
+  ],
+  "development": [
+    [
+      "d5 pawn",
+      "Play ...d5 immediately on move 2 - that's the whole point of 1...c6"
+    ],
+    [
+      "Bc8",
+      "Develop BEFORE ...e6! Go to f5 (classical) or g4 (to exchange against Nf3)"
+    ],
+    [
+      "Knights",
+      "Typical setup: ...Nd7 first, then ...Ngf6 - flexible and solid"
+    ],
+    [
+      "Bf8",
+      "Develop to e7 (solid) or d6 (more active) depending on the variation"
+    ],
+    [
+      "King",
+      "Classical kingside castle once the minor pieces are developed"
+    ],
+    [
+      "c6 pawn",
+      "Can advance to ...c5 later to attack White's center"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Advance Trap",
+      "fen": "rn2kbnr/pp3ppp/1qp1p1b1/3pP3/6P1/2N5/PPPPNP1P/R1BQKB1R w KQkq - 2 7",
+      "highlights": [
+        "b2",
+        "b6",
+        "g4"
+      ],
+      "desc": "Advance Variation: 3.e5 Bf5 4.Nc3 e6 5.g4 Bg6 6.Nge2?? Qb6! attacks undefended b2. AVOID (White): Play 6.Nf3 or defend b2 with Rb1 before Nge2."
+    },
+    {
+      "name": "Tal Trap",
+      "fen": "r1bqkb1r/pp3ppp/2p2n2/3pN3/3P4/8/PPP2PPP/R1BQKB1R w KQkq - 0 6",
+      "highlights": [
+        "f7",
+        "b3",
+        "c4"
+      ],
+      "desc": "After 4...Nf6?? 5.Nxf6+ exf6 (or gxf6) 6.Bc4! threatens Qb3 attacking b7 and f7. AVOID: Don't recapture on f6! Play 4...Bf5 or 4...Nd7 first."
+    },
+    {
+      "name": "Fantasy Trap",
+      "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR b KQkq - 0 3",
+      "highlights": [
+        "e5",
+        "f3",
+        "e4"
+      ],
+      "desc": "3.f3!? prepares e4-e5 with space gain. If Black ignores, e5 gives a powerful center. AVOID: Play ...e6 or ...dxe4 fxe4 ...e5! to break the center."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Classical Variation",
+      "moves": "2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6",
+      "uci": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "g6",
+        "e6",
+        "c5"
+      ],
+      "white_plan": "Play Nf3, h4 to attack the Bg6, Bd3 to exchange it. Sound structure and technical play.",
+      "black_plan": "Ultra-solid structure. Play ...e6, ...Nf6, ...Nbd7, ...Be7, ...0-0 then seek ...c5 to free."
+    },
+    {
+      "name": "Advance Variation",
+      "moves": "2.d4 d5 3.e5 Bf5 4.Nf3 e6 5.Be2",
+      "uci": "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2",
+      "eval": "+0.2",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": [
+        "c5",
+        "f6",
+        "e5"
+      ],
+      "white_plan": "Keep the e5-d4 pawn chain. Attack on the kingside with 0-0, Nh4 (chasing Bf5) then f4-f5.",
+      "black_plan": "Attack the base of the chain! ...c5 is thematic. ...Nc6, ...Qb6 put pressure on d4. ...f6 undermines e5."
+    },
+    {
+      "name": "Panov Variation",
+      "moves": "2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3",
+      "uci": "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3",
+      "eval": "=",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "d5",
+        "c4",
+        "e4"
+      ],
+      "white_plan": "Create an isolated black pawn on d5 with cxd5. The isolated pawn is a weakness to attack in the endgame.",
+      "black_plan": "The d5 pawn is isolated but gives active squares (c4, e4). Develop quickly and seek piece activity."
+    }
+  ]
+}

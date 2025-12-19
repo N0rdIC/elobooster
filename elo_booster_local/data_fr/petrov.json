@@ -1,0 +1,93 @@
+{
+  "name": "DÉFENSE PETROV",
+  "alt_name": "Défense Russe",
+  "moves": "1.e4 e5 2.Nf3 Nf6",
+  "uci_moves": "e2e4 e7e5 g1f3 g8f6",
+  "complexity": "Intermédiaire",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Kramnik, Caruana, Karjakin",
+  
+  "idea": "Au lieu de défendre e5 avec ...Nc6, les Noirs contre-attaquent e4! C'est la défense la plus solide contre 1.e4 e5. Les Noirs ne cherchent pas à gagner mais à égaliser solidement. Après 3.Nxe5 d6 4.Nf3 Nxe4, la position est parfaitement symétrique. La Petrov est l'arme favorite des joueurs qui veulent éviter la théorie de l'Espagnole et obtenir des positions où il est très difficile de perdre. Attention au piège du débutant sur le coup 3!",
+
+  "highlights_green": ["e4", "f6", "d5"],
+  "highlights_red": ["e5", "f7"],
+
+  "errors_white": [
+    "Jouer Bc4 ou Nc3 au lieu de Nxe5 : laisse passer la chance de tester les Noirs",
+    "Prendre en f7 après Nxe5 (piège) : ne gagne rien si les Noirs jouent correctement",
+    "Échanger toutes les pièces : mène à des finales nulles où les Blancs n'ont rien"
+  ],
+  
+  "errors_black": [
+    "Prendre e4 immédiatement avec 3...Nxe4?? : c'est le piège classique! 4.Qe2 perd une pièce",
+    "Jouer ...Nc6 au lieu de ...d6 : permet des complications favorables aux Blancs",
+    "Être trop passif : même si la Petrov est solide, les Noirs doivent chercher du contre-jeu"
+  ],
+
+  "development": [
+    ["Pion d6", "OBLIGATOIRE après 3.Nxe5! Chasse le Cavalier avant de reprendre e4"],
+    ["Cavalier f6", "Reprend e4 après ...d6 Nf3, puis se retire en d6 ou f6 selon la variante"],
+    ["Fou f8", "Développer en d6 (actif) ou e7 (solide) - contrôle les cases centrales"],
+    ["Fou c8", "Sortir en f5 ou g4 (cloue Cf3) - ne pas laisser enfermé"],
+    ["Cavalier b8", "Aller en d7 (soutient le centre) ou c6 (après ...c6)"],
+    ["Roi", "Petit roque classique après ...Be7 - position très sûre"]
+  ],
+
+  "traps": [
+    {
+      "name": "Piège du Débutant",
+      "fen": "rnbqkb1r/pppp1ppp/5n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R b KQkq - 0 3",
+      "highlights": ["e5", "e4", "e2"],
+      "desc": "3.Nxe5 Nxe4?? (erreur!) 4.Qe2! et le Cavalier e4 est cloué. Si 4...Nf6 5.Nc6+ gagne la Dame! ÉVITER (Noirs): TOUJOURS jouer 3...d6! d'abord pour chasser le Ce5."
+    },
+    {
+      "name": "Piège Stafford",
+      "fen": "rnbqkb1r/ppp2ppp/3p1n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 0 4",
+      "highlights": ["e5", "d6", "f7"],
+      "desc": "3...d6 4.Nxf7?! (gambit douteux) Kxf7 5.Bc4+ les Blancs ont des menaces mais les Noirs sont mieux après 5...Be6! ÉVITER (Blancs): Ne pas jouer Nxf7 - reculer Nf3 est correct."
+    },
+    {
+      "name": "Piège Cochrane",
+      "fen": "rnbqkb1r/ppp2ppp/3p4/4N2n/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 0 5",
+      "highlights": ["f7", "e5", "h5"],
+      "desc": "Gambit Cochrane: 4.Nxf7!? Kxf7 5.d4 - sacrifice réel pour l'attaque. Si les Noirs acceptent mal, l'attaque est forte. ÉVITER (Noirs): 5...c5! ou 5...Be6 avec défense active et matériel en plus."
+    }
+  ],
+
+  "variants": [
+    {
+      "name": "Variante Classique",
+      "moves": "3.Nxe5 d6 4.Nf3 Nxe4 5.d4 d5 6.Bd3",
+      "uci": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": ["d5", "e4", "d3"],
+      "white_plan": "Position symétrique. Jouer 0-0, c4 pour attaquer d5, Re1 et chercher Nc3 avec pression sur le centre.",
+      "black_plan": "Égalité parfaite! Développer ...Be7, ...0-0, ...Nc6 ou ...Nd7. Maintenir la symétrie et échanger vers la nulle."
+    },
+    {
+      "name": "Variante Steinitz",
+      "moves": "3.Nxe5 d6 4.Nf3 Nxe4 5.Nc3",
+      "uci": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 b1c3",
+      "eval": "+0.2",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": ["c3", "e4", "d5"],
+      "white_plan": "Attaquer le Ce4 immédiatement! Après Nxe4 dxe4, les Blancs ont un jeu plus facile avec Bc4, 0-0 et d3.",
+      "black_plan": "Défendre le Cavalier avec ...Nf6 ou ...Nc6. Si Nxe4 dxe4 accepter la structure et jouer ...Bf5, ...Qe7."
+    },
+    {
+      "name": "Attaque des 3 Cavaliers",
+      "moves": "3.Nc3 Nc6 4.Bb5",
+      "uci": "e2e4 e7e5 g1f3 g8f6 b1c3 b8c6 f1b5",
+      "eval": "+0.3",
+      "white_win": 54,
+      "black_win": 46,
+      "highlights": ["b5", "c6", "e5"],
+      "white_plan": "Éviter la Petrov classique! Transposition vers les 4 Cavaliers avec Bb5. Jeu actif avec 0-0, d3, puis Bg5 ou Nd5.",
+      "black_plan": "On sort de la Petrov pure. Jouer ...Bb4 (symétrie), ...Nd4 ou ...a6 pour chasser le Fou et chercher ...d5."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "name": "SICILIAN DEFENSE",
+  "alt_name": "",
+  "moves": "1.e4 c5",
+  "uci_moves": "e2e4 c7c5",
+  "complexity": "Advanced",
+  "white_win": 52,
+  "black_win": 48,
+  "champions": "Kasparov, Fischer, Nakamura",
+  "idea": "Black refuses the symmetry of 1...e5 and fights for the center with the c-pawn. After d4 cxd4 Nxd4, Black has exchanged a wing pawn (c) for a central pawn (d) - excellent deal! This creates an immediate imbalance: White has more space in the center, but Black has a queenside pawn majority and the semi-open c-file. This is the most combative opening and the most played at the highest level.",
+  "highlights_green": [
+    "d4",
+    "d5",
+    "b5"
+  ],
+  "highlights_red": [
+    "d6",
+    "e6",
+    "b6"
+  ],
+  "errors_white": [
+    "Playing d4 without Nf3 first: after ...cxd4 Qxd4?? ...Nc6 gains time on the Queen",
+    "Ignoring the ...b5-b4 counter-attack: Black can chase the Nc3 and create weaknesses",
+    "Pushing pawns without developing: premature f4-f5 or g4-g5 advance leaves the King exposed"
+  ],
+  "errors_black": [
+    "Playing ...d5 too early: after exd5 Qxd5, the Queen gets chased by Nc3 and White develops with tempo",
+    "Neglecting the development of the Nf6: this Knight is crucial for control of d5 and e4",
+    "Letting a White Knight settle on d5: without Nf6 to exchange it, this Knight becomes dominant"
+  ],
+  "development": [
+    [
+      "Nf6",
+      "Develop quickly - controls d5, attacks e4, essential in all variations"
+    ],
+    [
+      "d-pawn",
+      "Choose between ...d6 (solid, Scheveningen/Najdorf) or ...d5 in one move (aggressive)"
+    ],
+    [
+      "Bf8",
+      "Fianchetto ...g6/...Bg7 (Dragon) or ...Be7 (classical) depending on the variation"
+    ],
+    [
+      "Nb8",
+      "Develop to c6 (classical) or d7 (Scheveningen) to support ...e5"
+    ],
+    [
+      "Rooks",
+      "The Ra8 goes to c8 for the semi-open c-file - pressure on c2"
+    ],
+    [
+      "King",
+      "Kingside castling is usual, but queenside castling is possible in certain variations"
+    ]
+  ],
+  "traps": [
+    {
+      "name": "Siberian Trap",
+      "fen": "rnb1kb1r/pp2pppp/5n2/2pq4/3P4/N1P5/PP3PPP/R1BQKBNR b KQkq - 1 5",
+      "highlights": [
+        "b5",
+        "c7",
+        "a3"
+      ],
+      "desc": "Alapin: 2.c3 d5 3.exd5 Qxd5 4.d4 Nf6?? 5.Na3! The Na3 goes to b5, attacking c7. AVOID: Play 4...e6! or 4...Nc6 instead of Nf6 to control b5."
+    },
+    {
+      "name": "Dragon Trap",
+      "fen": "r4rk1/pp1bppbp/2np1np1/q7/3NP1P1/2N1BP2/PPPQ3P/2KR1B1R w - - 0 11",
+      "highlights": [
+        "d5",
+        "f6",
+        "c3"
+      ],
+      "desc": "Yugoslav Attack: if Black plays ...Rc8 without preparation, Bxf6! Bxf6 Nd5! is devastating. AVOID: Play ...Rfc8 and ...Ne5 first before ...Rc8."
+    },
+    {
+      "name": "Najdorf Trap",
+      "fen": "rn2kb1r/1p1p1ppp/pq2pn2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R w KQkq - 0 7",
+      "highlights": [
+        "b6",
+        "f7",
+        "e6"
+      ],
+      "desc": "After 6.Bg5 e6 7.f4 Qb6?? 8.Qd2! (or Nb3) the Queen is misplaced, b6 and f7 become weak. AVOID: Play ...Be7 or ...Nbd7 before bringing out the Queen."
+    }
+  ],
+  "variants": [
+    {
+      "name": "Dragon",
+      "moves": "2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6",
+      "uci": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6",
+      "eval": "=",
+      "white_win": 53,
+      "black_win": 47,
+      "highlights": [
+        "g7",
+        "c8",
+        "h4"
+      ],
+      "white_plan": "Yugoslav Attack! f3, Be3, Qd2, 0-0-0 then g4-g5-h4-h5 to open the h-file and mate on h7/h8.",
+      "black_plan": "The Bg7 is a monster on the long diagonal. Play ...Rc8, ...Qa5, ...Nc6-e5 and push ...b5-b4 to counter-attack."
+    },
+    {
+      "name": "Najdorf",
+      "moves": "2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6",
+      "uci": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6",
+      "eval": "=",
+      "white_win": 52,
+      "black_win": 48,
+      "highlights": [
+        "a6",
+        "b5",
+        "e5"
+      ],
+      "white_plan": "Several options: 6.Be3 (English Attack), 6.Bg5 (Poisoned Pawn), 6.Be2 (Classical), 6.f3 (Slow English). Central pressure and play on both wings.",
+      "black_plan": "Maximum flexibility! ...a6 prepares ...b5 and prevents Bb5/Nb5. Then choose between ...e5 (space) or ...e6 (solid) depending on White."
+    },
+    {
+      "name": "Sveshnikov",
+      "moves": "2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e5",
+      "uci": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5",
+      "eval": "=",
+      "white_win": 51,
+      "black_win": 49,
+      "highlights": [
+        "d5",
+        "d6",
+        "f5"
+      ],
+      "white_plan": "After Ndb5 d6, the Knight settles on d5 via c3. Exploit the d5 hole and the weakness of the backward d6 pawn.",
+      "black_plan": "Accept the weakness on d5 for activity! The bishop pair, the f5 square for the Knight and the ...f5 push more than compensate."
+    }
+  ]
+}
