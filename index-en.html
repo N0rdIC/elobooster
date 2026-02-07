@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elo Booster - Free Chess Openings Guide</title>
+  <meta name="description" content="Download the free Elo Booster guide: 30 opening sheets to improve at chess. Then practice with our training app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #00b894, #00cec9);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #fff, #a0a0a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      font-size: 1.25rem;
+      color: #b0b0b0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Main Card - Free PDF */
+    .main-card {
+      background: linear-gradient(145deg, #2d2d44, #1e1e32);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    .free-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #00b894, #00cec9);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .main-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .main-card p {
+      color: #b0b0b0;
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+    }
+    
+    .features-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+    
+    .features-list li {
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.05rem;
+    }
+    
+    .features-list .icon {
+      font-size: 1.3rem;
+    }
+    
+    /* Email Form */
+    .email-form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .email-form input {
+      flex: 1;
+      min-width: 250px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+    
+    .email-form input:focus {
+      outline: none;
+      border-color: #00b894;
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .email-form input::placeholder {
+      color: #666;
+    }
+    
+    .btn-download {
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #00b894, #00cec9);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 184, 148, 0.3);
+    }
+    
+    .form-note {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    /* App Section */
+    .app-section {
+      background: linear-gradient(145deg, #2d2d44, #1e1e32);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    
+    .app-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+    
+    .app-section p {
+      color: #b0b0b0;
+      margin-bottom: 25px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .app-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    
+    .app-feature {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    
+    .app-feature .icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .app-feature h3 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+    
+    .app-feature p {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0;
+    }
+    
+    .pricing-badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.2);
+      color: #D4AF37;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .btn-app {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #D4AF37, #F4D03F);
+      color: #1a1a2e;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .btn-app:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+    
+    /* Flow Section */
+    .flow-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .flow-section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      color: #888;
+    }
+    
+    .flow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .flow-step {
+      background: rgba(255,255,255,0.05);
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    
+    .flow-step .number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #D4AF37;
+      margin-bottom: 5px;
+    }
+    
+    .flow-step p {
+      font-size: 0.95rem;
+      color: #b0b0b0;
+    }
+    
+    .flow-arrow {
+      font-size: 1.5rem;
+      color: #444;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+    
+    /* Success Message */
+    .success-message {
+      display: none;
+      background: rgba(0, 184, 148, 0.2);
+      border: 1px solid #00b894;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .success-message.show {
+      display: block;
+    }
+    
+    .success-message h3 {
+      color: #00b894;
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 15px;
+      }
+      
+      .main-card, .app-section {
+        padding: 25px 20px;
+      }
+      
+      .email-form {
+        flex-direction: column;
+      }
+      
+      .email-form input {
+        min-width: 100%;
+      }
+      
+      .btn-download {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .flow {
+        flex-direction: column;
+      }
+      
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="badge">♟️ Chess Improvement</div>
+      <h1>Master your openings</h1>
+      <p class="subtitle">Download the free guide, then practice with the training app</p>
+    </header>
+    
+    <!-- Free PDF -->
+    <div class="main-card">
+      <div class="free-tag">📘 FREE</div>
+      <h2>Elo Booster Guide - 30 Openings</h2>
+      <p>Get the PDF instantly with 30 essential openings explained simply.</p>
+      
+      <ul class="features-list">
+        <li><span class="icon">✅</span> 15 openings for White</li>
+        <li><span class="icon">✅</span> 15 openings for Black</li>
+        <li><span class="icon">✅</span> Key ideas for each opening</li>
+        <li><span class="icon">✅</span> Common traps to avoid</li>
+      </ul>
+      
+      <form class="email-form" id="downloadForm">
+        <input type="email" placeholder="Your email" required id="emailInput">
+        <button type="submit" class="btn-download">
+          <span>📥</span> Download PDF
+        </button>
+      </form>
+      <p class="form-note">🔒 No spam. Just the PDF and some tips to improve.</p>
+      
+      <div class="success-message" id="successMessage">
+        <h3>✅ You're all set!</h3>
+        <p>Check your inbox to download the guide.</p>
+      </div>
+    </div>
+    
+    <!-- Flow -->
+    <div class="flow-section">
+      <h2>Your path to improvement</h2>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="number">1</div>
+          <p>Download<br>the PDF guide</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="number">2</div>
+          <p>Study the<br>openings</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="number">3</div>
+          <p>Practice with<br>the app</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- App Section -->
+    <div class="app-section">
+      <h2>🎯 Train with Elo Trainer</h2>
+      <p>The guide gives you knowledge. The app makes you practice until it becomes automatic.</p>
+      
+      <div class="app-features">
+        <div class="app-feature">
+          <div class="icon">🎮</div>
+          <h3>Interactive practice</h3>
+          <p>Play against AI that responds with theory moves</p>
+        </div>
+        <div class="app-feature">
+          <div class="icon">📊</div>
+          <h3>Stockfish analysis</h3>
+          <p>Every move analyzed by the #1 engine</p>
+        </div>
+        <div class="app-feature">
+          <div class="icon">💡</div>
+          <h3>Explanations</h3>
+          <p>Understand why a move is good or bad</p>
+        </div>
+        <div class="app-feature">
+          <div class="icon">📈</div>
+          <h3>Progress tracking</h3>
+          <p>Track your scores and improve</p>
+        </div>
+      </div>
+      
+      <div class="pricing-badge">Free to start • Premium at £3/month</div>
+      <br><br>
+      <a href="https://elo-trainer.vercel.app?lang=en" class="btn-app">
+        <span>🚀</span> Launch the app
+      </a>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Elo Booster • <a href="https://elo-trainer.vercel.app?lang=en">App</a></p>
+    </footer>
+  </div>
+  
+  <script>
+    document.getElementById('downloadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('emailInput').value;
+      const button = this.querySelector('button');
+      const originalText = button.innerHTML;
+      
+      button.innerHTML = '⏳ Sending...';
+      button.disabled = true;
+      
+      try {
+        // TODO: Replace with actual API call to send PDF
+        // await fetch('https://api.elo-trainer.com/api/send-pdf', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({ email, language: 'en' })
+        // });
+        
+        // Simulation
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        document.getElementById('successMessage').classList.add('show');
+        this.style.display = 'none';
+        
+      } catch (error) {
+        alert('Error sending. Please try again.');
+        button.innerHTML = originalText;
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
