@@ -1,19 +1,25 @@
-// Store d'authentification avec email
+// Auth store with email verification
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { useGameStore } from './gameStore';
 
 const API_URL = 'https://elo-booster-api.vercel.app';
 
 interface AuthState {
   email: string | null;
+  token: string | null;
+  tokenExpiresAt: string | null;
   isPremium: boolean;
   premiumUntil: string | null;
   plan: string | null;
   isLoading: boolean;
   error: string | null;
+  pendingEmail: string | null;
   
-  login: (email: string) => Promise<void>;
+  sendCode: (email: string, language?: string) => Promise<boolean>;
+  verifyCode: (code: string) => Promise<boolean>;
+  verifyToken: () => Promise<boolean>;
   logout: () => void;
   checkPremium: () => Promise<void>;
   subscribe: (plan: 'monthly' | 'yearly') => Promise<void>;
@@ -24,36 +30,140 @@ export const useAuthStore = create<AuthState>()(
   persist(
     (set, get) => ({
       email: null,
+      token: null,
+      tokenExpiresAt: null,
       isPremium: false,
       premiumUntil: null,
       plan: null,
       isLoading: false,
       error: null,
+      pendingEmail: null,
       
-      login: async (email: string) => {
+      sendCode: async (email: string, language: string = 'fr') => {
         const emailLower = email.toLowerCase().trim();
         
-        // Validation basique
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailLower)) {
           set({ error: 'Email invalide' });
-          return;
+          return false;
         }
         
-        set({ email: emailLower, error: null });
+        set({ isLoading: true, error: null });
         
-        // Vérifier le statut premium
-        await get().checkPremium();
+        try {
+          const response = await fetch(`${API_URL}/api/send-code`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: emailLower, language }),
+          });
+          
+          const data = await response.json();
+          
+          if (!response.ok) {
+            set({ error: data.error || 'Erreur envoi code', isLoading: false });
+            return false;
+          }
+          
+          set({ pendingEmail: emailLower, isLoading: false });
+          return true;
+          
+        } catch (error) {
+          set({ error: 'Erreur réseau', isLoading: false });
+          return false;
+        }
+      },
+      
+      verifyCode: async (code: string) => {
+        const { pendingEmail } = get();
+        
+        if (!pendingEmail) {
+          set({ error: 'Pas d\'email en attente' });
+          return false;
+        }
+        
+        set({ isLoading: true, error: null });
+        
+        try {
+          const response = await fetch(`${API_URL}/api/verify-code`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: pendingEmail, code }),
+          });
+          
+          const data = await response.json();
+          
+          if (!response.ok) {
+            set({ error: data.error || 'Code invalide', isLoading: false });
+            return false;
+          }
+          
+          set({ 
+            email: data.email,
+            token: data.token,
+            tokenExpiresAt: data.expiresAt,
+            pendingEmail: null,
+            isLoading: false,
+            error: null,
+          });
+          
+          await get().checkPremium();
+          
+          return true;
+          
+        } catch (error) {
+          set({ error: 'Erreur réseau', isLoading: false });
+          return false;
+        }
+      },
+      
+      verifyToken: async () => {
+        const { token } = get();
+        
+        if (!token) {
+          return false;
+        }
+        
+        try {
+          const response = await fetch(`${API_URL}/api/verify-token`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token }),
+          });
+          
+          const data = await response.json();
+          
+          if (!response.ok || !data.valid) {
+            get().logout();
+            return false;
+          }
+          
+          set({
+            email: data.email,
+            isPremium: data.isPremium,
+            premiumUntil: data.premiumUntil,
+            plan: data.plan,
+            tokenExpiresAt: data.expiresAt,
+          });
+          
+          return true;
+          
+        } catch (error) {
+          return false;
+        }
       },
       
       logout: () => {
         set({ 
           email: null, 
+          token: null,
+          tokenExpiresAt: null,
           isPremium: false, 
           premiumUntil: null, 
           plan: null,
-          error: null 
+          error: null,
+          pendingEmail: null,
         });
+        useGameStore.getState().resetStats();
       },
       
       checkPremium: async () => {
@@ -143,6 +253,14 @@ export const useAuthStore = create<AuthState>()(
     }),
     {
       name: 'elo-trainer-auth',
+      partialize: (state) => ({
+        email: state.email,
+        token: state.token,
+        tokenExpiresAt: state.tokenExpiresAt,
+        isPremium: state.isPremium,
+        premiumUntil: state.premiumUntil,
+        plan: state.plan,
+      }),
     }
   )
 );

@@ -6,7 +6,9 @@
       "Bash(git push *)",
       "Bash(grep -v \"^$\")",
       "Bash(python3)",
-      "Bash(grep -o \".{0,300}easy.{0,300}\")"
+      "Bash(grep -o \".{0,300}easy.{0,300}\")",
+      "Bash(npm run *)",
+      "Bash(git checkout *)"
     ]
   }
 }

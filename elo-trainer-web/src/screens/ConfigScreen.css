@@ -8,7 +8,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 13px;
@@ -22,7 +22,7 @@
 }
 
 .user-badge:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .config-header {
@@ -31,7 +31,7 @@
 }
 
 .config-header h1 {
-  color: #D4AF37;
+  color: #d4af37;
   font-size: 32px;
   margin-bottom: 8px;
 }
@@ -45,7 +45,7 @@
   display: flex;
   justify-content: center;
   gap: 24px;
-  background: #1A2332;
+  background: #1a2332;
   padding: 16px;
   border-radius: 12px;
   margin-bottom: 24px;
@@ -59,7 +59,7 @@
   display: block;
   color: #fff;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .stat-label {
@@ -68,7 +68,7 @@
 }
 
 .stat.remaining .stat-value {
-  color: #D4AF37;
+  color: #d4af37;
 }
 
 .config-section {
@@ -94,7 +94,7 @@
 
 .color-btn {
   flex: 1;
-  background: #1A2332;
+  background: #1a2332;
   border: 2px solid transparent;
   border-radius: 12px;
   padding: 20px;
@@ -105,11 +105,11 @@
 }
 
 .color-btn:hover {
-  background: #2D3748;
+  background: #2d3748;
 }
 
 .color-btn.selected {
-  border-color: #D4AF37;
+  border-color: #d4af37;
 }
 
 .color-btn.locked {
@@ -142,25 +142,25 @@
 
 .depth-btn {
   flex: 1;
-  background: #1A2332;
+  background: #1a2332;
   border: 2px solid transparent;
   border-radius: 12px;
   padding: 16px;
   color: #fff;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
 }
 
 .depth-btn:hover {
-  background: #2D3748;
+  background: #2d3748;
 }
 
 .depth-btn.selected {
-  border-color: #D4AF37;
-  color: #D4AF37;
+  border-color: #d4af37;
+  color: #d4af37;
 }
 
 .depth-btn.locked {
@@ -175,102 +175,10 @@
   font-size: 12px;
 }
 
-.difficulty-options {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.difficulty-btn {
-  background: #1A2332;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  padding: 16px;
-  cursor: pointer;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  transition: all 0.2s;
-}
-
-.difficulty-btn:hover {
-  background: #2D3748;
-}
-
-.difficulty-btn.selected {
-  border-color: #D4AF37;
-}
-
-.diff-label {
-  color: #fff;
-  font-weight: 600;
-  margin-right: 12px;
-}
-
-.difficulty-btn.selected .diff-label {
-  color: #D4AF37;
-}
-
-.diff-desc {
-  color: #888;
-  font-size: 13px;
-  flex: 1;
-}
-
-.check {
-  color: #D4AF37;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.start-btn {
-  width: 100%;
-  background: #D4AF37;
-  color: #1A2332;
-  border: none;
-  border-radius: 12px;
-  padding: 18px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.start-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-}
-
-.premium-link {
-  display: block;
-  width: 100%;
-  background: transparent;
-  border: none;
-  color: #D4AF37;
-  padding: 16px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.guide-link {
-  display: block;
-  text-align: center;
-  color: #888;
-  font-size: 14px;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.guide-link:hover {
-  color: #D4AF37;
-}
-
-/* Opening Select */
 .opening-select {
   width: 100%;
-  background: #1A2332;
-  border: 2px solid rgba(255,255,255,0.1);
+  background: #1a2332;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 14px 16px;
   color: #fff;
@@ -284,44 +192,20 @@
 }
 
 .opening-select:hover {
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .opening-select:focus {
   outline: none;
-  border-color: #D4AF37;
+  border-color: #d4af37;
 }
 
 .opening-select option {
-  background: #1A2332;
+  background: #1a2332;
   color: #fff;
   padding: 10px;
 }
 
-.opening-select optgroup {
-  background: #141D26;
-  color: #888;
-  font-weight: 600;
-}
-
-.back-btn {
-  background: rgba(255,255,255,0.1);
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-bottom: 20px;
-  transition: background 0.2s;
-}
-
-.back-btn:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-
-/* Opening Preview */
 .opening-preview {
   margin-top: 16px;
   padding: 16px;
@@ -340,13 +224,13 @@
 .opening-preview-name {
   font-size: 18px;
   font-weight: 600;
-  color: #D4AF37;
+  color: #d4af37;
 }
 
 .opening-preview-eco {
   font-size: 12px;
   color: #888;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -354,7 +238,7 @@
 .opening-preview-desc {
   color: #ccc;
   font-size: 14px;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
   font-style: italic;
 }
 
@@ -366,7 +250,7 @@
 .opening-preview-ideas h4 {
   color: #fff;
   font-size: 14px;
-  margin: 0 0 8px 0;
+  margin: 0 0 8px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -391,5 +275,35 @@
 }
 
 .opening-preview-ideas li::marker {
-  color: #D4AF37;
+  color: #d4af37;
+}
+
+.start-btn {
+  width: 100%;
+  background: #d4af37;
+  color: #1a2332;
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.premium-link {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  padding: 16px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
 }

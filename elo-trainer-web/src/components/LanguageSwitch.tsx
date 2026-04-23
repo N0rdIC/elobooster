@@ -1,5 +1,3 @@
-// Sélecteur de langue FR/EN
-
 import { useLanguage } from '../hooks/useLanguage';
 import './LanguageSwitch.css';
 

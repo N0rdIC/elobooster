@@ -1,96 +1,77 @@
-// Types pour le jeu d'entraînement aux ouvertures
-
-export type PieceColor = 'white' | 'black';
+export type PlayerColor = 'white' | 'black';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
-export interface GameConfig {
-  playerColor: PieceColor;
-  targetDepth: number;
-  difficulty: Difficulty;
-  startingMoves?: string[];  // Coups de départ pour une ouverture spécifique
-  openingName?: string;      // Nom de l'ouverture sélectionnée
-}
-
-export interface OpeningMove {
-  san: string;
-  uci: string;
-  white: number;
-  black: number;
-  draws: number;
-}
-
-export interface OpeningExplorerResponse {
-  white: number;
-  black: number;
-  draws: number;
-  moves: OpeningMove[];
-  opening?: { eco: string; name: string };
-}
-
-export interface MoveScore {
-  move: string;
-  rank: number;
-  totalMoves: number;
-  popularityPercent: number;
-  score: number;
-  isTheory: boolean;
-  bestMove?: string; // Meilleur coup alternatif (SAN)
-  bestMoveFrom?: string; // Case de départ (e2)
-  bestMoveTo?: string; // Case d'arrivée (e4)
-  // Données de qualité
-  winrate?: number; // Pourcentage de victoires
-  totalGames?: number; // Nombre de parties avec ce coup
-  quality?: 'excellent' | 'good' | 'playable' | 'dubious' | 'unknown';
-  isOpeningChoice?: boolean; // Premier coup = choix libre, pas de suggestion
-  // Données Stockfish
-  stockfishEval?: number; // Évaluation en centipions
-  stockfishEvalText?: string; // "+0.5" ou "M3"
-  evalDiff?: number; // Différence avec le meilleur coup
-  moveQuality?: 'excellent' | 'good' | 'inaccuracy' | 'mistake' | 'blunder';
-  explanation?: {
-    title: string;
-    text: string;
-    suggestion: string;
-  };
+export interface Opening {
+  id: string;
+  name: string;
+  eco: string;
+  moves: string[];
+  fen: string;
+  description?: string;
+  strategy?: string;
+  keyIdeas?: string[];
 }
 
 export interface GameMove {
-  ply: number;
-  playerMove?: MoveScore;
-  opponentMove?: string;
+  san: string;
+  uci: string;
   fen: string;
-  fenBefore?: string; // Position AVANT le coup (pour la flèche)
+  isPlayerMove: boolean;
+  score?: number;
+  bestMove?: string;
+  evaluation?: number;
+  isAutoPlay?: boolean; // Opening setup moves
 }
 
 export interface GameState {
-  config: GameConfig;
+  opening: Opening;
+  playerColor: PlayerColor;
+  difficulty: Difficulty;
+  targetDepth: number;
   moves: GameMove[];
-  currentFen: string;
   currentScore: number;
-  currentEval?: number; // Current position eval in centipawns
-  currentEvalText?: string; // "+0.5" or "M3"
-  isPlayerTurn: boolean;
-  isGameOver: boolean;
-  gameOverReason?: 'depth_reached' | 'out_of_theory' | 'checkmate' | 'stalemate';
-  openingName?: string;
-  showGameOverModal: boolean;
+  isComplete: boolean;
+  isModalVisible: boolean;
+  currentEval: number | null;
+}
+
+export interface GameConfig {
+  opening: Opening;
+  playerColor: PlayerColor;
+  difficulty: Difficulty;
+  targetDepth: number;
 }
 
 export interface PremiumStatus {
   isPremium: boolean;
-  source?: 'subscription';
+  source?: 'subscription' | 'lifetime';
 }
 
+export interface StockfishResult {
+  bestMove: string;
+  eval: number; // Centipawns from side to move perspective
+  depth: number;
+}
+
+export interface TopMove {
+  move: string;
+  eval: number;
+  rank: number;
+}
+
+// Feature limits
 export const FREE_LIMITS = {
   maxDepth: 5,
   canPlayBlack: false,
+  canChooseOpening: false,
   dailyGames: 3,
   hasReview: false,
-} as const;
+};
 
 export const PREMIUM_FEATURES = {
-  maxDepth: 20,
+  maxDepth: 15,
   canPlayBlack: true,
+  canChooseOpening: true,
   dailyGames: Infinity,
   hasReview: true,
-} as const;
+};

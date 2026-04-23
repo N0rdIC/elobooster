@@ -1,5 +1,3 @@
-/* Evaluation Bar Styles */
-
 .eval-bar-container {
   display: flex;
   align-items: stretch;
@@ -15,7 +13,7 @@
   border-radius: 4px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse; /* White at bottom */
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -35,7 +33,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: 'Roboto Mono', monospace;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   white-space: nowrap;
@@ -43,16 +41,15 @@
 }
 
 .eval-text.on-white {
-  bottom: 4px;
+  top: 4px; /* White is at bottom, text on top of white area */
   color: #333;
 }
 
 .eval-text.on-black {
-  top: 4px;
+  bottom: 4px; /* Black is at top, text at bottom of black area */
   color: #fff;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .eval-bar {
     width: 20px;
