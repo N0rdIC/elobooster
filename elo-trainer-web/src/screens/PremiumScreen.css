@@ -1,0 +1,401 @@
+/* Premium Screen Styles */
+
+.premium-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.premium-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Success Banner */
+.success-banner {
+  background: linear-gradient(135deg, #48BB78, #38A169);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 24px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Premium Active State */
+.premium-active {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.premium-badge-large {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.premium-active h1 {
+  color: #D4AF37;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.premium-email {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.premium-details {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.premium-enjoy {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.premium-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-manage {
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-manage:hover {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #666;
+  color: #888;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Logged In Header */
+.logged-in-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+.logged-as {
+  color: #888;
+  font-size: 14px;
+}
+
+.logged-as strong {
+  color: #fff;
+}
+
+.btn-logout-small {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Headings */
+.premium-container h1 {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.premium-subtitle {
+  color: #888;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Benefits List */
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+
+.benefit-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.benefit h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.benefit p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Subscription Options */
+.subscription-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.subscription-card {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.subscription-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.subscription-card.popular {
+  border-color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #D4AF37;
+  color: #1a1a2e;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.subscription-card h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.subscription-card .price {
+  margin-bottom: 8px;
+}
+
+.subscription-card .amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.subscription-card .period {
+  color: #888;
+  font-size: 14px;
+}
+
+.subscription-card .savings {
+  color: #D4AF37;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.btn-subscribe {
+  width: 100%;
+  background: linear-gradient(135deg, #D4AF37, #F4D03F);
+  border: none;
+  color: #1a1a2e;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-subscribe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-subscribe:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Login Section */
+.login-section {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 30px 24px;
+  margin-bottom: 24px;
+}
+
+.login-section h2 {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #D4AF37;
+}
+
+.login-form input::placeholder {
+  color: #666;
+}
+
+.btn-login {
+  background: linear-gradient(135deg, #D4AF37, #F4D03F);
+  border: none;
+  color: #1a1a2e;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-login:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-note {
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* Error Message */
+.error-message {
+  color: #E53E3E;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* Secure Note */
+.secure-note {
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Pricing Preview */
+.pricing-preview {
+  text-align: center;
+  padding: 20px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 12px;
+}
+
+.pricing-preview p {
+  color: #888;
+  font-size: 16px;
+  margin: 0;
+}
+
+.pricing-preview strong {
+  color: #D4AF37;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .subscription-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .premium-container h1 {
+    font-size: 24px;
+  }
+  
+  .subscription-card .amount {
+    font-size: 28px;
+  }
+}
